@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* DCGG design tokens — mirrored from prototype v7 */
+:root {
+  --dcgg-accent:       #1d4ed8;
+  --dcgg-accent-soft:  #eff6ff;
+  --dcgg-accent-ring:  #bfdbfe;
+
+  --dcgg-ink-900: #111827;
+  --dcgg-ink-700: #374151;
+  --dcgg-ink-500: #6b7280;
+  --dcgg-ink-400: #9ca3af;
+  --dcgg-ink-300: #d1d5db;
+  --dcgg-ink-200: #e5e7eb;
+  --dcgg-ink-100: #f3f4f6;
+  --dcgg-ink-50:  #f9fafb;
+
+  --dcgg-ok:   #059669;
+  --dcgg-warn: #d97706;
+  --dcgg-err:  #dc2626;
+  --dcgg-info: #0891b2;
+  --dcgg-plum: #7c3aed;
+
+  --dcgg-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui,
+               Helvetica, Arial, sans-serif;
+}
+
+html, body, #app { height: 100%; }
+body {
+  font-family: var(--dcgg-font);
+  font-size: 14px;
+  color: var(--dcgg-ink-900);
+  background: var(--dcgg-ink-50);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar (matches prototype) */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--dcgg-ink-300); border-radius: 3px; }
+
+/* Reusable prototype-style component classes */
+@layer components {
+  .dcgg-card {
+    @apply bg-white border border-ink-200 rounded-lg p-4 shadow-card;
+  }
+  .dcgg-btn {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium
+           rounded-md border border-ink-200 bg-white text-ink-700
+           hover:bg-ink-100 transition-colors;
+  }
+  .dcgg-btn-primary {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold
+           rounded-md bg-brand-600 text-white hover:bg-brand-700 transition-colors;
+  }
+  .dcgg-input {
+    @apply px-3 py-1.5 text-xs rounded-md border border-ink-200 bg-white text-ink-700
+           outline-none focus:border-brand-500 transition-colors;
+  }
+  .dcgg-tag {
+    @apply inline-block text-xxs px-1.5 py-0.5 rounded bg-ink-100 text-ink-700 border border-ink-200;
+  }
+  .dcgg-table {
+    @apply w-full border-collapse;
+  }
+  .dcgg-table th {
+    @apply text-left px-3 py-2 text-xxs font-semibold text-ink-500 uppercase tracking-wider
+           bg-ink-50 border-b-2 border-ink-200;
+  }
+  .dcgg-table td {
+    @apply px-3 py-2 text-sm text-ink-700 border-b border-ink-100;
+  }
+  .dcgg-table tr:hover td { @apply bg-ink-50; }
+}
