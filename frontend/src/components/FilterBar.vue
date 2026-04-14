@@ -27,23 +27,19 @@ watch(
     <select v-model="vertical" class="dcgg-input">
       <option value="all">All verticals</option>
       <option value="crypto">Crypto</option>
-      <option value="banking">Banking</option>
-      <option value="securities">Securities</option>
-      <option value="insurance">Insurance</option>
-      <option value="payments">Payments</option>
-      <option value="fintech">Fintech</option>
-      <option value="asset-management">Asset Mgmt</option>
-      <option value="other">Other</option>
+      <option value="ai">AI</option>
+      <option value="privacy">Privacy</option>
+      <option value="market">Market infra</option>
     </select>
 
     <select v-model="region" class="dcgg-input">
       <option value="all">All regions</option>
-      <option value="EMEA">EMEA</option>
-      <option value="Americas">Americas</option>
-      <option value="APAC">APAC</option>
-      <option value="MENA">MENA</option>
-      <option value="Africa">Africa</option>
-      <option value="Global">Global</option>
+      <option value="eu">Europe</option>
+      <option value="na">North America</option>
+      <option value="latam">Latin America</option>
+      <option value="mena">MENA</option>
+      <option value="apac">APAC</option>
+      <option value="africa">Africa</option>
     </select>
 
     <input v-model="clientId" placeholder="Client" class="dcgg-input w-32" />

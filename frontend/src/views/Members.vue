@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, computed } from 'vue';
+import { onMounted, ref, computed, watch } from 'vue';
 import { membership } from '@/api';
 import type { Member } from '@/types';
 import FilterBar from '@/components/FilterBar.vue';
@@ -13,10 +13,13 @@ const loading = ref(true);
 const router = useRouter();
 const filters = useFiltersStore();
 
-onMounted(async () => {
+async function load() {
+  loading.value = true;
   try { rows.value = await membership.list(filters.asQuery); }
   finally { loading.value = false; }
-});
+}
+onMounted(load);
+watch(() => filters.asQuery, load, { deep: true });
 
 const filtered = computed(() =>
   rows.value.filter((m) =>

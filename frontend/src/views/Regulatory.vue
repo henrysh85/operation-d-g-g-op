@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, computed } from 'vue';
+import { onMounted, ref, computed, watch } from 'vue';
 import { regulatory } from '@/api';
 import type { Jurisdiction } from '@/types';
 import FilterBar from '@/components/FilterBar.vue';
@@ -19,6 +19,7 @@ async function load() {
   finally { loading.value = false; }
 }
 onMounted(load);
+watch(() => filters.asQuery, load, { deep: true });
 
 const filtered = computed(() =>
   rows.value.filter((r) =>

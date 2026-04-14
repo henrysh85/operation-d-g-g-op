@@ -66,7 +66,7 @@ func New(cfg *config.Config, db *pgxpool.Pool, s3 *storage.Client, jwtMgr *auth.
 
 		// authenticated
 		authed := v1.Group("")
-		authed.Use(jwtMgr.Middleware())
+		authed.Use(jwtMgr.Middleware(), auth.AuditMiddleware(db))
 		{
 			authed.GET("/auth/me", authH.Me)
 			authed.POST("/auth/verify-pin", jwtMgr.VerifyPin)
