@@ -27,6 +27,8 @@ bin/
 *.out
 coverage.out
 vendor/
+/backend/api
+/backend/importer
 
 # Air / live reload
 tmp/

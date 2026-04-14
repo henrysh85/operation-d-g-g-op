@@ -1,0 +1,4424 @@
+[
+  {
+    "id": "brazil",
+    "flag": "🇧🇷",
+    "n": "Brazil",
+    "lat": -10,
+    "lng": -53,
+    "r": "latam",
+    "tier": "t1",
+    "crypto": {
+      "s": "live",
+      "h": "BCB authorization regime Feb 2026. 270-day grace period ends Oct 2026.",
+      "reg": [
+        "BCB",
+        "CVM"
+      ],
+      "tl": [
+        {
+          "d": "Feb 2026",
+          "e": "BCB authorization regime live",
+          "done": true
+        },
+        {
+          "d": "Oct 2026",
+          "e": "Grace period ends",
+          "done": false
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "CRITICAL",
+          "n": "BCB authorization. Cross-border stablecoin = forex."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "Ledger classification."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON as payment rails."
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "active",
+      "h": "AI Bill pending. LGPD covers AI data aspects.",
+      "reg": [
+        "SENACON",
+        "ANPD"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "MEDIUM",
+          "n": "LGPD applies now."
+        }
+      }
+    },
+    "privacy": {
+      "s": "live",
+      "h": "LGPD — Brazil GDPR equivalent — in force.",
+      "reg": [
+        "ANPD"
+      ],
+      "tl": [
+        {
+          "d": "Aug 2020",
+          "e": "LGPD in force",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "User data."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "Ledger data."
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "HIGH",
+          "n": "Analytics of Brazilian users."
+        }
+      }
+    },
+    "market": {
+      "s": "early",
+      "h": "BCB PIX dominant. No crypto-specific market infrastructure.",
+      "reg": [
+        "BCB",
+        "B3"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "USDT as dollar alternative to PIX."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "consults": [
+      {
+        "t": "BCB Consultations 109/110/111",
+        "r": "BCB",
+        "d": "Ongoing 2026",
+        "v": "crypto",
+        "s": "active",
+        "a": "Hugo + Bellini + Larissa"
+      }
+    ]
+  },
+  {
+    "id": "argentina",
+    "flag": "🇦🇷",
+    "n": "Argentina",
+    "lat": -34,
+    "lng": -64,
+    "r": "latam",
+    "tier": "t1",
+    "crypto": {
+      "s": "active",
+      "h": "CNV Resolution 1058/2025 VASP framework. LIBRA scandal (Milei, 93% crash) creates toxic political context. Pre-election FX stress forecast Oct 2025.",
+      "reg": [
+        "CNV",
+        "BCRA"
+      ],
+      "tl": [
+        {
+          "d": "2025",
+          "e": "CNV Resolution 1058/2025 enacted",
+          "done": true
+        },
+        {
+          "d": "Oct 2025",
+          "e": "Presidential elections",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "USDT dominant as peso hedge. VASP framework directly regulates issuance."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "Ledger use for peso capital flight."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON as USDT delivery."
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "early",
+      "h": "No specific AI crypto regulation.",
+      "reg": [],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "active",
+      "h": "PDPA equivalent developing. AAIP (data protection agency) active.",
+      "reg": [
+        "AAIP"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "User data."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "MEDIUM",
+          "n": "Analytics."
+        }
+      }
+    },
+    "market": {
+      "s": "early",
+      "h": "CNV exploring tokenisation. BCB analogue framework developing.",
+      "reg": [
+        "CNV"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "USDT as capital flight tool — very high P2P usage."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "consults": [
+      {
+        "t": "DCGG VASP + Stablecoin Regulations Position Paper",
+        "r": "CNV",
+        "d": "Filed 2024",
+        "v": "crypto",
+        "s": "submitted",
+        "a": "Hugo"
+      }
+    ]
+  },
+  {
+    "id": "colombia",
+    "flag": "🇨🇴",
+    "n": "Colombia",
+    "lat": 4,
+    "lng": -74,
+    "r": "latam",
+    "tier": "t1",
+    "crypto": {
+      "s": "active",
+      "h": "Bill 510/2025 VASP regulation pending. DCGG filed 6-amendment position paper Mar 2026. SFC + Congreso joint process.",
+      "reg": [
+        "SFC",
+        "Congreso de Colombia"
+      ],
+      "tl": [
+        {
+          "d": "2025",
+          "e": "Bill 510/2025 introduced",
+          "done": true
+        },
+        {
+          "d": "Mar 2026",
+          "e": "DCGG 6-amendment position paper filed",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "Bill 510/2025 could restrict foreign stablecoin issuers."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "Ledger classification under VASP rules."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON as USDT delivery."
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "early",
+      "h": "No specific AI crypto regulation.",
+      "reg": [],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "live",
+      "h": "Law 1581/2012 (Habeas Data) in force. SIC active.",
+      "reg": [
+        "SIC"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "User data."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "MEDIUM",
+          "n": "Analytics."
+        }
+      }
+    },
+    "market": {
+      "s": "early",
+      "h": "BVC (Bolsa de Valores de Colombia) exploring tokenisation.",
+      "reg": [
+        "SFC",
+        "BVC"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": [
+      {
+        "t": "Colombia Bill 510/2025 — Position Paper (6 Amendments)",
+        "r": "SFC + Congreso",
+        "d": "Filed Mar 2026",
+        "v": "crypto",
+        "s": "submitted",
+        "a": "Carolina"
+      }
+    ]
+  },
+  {
+    "id": "mexico",
+    "flag": "🇲🇽",
+    "n": "Mexico",
+    "lat": 23,
+    "lng": -102,
+    "r": "latam",
+    "tier": "t1",
+    "crypto": {
+      "s": "active",
+      "h": "FinTech Law (2018) covers crypto — ITF framework. CNBV restricts exchanges. High P2P USDT usage.",
+      "reg": [
+        "CNBV",
+        "Banxico",
+        "SHCP"
+      ],
+      "tl": [
+        {
+          "d": "2018",
+          "e": "FinTech Law enacted",
+          "done": true
+        },
+        {
+          "d": "2022",
+          "e": "CNBV restricts exchanges for retail",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "USDT widely used. CNBV stance on foreign stablecoins unclear."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "Ledger use for remittances."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON as USDT delivery — remittance market."
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "early",
+      "h": "No specific AI regulation.",
+      "reg": [],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "live",
+      "h": "LFPDPPP (Federal Data Protection Law) in force. INAI active.",
+      "reg": [
+        "INAI"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "User data."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "MEDIUM",
+          "n": "Analytics."
+        }
+      }
+    },
+    "market": {
+      "s": "early",
+      "h": "BMV exploring tokenisation. No specific market infra law.",
+      "reg": [
+        "CNBV",
+        "BMV"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": []
+  },
+  {
+    "id": "elsalvador",
+    "flag": "🇸🇻",
+    "n": "El Salvador",
+    "lat": 13.7,
+    "lng": -88.9,
+    "r": "latam",
+    "tier": "t1",
+    "crypto": {
+      "s": "live",
+      "h": "Bitcoin Legal Tender. CNAD regulates digital assets. Tether (USDt issuer) is licensed in El Salvador — primary regulatory jurisdiction.",
+      "reg": [
+        "CNAD",
+        "BCR"
+      ],
+      "tl": [
+        {
+          "d": "Sep 2021",
+          "e": "Bitcoin Legal Tender Act",
+          "done": true
+        },
+        {
+          "d": "Q2 2025",
+          "e": "Tether licensed as stablecoin issuer",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "CRITICAL",
+          "n": "Tether is licensed here — El Salvador is the regulatory home jurisdiction for USDt."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "HIGH",
+          "n": "TRON as Tether settlement layer — regulatory validation."
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "early",
+      "h": "No specific AI regulation.",
+      "reg": [],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "early",
+      "h": "Limited data protection framework.",
+      "reg": [],
+      "tl": [],
+      "impact": {}
+    },
+    "market": {
+      "s": "early",
+      "h": "Bitcoin beach ecosystem. Limited formal market infra.",
+      "reg": [
+        "CNAD"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": [
+      {
+        "t": "DCGG El Salvador — Pioneering Progress Summit",
+        "r": "CNAD",
+        "d": "Jan 2025",
+        "v": "crypto",
+        "s": "submitted",
+        "a": "Bellini"
+      }
+    ]
+  },
+  {
+    "id": "uruguay",
+    "flag": "🇺🇾",
+    "n": "Uruguay",
+    "lat": -32.5,
+    "lng": -55.8,
+    "r": "latam",
+    "tier": "t1",
+    "crypto": {
+      "s": "active",
+      "h": "BCU PSAV (stablecoin/virtual asset) framework — DCGG filed second consultation response Mar 2026.",
+      "reg": [
+        "BCU (Banco Central del Uruguay)"
+      ],
+      "tl": [
+        {
+          "d": "2025",
+          "e": "BCU PSAV consultation published",
+          "done": true
+        },
+        {
+          "d": "Mar 2026",
+          "e": "DCGG second consultation response filed",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "PSAV framework directly impacts USDT operations."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "Ledger classification."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON as USDT delivery."
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "early",
+      "h": "No specific AI regulation.",
+      "reg": [],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "live",
+      "h": "LPDP (Law 18.331) in force. Uruguay GDPR-adequate.",
+      "reg": [
+        "URCDP"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "market": {
+      "s": "early",
+      "h": "BVM exploring tokenisation.",
+      "reg": [
+        "BCU",
+        "BVM"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": [
+      {
+        "t": "BCU PSAV — Second Consultation Response",
+        "r": "BCU",
+        "d": "Filed Mar 2026",
+        "v": "crypto",
+        "s": "submitted",
+        "a": "Hugo"
+      }
+    ]
+  },
+  {
+    "id": "paraguay",
+    "flag": "🇵🇾",
+    "n": "Paraguay",
+    "lat": -23,
+    "lng": -58,
+    "r": "latam",
+    "tier": "t1",
+    "crypto": {
+      "s": "active",
+      "h": "Law 6859/2021 established crypto mining/trading framework. BCP oversight of virtual assets. Paraguay = major Bitcoin mining hub (cheap hydropower).",
+      "reg": [
+        "BCP (Banco Central del Paraguay)",
+        "MIC (Ministry of Industry)"
+      ],
+      "tl": [
+        {
+          "d": "2021",
+          "e": "Law 6859/2021 enacted — crypto framework",
+          "done": true
+        },
+        {
+          "d": "2025",
+          "e": "BCP implementing virtual asset oversight",
+          "done": false
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "USDT widely used. BCP framework developing."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON as stablecoin rail."
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "early",
+      "h": "No specific AI regulation.",
+      "reg": [],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "early",
+      "h": "Limited data protection framework.",
+      "reg": [],
+      "tl": [],
+      "impact": {}
+    },
+    "market": {
+      "s": "early",
+      "h": "No specific crypto market infra regulation.",
+      "reg": [
+        "BCP"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": []
+  },
+  {
+    "id": "eu",
+    "flag": "🇪🇺",
+    "n": "European Union",
+    "lat": 50,
+    "lng": 15,
+    "r": "europe",
+    "tier": "t1",
+    "crypto": {
+      "s": "live",
+      "h": "MiCA fully in force Dec 2024. MiCA Review expected Q1/Q2 2026.",
+      "reg": [
+        "ESMA",
+        "EBA",
+        "EC DG FISMA",
+        "NCAs"
+      ],
+      "tl": [
+        {
+          "d": "Dec 2024",
+          "e": "Full MiCA application",
+          "done": true
+        },
+        {
+          "d": "Q2 2026",
+          "e": "MiCA Review consultation",
+          "done": false
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "CRITICAL",
+          "n": "Tether requires MiCA auth. ART/EMT classification."
+        },
+        "infrastructure": {
+          "l": "HIGH",
+          "n": "Ledger non-custodial exemption critical."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "CASPs on TRON must be MiCA compliant."
+        },
+        "marketmaker": {
+          "l": "HIGH",
+          "n": "Wintermute requires CASP licence."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "Not directly regulated."
+        }
+      }
+    },
+    "ai": {
+      "s": "live",
+      "h": "EU AI Act in force. GPAI Code of Practice Aug 2025.",
+      "reg": [
+        "EU AI Office",
+        "National AI Authorities"
+      ],
+      "tl": [
+        {
+          "d": "Aug 2024",
+          "e": "AI Act published",
+          "done": true
+        },
+        {
+          "d": "Aug 2025",
+          "e": "GPAI Code of Practice",
+          "done": true
+        },
+        {
+          "d": "Nov 2026",
+          "e": "DCGG DeAI Workshop",
+          "done": false
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "QVAC/DeAI: agentic AI definition gap = very high risk."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "AI features in Ledger devices."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "Autonomous agents on TRON."
+        },
+        "marketmaker": {
+          "l": "HIGH",
+          "n": "Algorithmic trading = potential high-risk AI."
+        },
+        "chainanalytics": {
+          "l": "MEDIUM",
+          "n": "AI analytics potentially regulated."
+        }
+      }
+    },
+    "privacy": {
+      "s": "live",
+      "h": "GDPR live. CSAM/Chat Control trilogue Dec 2025.",
+      "reg": [
+        "EDPB",
+        "National DPAs"
+      ],
+      "tl": [
+        {
+          "d": "2018",
+          "e": "GDPR in force",
+          "done": true
+        },
+        {
+          "d": "Dec 2025",
+          "e": "CSAM Trilogue began",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "GDPR for EU ops."
+        },
+        "infrastructure": {
+          "l": "CRITICAL",
+          "n": "Ledger E2EE. CSAM = existential threat."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "Immutability vs. erasure."
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "Standard GDPR."
+        },
+        "chainanalytics": {
+          "l": "HIGH",
+          "n": "Analytics of EU data."
+        }
+      }
+    },
+    "market": {
+      "s": "active",
+      "h": "MISP — DCGG opposing ESMA central supervision.",
+      "reg": [
+        "ESMA",
+        "EP ECON",
+        "Council"
+      ],
+      "tl": [
+        {
+          "d": "Nov 2025",
+          "e": "MISP proposal from EC",
+          "done": true
+        },
+        {
+          "d": "H2 2026",
+          "e": "EP/Council trilogue",
+          "done": false
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "ESMA supervision of large stablecoin issuers."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "CASP supervision may extend."
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "Indirect."
+        },
+        "marketmaker": {
+          "l": "HIGH",
+          "n": "ESMA supervision of large market makers."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "consults": [
+      {
+        "t": "MiCA Review Consultation",
+        "r": "EC",
+        "d": "Expected Q1/Q2 2026",
+        "v": "crypto",
+        "s": "monitoring",
+        "a": "JJ + Mina"
+      },
+      {
+        "t": "CSAM / Chat Control Trilogue",
+        "r": "EP + Council",
+        "d": "Ongoing 2026",
+        "v": "privacy",
+        "s": "active",
+        "a": "JJ + Mina"
+      },
+      {
+        "t": "GPAI Code of Practice",
+        "r": "EU AI Office",
+        "d": "Ongoing",
+        "v": "ai",
+        "s": "active",
+        "a": "Norberto + Maira"
+      },
+      {
+        "t": "MISP — oppose ESMA supervision",
+        "r": "EP ECON",
+        "d": "Ongoing",
+        "v": "market",
+        "s": "active",
+        "a": "JJ + Josh"
+      },
+      {
+        "t": "MiCA Level II/III — Policy Asks tracker",
+        "r": "EBA/ESMA",
+        "d": "Ongoing",
+        "v": "crypto",
+        "s": "active",
+        "a": "JJ + Mina"
+      },
+      {
+        "t": "ESMA Reverse Solicitation Guidelines",
+        "r": "ESMA",
+        "d": "Filed 2025",
+        "v": "crypto",
+        "s": "submitted",
+        "a": "JJ"
+      },
+      {
+        "t": "EU-US Alignment / GENIUS Act Briefing",
+        "r": "EC/FISMA",
+        "d": "Filed 2025",
+        "v": "crypto",
+        "s": "submitted",
+        "a": "JJ + Mina"
+      }
+    ]
+  },
+  {
+    "id": "uk",
+    "flag": "🇬🇧",
+    "n": "United Kingdom",
+    "lat": 55,
+    "lng": -3,
+    "r": "europe",
+    "tier": "t1",
+    "crypto": {
+      "s": "active",
+      "h": "FCA regime expected H2 2026. HMRC deadline 7 May 2026.",
+      "reg": [
+        "FCA",
+        "BoE",
+        "HMT",
+        "HMRC"
+      ],
+      "tl": [
+        {
+          "d": "Jul 2025",
+          "e": "FCA CP25-14 stablecoin rules",
+          "done": true
+        },
+        {
+          "d": "7 May 2026",
+          "e": "HMRC taxation deadline",
+          "done": false
+        },
+        {
+          "d": "H2 2026",
+          "e": "FCA Policy Statement",
+          "done": false
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "Direct FCA licensing. HMRC taxation critical."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "FinProms, HMRC CARF/RCASP classification."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "Exchange licensing."
+        },
+        "marketmaker": {
+          "l": "HIGH",
+          "n": "FCA A&D + MARC regime."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "No specific licensing."
+        }
+      }
+    },
+    "ai": {
+      "s": "active",
+      "h": "Sector-specific AI governance. No comprehensive AI Act.",
+      "reg": [
+        "ICO",
+        "FCA",
+        "AI Safety Institute"
+      ],
+      "tl": [
+        {
+          "d": "2024",
+          "e": "AI Safety Institute established",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "MEDIUM",
+          "n": "FCA algorithmic trading rules."
+        },
+        "chainanalytics": {
+          "l": "MEDIUM",
+          "n": "Transparency obligations developing."
+        }
+      }
+    },
+    "privacy": {
+      "s": "live",
+      "h": "UK GDPR + DPA 2018 in force. ICO Blockchain Guidance Nov 2025.",
+      "reg": [
+        "ICO"
+      ],
+      "tl": [
+        {
+          "d": "Jan 2021",
+          "e": "UK GDPR applied post-Brexit",
+          "done": true
+        },
+        {
+          "d": "Nov 2025",
+          "e": "ICO Blockchain Guidance",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "On-chain transaction data."
+        },
+        "infrastructure": {
+          "l": "HIGH",
+          "n": "Ledger E2EE. CSAM-equivalent risks."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "Immutability vs. erasure."
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "Standard GDPR."
+        },
+        "chainanalytics": {
+          "l": "HIGH",
+          "n": "Analytics of UK user data."
+        }
+      }
+    },
+    "market": {
+      "s": "active",
+      "h": "FCA A&D + MARC. Digital Securities Sandbox live.",
+      "reg": [
+        "FCA",
+        "BoE"
+      ],
+      "tl": [
+        {
+          "d": "Feb 2026",
+          "e": "MARC + A&D consultation closed",
+          "done": true
+        },
+        {
+          "d": "H2 2026",
+          "e": "FCA Policy Statement",
+          "done": false
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "LOW",
+          "n": "Indirect."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "Layer 1 as infrastructure."
+        },
+        "marketmaker": {
+          "l": "CRITICAL",
+          "n": "Core licensing requirement. Market abuse rules apply."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "consults": [
+      {
+        "t": "HMRC Stablecoin Taxation",
+        "r": "HMRC",
+        "d": "7 May 2026",
+        "v": "crypto",
+        "s": "drafting",
+        "a": "Josh + Mina"
+      }
+    ]
+  },
+  {
+    "id": "france",
+    "flag": "🇫🇷",
+    "n": "France",
+    "lat": 46.2,
+    "lng": 2.2,
+    "r": "europe",
+    "tier": "t1",
+    "crypto": {
+      "s": "live",
+      "h": "MiCA fully applicable. France most aggressive EU jurisdiction on DeFi — AMF/ACPR smart contract certification consultation. DCGG filed response opposing mandatory certification. Ledger HQ: Paris.",
+      "reg": [
+        "AMF",
+        "ACPR"
+      ],
+      "tl": [
+        {
+          "d": "2025",
+          "e": "AMF/ACPR smart contract certification consultation",
+          "done": true
+        },
+        {
+          "d": "Jan 2025",
+          "e": "DCGG response filed opposing mandatory certification",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "MiCA EMT/ART rules apply fully. AMF aggressive on DeFi scope."
+        },
+        "infrastructure": {
+          "l": "HIGH",
+          "n": "France aggressive on DeFi scope — Ledger HQ jurisdiction."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON DeFi/dApps under MiCA."
+        },
+        "marketmaker": {
+          "l": "HIGH",
+          "n": "Wintermute EU MiCA licensing."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "live",
+      "h": "EU AI Act applies directly. France strong national AI investment agenda (€6B+).",
+      "reg": [
+        "EU AI Act",
+        "CNIL",
+        "French national AI strategy"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "Agentic AI on TRON."
+        },
+        "marketmaker": {
+          "l": "HIGH",
+          "n": "Algorithmic trading AI classification."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "privacy": {
+      "s": "live",
+      "h": "GDPR + CNIL. CNIL very active on blockchain and cookie enforcement.",
+      "reg": [
+        "CNIL",
+        "GDPR"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "User data."
+        },
+        "infrastructure": {
+          "l": "HIGH",
+          "n": "Ledger France HQ — CNIL jurisdiction."
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "HIGH",
+          "n": "CNIL analytics enforcement."
+        }
+      }
+    },
+    "market": {
+      "s": "live",
+      "h": "AMF very active on MiCA implementation. France DeFi consultation ongoing.",
+      "reg": [
+        "AMF",
+        "ACPR"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "MiCA ART classification."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON DeFi scope."
+        },
+        "marketmaker": {
+          "l": "HIGH",
+          "n": "AMF MiCA CASP licensing."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "consults": [
+      {
+        "t": "ACPR/AMF Smart Contract Certification — Response",
+        "r": "AMF/ACPR",
+        "d": "Jan 2025",
+        "v": "crypto",
+        "s": "submitted",
+        "a": "JJ"
+      },
+      {
+        "t": "DCGG/Ledger DeFi Decentralisation Position Paper (DFSA)",
+        "r": "AMF",
+        "d": "Filed 2025",
+        "v": "crypto",
+        "s": "submitted",
+        "a": "JJ + Mina"
+      }
+    ]
+  },
+  {
+    "id": "portugal",
+    "flag": "🇵🇹",
+    "n": "Portugal",
+    "lat": 39.4,
+    "lng": -8.2,
+    "r": "europe",
+    "tier": "t1",
+    "crypto": {
+      "s": "live",
+      "h": "MiCA fully implemented. First EU member state to complete MiCA domestic transposition late 2024. DCGG produced Portugal MiCA law brief Dec 2024.",
+      "reg": [
+        "CMVM",
+        "Banco de Portugal"
+      ],
+      "tl": [
+        {
+          "d": "Dec 2024",
+          "e": "Portugal finalises MiCA domestic transposition",
+          "done": true
+        },
+        {
+          "d": "2025",
+          "e": "First MiCA licence applications under Portuguese framework",
+          "done": false
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "MiCA EMT licence required for EUR stablecoin issuance."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "CASP licensing required."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "MiCA CASP compliance."
+        },
+        "marketmaker": {
+          "l": "HIGH",
+          "n": "Wintermute MiCA CASP licence."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "live",
+      "h": "EU AI Act applies directly. No national AI-specific legislation.",
+      "reg": [
+        "EU AI Act",
+        "CNPD"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "live",
+      "h": "GDPR fully implemented. CNPD (Portuguese DPA) active.",
+      "reg": [
+        "GDPR",
+        "CNPD"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "market": {
+      "s": "active",
+      "h": "CMVM as MiCA NCA. MiCA CASP rules apply.",
+      "reg": [
+        "MiCA",
+        "CMVM"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": [
+      {
+        "t": "Portugal MiCA Law Brief — A Turning Point for Crypto Businesses",
+        "r": "CMVM",
+        "d": "Dec 2024",
+        "v": "crypto",
+        "s": "submitted",
+        "a": "JJ + Mina"
+      }
+    ]
+  },
+  {
+    "id": "nigeria",
+    "flag": "🇳🇬",
+    "n": "Nigeria",
+    "lat": 9,
+    "lng": 8,
+    "r": "africa",
+    "tier": "t1",
+    "crypto": {
+      "s": "active",
+      "h": "ISA 2025 — stablecoins as securities. Very high USDT P2P usage. CBN reversed crypto ban 2023.",
+      "reg": [
+        "SEC Nigeria",
+        "CBN"
+      ],
+      "tl": [
+        {
+          "d": "2023",
+          "e": "CBN reversed crypto ban",
+          "done": true
+        },
+        {
+          "d": "2025",
+          "e": "ISA 2025 enacted",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "ISA 2025 classification risk. Very high USDT P2P usage."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "Ledger availability."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON as dominant USDT network."
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "early",
+      "h": "NITDA developing AI strategy.",
+      "reg": [
+        "NITDA"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "active",
+      "h": "NDPA 2023 — operational. NDPC active.",
+      "reg": [
+        "NDPC"
+      ],
+      "tl": [
+        {
+          "d": "2023",
+          "e": "NDPA enacted",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "User data."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "Ledger data."
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "HIGH",
+          "n": "Analytics."
+        }
+      }
+    },
+    "market": {
+      "s": "early",
+      "h": "NGX exploring tokenisation.",
+      "reg": [
+        "NGX",
+        "SEC Nigeria"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "USDT as dollar access."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON as USDT delivery."
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "consults": []
+  },
+  {
+    "id": "kenya",
+    "flag": "🇰🇪",
+    "n": "Kenya",
+    "lat": -0.9,
+    "lng": 37,
+    "r": "africa",
+    "tier": "t1",
+    "crypto": {
+      "s": "active",
+      "h": "CBK VASP Bill — DCGG response filed Feb 2026. M-Pesa integration context.",
+      "reg": [
+        "CBK",
+        "CMA Kenya"
+      ],
+      "tl": [
+        {
+          "d": "Jan 2026",
+          "e": "CBK Draft SI on VASPs",
+          "done": true
+        },
+        {
+          "d": "Feb 2026",
+          "e": "DCGG response filed",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "USDT widely used. M-Pesa integration context."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "Hardware wallet rules."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON as USDT delivery."
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "early",
+      "h": "Early stage.",
+      "reg": [
+        "CA Kenya"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "live",
+      "h": "DPA 2019 in force.",
+      "reg": [
+        "ODPC"
+      ],
+      "tl": [
+        {
+          "d": "2019",
+          "e": "DPA 2019 in force",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "User data."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "Ledger data."
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "HIGH",
+          "n": "Analytics."
+        }
+      }
+    },
+    "market": {
+      "s": "early",
+      "h": "NSE exploring tokenisation.",
+      "reg": [
+        "NSE",
+        "CMA Kenya"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "USDT bridges mobile money ecosystem."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "consults": [
+      {
+        "t": "Kenya CBK VASP Bill follow-up",
+        "r": "CBK",
+        "d": "Ongoing",
+        "v": "crypto",
+        "s": "active",
+        "a": "Breitner"
+      }
+    ]
+  },
+  {
+    "id": "ghana",
+    "flag": "🇬🇭",
+    "n": "Ghana",
+    "lat": 7.9,
+    "lng": -1,
+    "r": "africa",
+    "tier": "t1",
+    "crypto": {
+      "s": "active",
+      "h": "BOG Virtual Assets Regulatory Office established. Ghana SEC VA oversight. DCGG met BOG + Ghana SEC Dec 2025 — no USDT restrictions confirmed.",
+      "reg": [
+        "BOG",
+        "Ghana SEC"
+      ],
+      "tl": [
+        {
+          "d": "Dec 2025",
+          "e": "DCGG met BOG + Ghana SEC",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "USDT widely used. No restrictions confirmed Dec 2025."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "Hardware wallet oversight."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON as USDT delivery."
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "early",
+      "h": "Early stage.",
+      "reg": [],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "active",
+      "h": "Data Protection Act 2012 in force. DPC active.",
+      "reg": [
+        "DPC Ghana"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "market": {
+      "s": "early",
+      "h": "GSE (Ghana Stock Exchange) exploring tokenisation.",
+      "reg": [
+        "BOG",
+        "Ghana SEC"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": []
+  },
+  {
+    "id": "southafrica",
+    "flag": "🇿🇦",
+    "n": "South Africa",
+    "lat": -30,
+    "lng": 25,
+    "r": "africa",
+    "tier": "t1",
+    "crypto": {
+      "s": "live",
+      "h": "FSCA declared crypto assets as financial products 2022. CASP licensing live from 2023. Most regulated African market.",
+      "reg": [
+        "FSCA",
+        "SARB",
+        "FIC"
+      ],
+      "tl": [
+        {
+          "d": "2022",
+          "e": "Crypto assets declared financial products",
+          "done": true
+        },
+        {
+          "d": "2023",
+          "e": "CASP licensing regime live",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "USDT classified as financial product — CASP licensing required."
+        },
+        "infrastructure": {
+          "l": "HIGH",
+          "n": "Ledger CASP classification risk."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON as USDT delivery."
+        },
+        "marketmaker": {
+          "l": "HIGH",
+          "n": "FSCA CASP licensing for market-making."
+        },
+        "chainanalytics": {
+          "l": "MEDIUM",
+          "n": "FIC analytics obligations."
+        }
+      }
+    },
+    "ai": {
+      "s": "active",
+      "h": "SA National AI Policy Framework 2024.",
+      "reg": [
+        "DSAI"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "live",
+      "h": "POPIA (Protection of Personal Information Act) fully in force from 2021.",
+      "reg": [
+        "POPIA",
+        "Information Regulator"
+      ],
+      "tl": [
+        {
+          "d": "Jul 2021",
+          "e": "POPIA fully in force",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "User data."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "Ledger data."
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "HIGH",
+          "n": "Analytics of SA users."
+        }
+      }
+    },
+    "market": {
+      "s": "live",
+      "h": "JSE exploring tokenisation. FSCA most advanced African market regulator.",
+      "reg": [
+        "FSCA",
+        "JSE"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "USDT as ZAR hedge."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON as stablecoin rail."
+        },
+        "marketmaker": {
+          "l": "HIGH",
+          "n": "FSCA CASP licensing."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "consults": []
+  },
+  {
+    "id": "tanzania",
+    "flag": "🇹🇿",
+    "n": "Tanzania",
+    "lat": -6,
+    "lng": 35,
+    "r": "africa",
+    "tier": "t2",
+    "crypto": {
+      "s": "early",
+      "h": "BoT (Bank of Tanzania) issued digital currency guidelines 2023. Framework developing.",
+      "reg": [
+        "Bank of Tanzania"
+      ],
+      "tl": [
+        {
+          "d": "2023",
+          "e": "BoT digital currency guidelines",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "USDT usage growing."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "early",
+      "h": "Early stage.",
+      "reg": [],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "early",
+      "h": "Electronic and Postal Communications Act covers data aspects.",
+      "reg": [],
+      "tl": [],
+      "impact": {}
+    },
+    "market": {
+      "s": "early",
+      "h": "No specific market infra regulation.",
+      "reg": [
+        "DSE"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": []
+  },
+  {
+    "id": "rwanda",
+    "flag": "🇷🇼",
+    "n": "Rwanda",
+    "lat": -2,
+    "lng": 30,
+    "r": "africa",
+    "tier": "t2",
+    "crypto": {
+      "s": "early",
+      "h": "NBR (National Bank of Rwanda) monitoring digital assets. Rwanda Fintech innovation-friendly.",
+      "reg": [
+        "NBR"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "Growing USDT adoption."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "early",
+      "h": "Rwanda National AI Policy under development.",
+      "reg": [],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "active",
+      "h": "Law No. 058/2021 on Personal Data Protection in force.",
+      "reg": [
+        "RURA"
+      ],
+      "tl": [
+        {
+          "d": "2021",
+          "e": "Data Protection Law enacted",
+          "done": true
+        }
+      ],
+      "impact": {}
+    },
+    "market": {
+      "s": "early",
+      "h": "RSE exploring tokenisation.",
+      "reg": [
+        "CMA Rwanda"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": []
+  },
+  {
+    "id": "senegal",
+    "flag": "🇸🇳",
+    "n": "Sénégal",
+    "lat": 14.5,
+    "lng": -14.4,
+    "r": "africa",
+    "tier": "t2",
+    "crypto": {
+      "s": "early",
+      "h": "BCEAO (West African Central Bank) covers Senegal. BCEAO issued digital asset guidelines 2022 across WAEMU zone.",
+      "reg": [
+        "BCEAO",
+        "CREPMF"
+      ],
+      "tl": [
+        {
+          "d": "2022",
+          "e": "BCEAO digital asset guidelines",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "USDT adoption growing in Francophone Africa."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "early",
+      "h": "Early stage.",
+      "reg": [],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "active",
+      "h": "Law No. 2008-12 on Personal Data Protection (CDP).",
+      "reg": [
+        "CDP"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "market": {
+      "s": "early",
+      "h": "BRVM (Bourse Régionale) exploring tokenisation.",
+      "reg": [
+        "CREPMF"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": []
+  },
+  {
+    "id": "ethiopia",
+    "flag": "🇪🇹",
+    "n": "Ethiopia",
+    "lat": 9,
+    "lng": 40,
+    "r": "africa",
+    "tier": "t2",
+    "crypto": {
+      "s": "early",
+      "h": "NBE (National Bank of Ethiopia) issued directive allowing forex transactions in crypto 2023. One of Africa's fastest-growing crypto markets by user count.",
+      "reg": [
+        "NBE"
+      ],
+      "tl": [
+        {
+          "d": "2023",
+          "e": "NBE forex directive covering crypto",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "USDT for forex access."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "early",
+      "h": "Early stage.",
+      "reg": [],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "early",
+      "h": "Personal Data Protection Proclamation pending.",
+      "reg": [],
+      "tl": [],
+      "impact": {}
+    },
+    "market": {
+      "s": "early",
+      "h": "ESX (Ethiopian Securities Exchange) launched 2023.",
+      "reg": [
+        "ESX",
+        "NBE"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": []
+  },
+  {
+    "id": "ivorycoast",
+    "flag": "🇨🇮",
+    "n": "Côte d'Ivoire",
+    "lat": 7.5,
+    "lng": -5.5,
+    "r": "africa",
+    "tier": "t2",
+    "crypto": {
+      "s": "early",
+      "h": "BCEAO zone. Crypto adoption growing. Regulatory framework via WAEMU/BCEAO.",
+      "reg": [
+        "BCEAO",
+        "CREPMF"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "USDT adoption in WAEMU zone."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "early",
+      "h": "Early stage.",
+      "reg": [],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "active",
+      "h": "Data protection law in force (ARTCI oversight).",
+      "reg": [
+        "ARTCI"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "market": {
+      "s": "early",
+      "h": "BRVM member. Early tokenisation discussion.",
+      "reg": [
+        "CREPMF"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": []
+  },
+  {
+    "id": "uganda",
+    "flag": "🇺🇬",
+    "n": "Uganda",
+    "lat": 1,
+    "lng": 32,
+    "r": "africa",
+    "tier": "t2",
+    "crypto": {
+      "s": "early",
+      "h": "BOU (Bank of Uganda) cautionary stance but growing adoption. No formal framework yet.",
+      "reg": [
+        "BOU",
+        "CMA Uganda"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "USDT for mobile money alternatives."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "early",
+      "h": "Early stage.",
+      "reg": [],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "active",
+      "h": "Data Protection and Privacy Act 2019.",
+      "reg": [
+        "PDPO Uganda"
+      ],
+      "tl": [
+        {
+          "d": "2019",
+          "e": "Data Protection Act",
+          "done": true
+        }
+      ],
+      "impact": {}
+    },
+    "market": {
+      "s": "early",
+      "h": "USE (Uganda Securities Exchange) monitoring tokenisation.",
+      "reg": [
+        "CMA Uganda"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": []
+  },
+  {
+    "id": "uae",
+    "flag": "🇦🇪",
+    "n": "UAE",
+    "lat": 24,
+    "lng": 54,
+    "r": "mena",
+    "tier": "t1",
+    "sub": "me",
+    "crypto": {
+      "s": "live",
+      "h": "VARA, ADGM FSRA, DFSA all live. CBUAE Innovation Hub May 2026. FATF June 2026.",
+      "reg": [
+        "VARA",
+        "ADGM FSRA",
+        "DFSA",
+        "CBUAE"
+      ],
+      "tl": [
+        {
+          "d": "Jan 2026",
+          "e": "DFSA CP168 effective",
+          "done": true
+        },
+        {
+          "d": "May 2026",
+          "e": "CBUAE Innovation Hub",
+          "done": false
+        },
+        {
+          "d": "Jun 2026",
+          "e": "FATF T3 Workshop",
+          "done": false
+        },
+        {
+          "d": "Sept 2026",
+          "e": "Ledger Article 62 deadline",
+          "done": false
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "CRITICAL",
+          "n": "PTSR registration under consideration. AEDt planned."
+        },
+        "infrastructure": {
+          "l": "CRITICAL",
+          "n": "Article 62: AED 1B fine risk. Deadline Sept 2026."
+        },
+        "layer1": {
+          "l": "HIGH",
+          "n": "FSRA CP10/2025 staking rules."
+        },
+        "marketmaker": {
+          "l": "HIGH",
+          "n": "VARA + DFSA market-making rules."
+        },
+        "chainanalytics": {
+          "l": "MEDIUM",
+          "n": "VARA oversight growing."
+        }
+      }
+    },
+    "ai": {
+      "s": "active",
+      "h": "UAE National AI Strategy 2031. Light-touch governance.",
+      "reg": [
+        "Ministry of AI",
+        "TII"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "active",
+      "h": "PDPL implementing. DIFC + ADGM own frameworks.",
+      "reg": [
+        "UAE Data Office",
+        "DIFC",
+        "ADGM"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "User data."
+        },
+        "infrastructure": {
+          "l": "HIGH",
+          "n": "Ledger across three zones."
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "HIGH",
+          "n": "Analytics."
+        }
+      }
+    },
+    "market": {
+      "s": "live",
+      "h": "ADGM and DIFC — leading regional financial infrastructure.",
+      "reg": [
+        "ADGM FSRA",
+        "DFSA"
+      ],
+      "tl": [
+        {
+          "d": "H2 2026",
+          "e": "FSRA DeFi regulation",
+          "done": false
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "N/A"
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "HIGH",
+          "n": "TRON DeFi/staking."
+        },
+        "marketmaker": {
+          "l": "HIGH",
+          "n": "ADGM + DIFC market-making."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "consults": [
+      {
+        "t": "CBUAE Innovation Hub — preparation",
+        "r": "CBUAE",
+        "d": "End May 2026",
+        "v": "crypto",
+        "s": "active",
+        "a": "Soha + Francesca"
+      },
+      {
+        "t": "FATF UAE T3 Workshop",
+        "r": "NAMLCFTC",
+        "d": "June 2026",
+        "v": "crypto",
+        "s": "active",
+        "a": "Francesca + Nick"
+      },
+      {
+        "t": "Ledger Article 62 — CBUAE guidance",
+        "r": "CBUAE",
+        "d": "Sept 2026",
+        "v": "privacy",
+        "s": "active",
+        "a": "Nick + Soha"
+      }
+    ]
+  },
+  {
+    "id": "saudi",
+    "flag": "🇸🇦",
+    "n": "Saudi Arabia",
+    "lat": 23.9,
+    "lng": 45,
+    "r": "mena",
+    "tier": "t1",
+    "sub": "me",
+    "crypto": {
+      "s": "active",
+      "h": "CMA digital asset framework developing. SAMA CBDC (Project Aber). Vision 2030 financial innovation agenda.",
+      "reg": [
+        "CMA Saudi",
+        "SAMA"
+      ],
+      "tl": [
+        {
+          "d": "2023",
+          "e": "CMA consultation on digital asset regulation",
+          "done": true
+        },
+        {
+          "d": "2026",
+          "e": "CMA framework expected",
+          "done": false
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "SAMA and CMA framework will directly impact USDT operations."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "Ledger classification."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON as stablecoin rail."
+        },
+        "marketmaker": {
+          "l": "MEDIUM",
+          "n": "CMA licensing."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "active",
+      "h": "Saudi National AI Strategy. SDAIA active. Vision 2030 AI investment.",
+      "reg": [
+        "SDAIA",
+        "NDMO"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "live",
+      "h": "PDPL (Personal Data Protection Law) in force from 2023.",
+      "reg": [
+        "NDMO"
+      ],
+      "tl": [
+        {
+          "d": "2023",
+          "e": "PDPL in force",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "User data."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "Ledger data."
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "HIGH",
+          "n": "Analytics."
+        }
+      }
+    },
+    "market": {
+      "s": "active",
+      "h": "Tadawul exploring tokenisation. CMA active.",
+      "reg": [
+        "CMA Saudi",
+        "Tadawul"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": []
+  },
+  {
+    "id": "bahrain",
+    "flag": "🇧🇭",
+    "n": "Bahrain",
+    "lat": 26,
+    "lng": 50.5,
+    "r": "mena",
+    "tier": "t1",
+    "sub": "me",
+    "crypto": {
+      "s": "live",
+      "h": "CBB (Central Bank of Bahrain) crypto asset module in force from 2019 — first comprehensive MENA framework. Class M + Class E licensing.",
+      "reg": [
+        "CBB"
+      ],
+      "tl": [
+        {
+          "d": "2019",
+          "e": "CBB crypto asset module — first in MENA",
+          "done": true
+        },
+        {
+          "d": "2022",
+          "e": "CBB updated framework",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "CBB module covers stablecoin issuers — USDT classification important."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "Ledger licensing."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON compliance."
+        },
+        "marketmaker": {
+          "l": "HIGH",
+          "n": "CBB Class E (exchange) licence required."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "active",
+      "h": "Bahrain AI Strategy. EDB innovation-friendly.",
+      "reg": [
+        "CBB",
+        "EDB"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "live",
+      "h": "PDPL (Personal Data Protection Law) 2018.",
+      "reg": [
+        "PDPL Bahrain"
+      ],
+      "tl": [
+        {
+          "d": "2018",
+          "e": "PDPL in force",
+          "done": true
+        }
+      ],
+      "impact": {}
+    },
+    "market": {
+      "s": "active",
+      "h": "Bahrain Bourse exploring digital securities. CBB active on tokenisation.",
+      "reg": [
+        "CBB",
+        "Bahrain Bourse"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": []
+  },
+  {
+    "id": "kuwait",
+    "flag": "🇰🇼",
+    "n": "Kuwait",
+    "lat": 29.3,
+    "lng": 47.7,
+    "r": "mena",
+    "tier": "t1",
+    "sub": "me",
+    "crypto": {
+      "s": "active",
+      "h": "CMA Kuwait developing digital asset framework. CBK restrictive historically but evolving. Large retail crypto adoption.",
+      "reg": [
+        "CMA Kuwait",
+        "CBK"
+      ],
+      "tl": [
+        {
+          "d": "2023",
+          "e": "CMA Kuwait consultation on digital assets",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "USDT widely used — regulatory clarity needed."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "Ledger classification."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON as USDT delivery."
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "active",
+      "h": "Kuwait National AI Strategy 2035.",
+      "reg": [
+        "CITRA"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "active",
+      "h": "Law No. 20/2014 on Data Privacy developing further.",
+      "reg": [
+        "MCIT Kuwait"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "market": {
+      "s": "early",
+      "h": "Boursa Kuwait. Early digital securities discussion.",
+      "reg": [
+        "CMA Kuwait"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": []
+  },
+  {
+    "id": "oman",
+    "flag": "🇴🇲",
+    "n": "Oman",
+    "lat": 22,
+    "lng": 57,
+    "r": "mena",
+    "tier": "t2",
+    "sub": "me",
+    "crypto": {
+      "s": "active",
+      "h": "CMA Oman issued virtual asset regulations 2023. CBO cautious. Growing framework.",
+      "reg": [
+        "CMA Oman",
+        "CBO"
+      ],
+      "tl": [
+        {
+          "d": "2023",
+          "e": "CMA Oman virtual asset regulations",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "USDT adoption growing."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "early",
+      "h": "Oman National AI Strategy. OAS.",
+      "reg": [],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "active",
+      "h": "Personal Data Protection Law 2022.",
+      "reg": [
+        "ITA Oman"
+      ],
+      "tl": [
+        {
+          "d": "2022",
+          "e": "PDPL Oman enacted",
+          "done": true
+        }
+      ],
+      "impact": {}
+    },
+    "market": {
+      "s": "early",
+      "h": "MSX exploring tokenisation.",
+      "reg": [
+        "CMA Oman"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": []
+  },
+  {
+    "id": "qatar",
+    "flag": "🇶🇦",
+    "n": "Qatar",
+    "lat": 25.3,
+    "lng": 51.2,
+    "r": "mena",
+    "tier": "t2",
+    "sub": "me",
+    "crypto": {
+      "s": "active",
+      "h": "QFCRA (Qatar Financial Centre Regulatory Authority) has digital assets framework. QCB cautious on retail crypto.",
+      "reg": [
+        "QFCRA",
+        "QCB"
+      ],
+      "tl": [
+        {
+          "d": "2023",
+          "e": "QFCRA digital asset rules",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "QFCRA framework may cover stablecoin issuers in QFC."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "MEDIUM",
+          "n": "QFCRA market-making rules."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "active",
+      "h": "Qatar National AI Strategy. QF research active.",
+      "reg": [
+        "MCIT Qatar"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "active",
+      "h": "PDPA 2016. QFC own data protection framework.",
+      "reg": [
+        "QFCA",
+        "QFC"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "market": {
+      "s": "active",
+      "h": "QFC active on tokenised assets. Qatar Exchange.",
+      "reg": [
+        "QFCRA",
+        "QE"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": []
+  },
+  {
+    "id": "jordan",
+    "flag": "🇯🇴",
+    "n": "Jordan",
+    "lat": 31,
+    "lng": 36,
+    "r": "mena",
+    "tier": "t2",
+    "sub": "me",
+    "crypto": {
+      "s": "early",
+      "h": "CBJ (Central Bank of Jordan) cautious. Jordan Securities Commission monitoring. Nascent framework.",
+      "reg": [
+        "CBJ",
+        "JSC"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "USDT P2P usage growing."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "early",
+      "h": "Jordan AI Strategy under development.",
+      "reg": [],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "active",
+      "h": "Personal Data Protection Law 2023.",
+      "reg": [
+        "JNCPD"
+      ],
+      "tl": [
+        {
+          "d": "2023",
+          "e": "Data Protection Law enacted",
+          "done": true
+        }
+      ],
+      "impact": {}
+    },
+    "market": {
+      "s": "early",
+      "h": "ASE (Amman Stock Exchange) monitoring.",
+      "reg": [
+        "JSC"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": []
+  },
+  {
+    "id": "egypt",
+    "flag": "🇪🇬",
+    "n": "Egypt",
+    "lat": 27,
+    "lng": 30,
+    "r": "mena",
+    "tier": "t1",
+    "sub": "na",
+    "crypto": {
+      "s": "active",
+      "h": "FRA (Financial Regulatory Authority) issued crypto asset regulation framework 2022. CBE historically restrictive but evolving. Large market — 100M+ population.",
+      "reg": [
+        "FRA",
+        "CBE"
+      ],
+      "tl": [
+        {
+          "d": "2022",
+          "e": "FRA virtual asset framework",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "USDT widely used for EGP hedge. CBE position critical."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "Ledger classification."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON as USDT delivery."
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "active",
+      "h": "Egypt National AI Strategy 2025. MCIT active.",
+      "reg": [
+        "MCIT Egypt",
+        "NTRA"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "active",
+      "h": "Data Protection Law 151/2020 in force.",
+      "reg": [
+        "PDPO Egypt"
+      ],
+      "tl": [
+        {
+          "d": "2020",
+          "e": "Data Protection Law enacted",
+          "done": true
+        }
+      ],
+      "impact": {}
+    },
+    "market": {
+      "s": "active",
+      "h": "EGX (Egyptian Exchange) tokenisation pilot. FRA active.",
+      "reg": [
+        "FRA",
+        "EGX"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": []
+  },
+  {
+    "id": "morocco",
+    "flag": "🇲🇦",
+    "n": "Morocco",
+    "lat": 31.8,
+    "lng": -7,
+    "r": "mena",
+    "tier": "t1",
+    "sub": "na",
+    "crypto": {
+      "s": "active",
+      "h": "AMMC (Autorité Marocaine du Marché des Capitaux) developing framework. Bank Al-Maghrib (BAM) cautious historically but evolving rapidly 2024-2025. Large informal crypto economy.",
+      "reg": [
+        "BAM (Bank Al-Maghrib)",
+        "AMMC"
+      ],
+      "tl": [
+        {
+          "d": "2025",
+          "e": "BAM initiates formal digital asset regulation process",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "USDT widely used. BAM framework critical for operations."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "Ledger classification."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON as USDT delivery."
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "active",
+      "h": "Morocco Digital Strategy. Strong AI research ecosystem.",
+      "reg": [
+        "DNUM",
+        "CNDP"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "live",
+      "h": "Law 09-08 on Data Protection in force. CNDP active.",
+      "reg": [
+        "CNDP"
+      ],
+      "tl": [
+        {
+          "d": "2009",
+          "e": "Law 09-08 in force",
+          "done": true
+        }
+      ],
+      "impact": {}
+    },
+    "market": {
+      "s": "active",
+      "h": "Casablanca Stock Exchange + AMMC active on capital markets.",
+      "reg": [
+        "AMMC",
+        "BVC"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": []
+  },
+  {
+    "id": "tunisia",
+    "flag": "🇹🇳",
+    "n": "Tunisia",
+    "lat": 33.9,
+    "lng": 9.5,
+    "r": "mena",
+    "tier": "t2",
+    "sub": "na",
+    "crypto": {
+      "s": "early",
+      "h": "BCT (Banque Centrale de Tunisie) issued CBDC research. Crypto trading technically prohibited but P2P active. Framework under development.",
+      "reg": [
+        "BCT",
+        "CMF Tunisia"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "USDT P2P usage growing despite restrictions."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "active",
+      "h": "Smart Tunisia strategy. AI investment growing.",
+      "reg": [],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "live",
+      "h": "Organic Law 63-2004 on Data Protection. INPDP active.",
+      "reg": [
+        "INPDP"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "market": {
+      "s": "early",
+      "h": "Bourse de Tunis. No specific crypto market infra.",
+      "reg": [
+        "CMF Tunisia"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": []
+  },
+  {
+    "id": "southkorea",
+    "flag": "🇰🇷",
+    "n": "South Korea",
+    "lat": 37,
+    "lng": 127,
+    "r": "asia",
+    "tier": "t1",
+    "crypto": {
+      "s": "active",
+      "h": "DABA Phase 2 + 51% bank equity rule. Seoul seminar 12 May 2026.",
+      "reg": [
+        "FSC",
+        "FSS",
+        "National Assembly"
+      ],
+      "tl": [
+        {
+          "d": "Jul 2024",
+          "e": "Virtual Asset User Protection Act Phase 1",
+          "done": true
+        },
+        {
+          "d": "12 May 2026",
+          "e": "DCGG Seoul Seminar",
+          "done": false
+        },
+        {
+          "d": "Late 2026",
+          "e": "DABA Phase 2",
+          "done": false
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "CRITICAL",
+          "n": "51% bank equity rule is core battleground."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON as Layer 1 — DABA Phase 2."
+        },
+        "marketmaker": {
+          "l": "MEDIUM",
+          "n": "Market-making rules under VAUPA."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "live",
+      "h": "AI Basic Act — world-first national AI law — Jan 2026.",
+      "reg": [
+        "Ministry of Science and ICT"
+      ],
+      "tl": [
+        {
+          "d": "Jan 2026",
+          "e": "AI Basic Act in force",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "DeAI systems may trigger AI Act."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "Autonomous agents."
+        },
+        "marketmaker": {
+          "l": "HIGH",
+          "n": "Algorithmic trading = high-impact AI."
+        },
+        "chainanalytics": {
+          "l": "MEDIUM",
+          "n": "Transparency obligations."
+        }
+      }
+    },
+    "privacy": {
+      "s": "live",
+      "h": "PIPA — strong enforcement.",
+      "reg": [
+        "PIPC"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "User data."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "Ledger data."
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "HIGH",
+          "n": "Transaction analytics."
+        }
+      }
+    },
+    "market": {
+      "s": "active",
+      "h": "VAUPA Phase 2 + won-stablecoin legislation developing.",
+      "reg": [
+        "FSC",
+        "Bank of Korea"
+      ],
+      "tl": [
+        {
+          "d": "Late 2026",
+          "e": "DABA Phase 2 expected",
+          "done": false
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "Won-stablecoin competition. Critical positioning."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON as stablecoin infrastructure."
+        },
+        "marketmaker": {
+          "l": "HIGH",
+          "n": "Market-making rules."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "consults": [
+      {
+        "t": "Seoul National Assembly Seminar — preparation",
+        "r": "National Assembly",
+        "d": "12 May 2026",
+        "v": "crypto",
+        "s": "active",
+        "a": "Timothy Shin"
+      }
+    ]
+  },
+  {
+    "id": "singapore",
+    "flag": "🇸🇬",
+    "n": "Singapore",
+    "lat": 1.3,
+    "lng": 103.8,
+    "r": "asia",
+    "tier": "t1",
+    "crypto": {
+      "s": "live",
+      "h": "MAS PSA live. 8th licence type H1 2026. BLOOM trials.",
+      "reg": [
+        "MAS"
+      ],
+      "tl": [
+        {
+          "d": "2020",
+          "e": "PSA enacted",
+          "done": true
+        },
+        {
+          "d": "Jun 2025",
+          "e": "DTSP regime",
+          "done": true
+        },
+        {
+          "d": "H1 2026",
+          "e": "New 8th licence type",
+          "done": false
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "CRITICAL",
+          "n": "New licence type = most urgent Asia engagement."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "PSA classification."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "Exchanges must be MAS licensed."
+        },
+        "marketmaker": {
+          "l": "HIGH",
+          "n": "MAS MPI licence required."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "active",
+      "h": "MAS AI governance for financial services (principles-based).",
+      "reg": [
+        "MAS",
+        "IMDA"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "MEDIUM",
+          "n": "MAS AI governance for trading."
+        },
+        "chainanalytics": {
+          "l": "MEDIUM",
+          "n": "AI analytics oversight."
+        }
+      }
+    },
+    "privacy": {
+      "s": "live",
+      "h": "PDPA (2012, amended 2021).",
+      "reg": [
+        "PDPC"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "User data."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "Ledger data."
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "HIGH",
+          "n": "Analytics of SG data."
+        }
+      }
+    },
+    "market": {
+      "s": "live",
+      "h": "Project Guardian + tokenisation framework mature.",
+      "reg": [
+        "MAS",
+        "SGX"
+      ],
+      "tl": [
+        {
+          "d": "2022",
+          "e": "Project Guardian launched",
+          "done": true
+        },
+        {
+          "d": "Mid-2026",
+          "e": "SGX-Nasdaq dual listing bridge",
+          "done": false
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "Stablecoins as settlement."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "HIGH",
+          "n": "TRON as Layer 1 for tokenised assets."
+        },
+        "marketmaker": {
+          "l": "HIGH",
+          "n": "Tokenised securities market-making."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "consults": []
+  },
+  {
+    "id": "japan",
+    "flag": "🇯🇵",
+    "n": "Japan",
+    "lat": 36,
+    "lng": 138,
+    "r": "asia",
+    "tier": "t1",
+    "crypto": {
+      "s": "live",
+      "h": "JFSA — world's most mature crypto framework. Stablecoin rules from 2023. JVCEA self-regulatory body.",
+      "reg": [
+        "JFSA",
+        "JVCEA"
+      ],
+      "tl": [
+        {
+          "d": "2017",
+          "e": "Payment Services Act — crypto exchanges",
+          "done": true
+        },
+        {
+          "d": "Jun 2023",
+          "e": "Stablecoin regulation enacted",
+          "done": true
+        },
+        {
+          "d": "2026",
+          "e": "DCGG JFSA meeting being arranged (Małgo)",
+          "done": false
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "CRITICAL",
+          "n": "JFSA stablecoin rules: only Japanese banks and licensed entities can issue. Foreign stablecoins (USDT) require JFSA-licensed custodians."
+        },
+        "infrastructure": {
+          "l": "HIGH",
+          "n": "Ledger classification under JFSA custody rules."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON — exchange listing restrictions."
+        },
+        "marketmaker": {
+          "l": "HIGH",
+          "n": "JFSA Type 1 Financial Instruments Business licence required."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "active",
+      "h": "Japan AI Strategy 2024. METI principles-based governance. Innovation-friendly.",
+      "reg": [
+        "METI",
+        "MIC Japan"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "AI agents on TRON."
+        },
+        "marketmaker": {
+          "l": "MEDIUM",
+          "n": "AI trading governance."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "privacy": {
+      "s": "live",
+      "h": "APPI (Act on Protection of Personal Information) — amended 2022.",
+      "reg": [
+        "PPC Japan"
+      ],
+      "tl": [
+        {
+          "d": "2022",
+          "e": "APPI amendments in force",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "User data."
+        },
+        "infrastructure": {
+          "l": "HIGH",
+          "n": "Ledger data + APPI compliance."
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "HIGH",
+          "n": "Analytics of Japanese users."
+        }
+      }
+    },
+    "market": {
+      "s": "live",
+      "h": "JFSA Type 1 Financial Instruments. TSE digital securities.",
+      "reg": [
+        "JFSA",
+        "TSE"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON as Layer 1 for digital securities."
+        },
+        "marketmaker": {
+          "l": "CRITICAL",
+          "n": "JFSA licence required."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "consults": []
+  },
+  {
+    "id": "hongkong",
+    "flag": "🇭🇰",
+    "n": "Hong Kong",
+    "lat": 22.3,
+    "lng": 114.2,
+    "r": "asia",
+    "tier": "t1",
+    "crypto": {
+      "s": "live",
+      "h": "VATP + Stablecoins Ordinance Aug 2025. First licences 2026.",
+      "reg": [
+        "HKMA",
+        "SFC"
+      ],
+      "tl": [
+        {
+          "d": "Jun 2023",
+          "e": "VATP regime live",
+          "done": true
+        },
+        {
+          "d": "Aug 2025",
+          "e": "Stablecoins Ordinance",
+          "done": true
+        },
+        {
+          "d": "H1 2026",
+          "e": "First stablecoin licences",
+          "done": false
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "CRITICAL",
+          "n": "HKMA stablecoin licensing. DCGG submitted response. OTC dealers can use USDT for professional investors."
+        },
+        "infrastructure": {
+          "l": "HIGH",
+          "n": "SFC VA Custody rules."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "CASPs on TRON must be licensed."
+        },
+        "marketmaker": {
+          "l": "HIGH",
+          "n": "Market-making licensed under VATP."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "active",
+      "h": "HK AI governance developing — innovation-friendly.",
+      "reg": [
+        "ITC",
+        "HKMA"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "MEDIUM",
+          "n": "Algorithmic trading via SFC."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "privacy": {
+      "s": "live",
+      "h": "PDPO under reform.",
+      "reg": [
+        "PCPD"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "User data."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "Ledger data."
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "HIGH",
+          "n": "Analytics."
+        }
+      }
+    },
+    "market": {
+      "s": "live",
+      "h": "Project Ensemble live. First stablecoin licences 2026.",
+      "reg": [
+        "HKMA",
+        "SFC"
+      ],
+      "tl": [
+        {
+          "d": "2024",
+          "e": "Project Ensemble launched",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "Stablecoins as settlement layer."
+        },
+        "infrastructure": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "layer1": {
+          "l": "HIGH",
+          "n": "TRON as Layer 1 for HK ecosystem."
+        },
+        "marketmaker": {
+          "l": "HIGH",
+          "n": "Tokenised securities."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "consults": [
+      {
+        "t": "HKMA AML Stablecoins",
+        "r": "HKMA",
+        "d": "Filed May 2025",
+        "v": "crypto",
+        "s": "submitted",
+        "a": "Timothy + Nick"
+      },
+      {
+        "t": "SFC VA Custody + Dealing",
+        "r": "SFC",
+        "d": "Filed Aug 2025",
+        "v": "crypto",
+        "s": "submitted",
+        "a": "Timothy + Nick"
+      },
+      {
+        "t": "FSTB/SFC OTC Virtual Assets — USDT OTC win",
+        "r": "FSTB/SFC",
+        "d": "Jun 2025",
+        "v": "crypto",
+        "s": "submitted",
+        "a": "Timothy"
+      }
+    ]
+  },
+  {
+    "id": "australia",
+    "flag": "🇦🇺",
+    "n": "Australia",
+    "lat": -25,
+    "lng": 133,
+    "r": "asia",
+    "tier": "t1",
+    "crypto": {
+      "s": "active",
+      "h": "Payment Entities (Prudential Regulation) Bill 2026. DCGG filed response. Key win: self-custody explicitly excluded. AFS licence exemption for Tether under advocacy.",
+      "reg": [
+        "ASIC",
+        "APRA",
+        "Australian Treasury"
+      ],
+      "tl": [
+        {
+          "d": "2026",
+          "e": "PSP Tranche 1 draft legislation published",
+          "done": true
+        },
+        {
+          "d": "2026",
+          "e": "DCGG response filed",
+          "done": true
+        },
+        {
+          "d": "H2 2026",
+          "e": "Final legislation expected",
+          "done": false
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "USDT at risk if Reg 7.6.02AG(2C) AFS exemption removed. DCGG filed to preserve it."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "Tokenised SVF framework — new licensing for AUD-denominated SVFs."
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "TRON mentioned as DCGG member in submission."
+        },
+        "marketmaker": {
+          "l": "MEDIUM",
+          "n": "ASIC oversight of exchanges."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "active",
+      "h": "Australia AI Safety + Governance Framework 2024. DIGI active.",
+      "reg": [
+        "DIGI",
+        "ACMA"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "live",
+      "h": "Privacy Act 1988. Major review underway 2024-2026.",
+      "reg": [
+        "OAIC"
+      ],
+      "tl": [],
+      "impact": {
+        "stablecoin": {
+          "l": "MEDIUM",
+          "n": "User data."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "Ledger data."
+        },
+        "layer1": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "HIGH",
+          "n": "Analytics of Australian users."
+        }
+      }
+    },
+    "market": {
+      "s": "active",
+      "h": "ASIC oversight of crypto exchanges. ASX tokenisation pilots.",
+      "reg": [
+        "ASIC",
+        "ASX"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": [
+      {
+        "t": "Treasury PSP Tranche 1 — Payment Entities Bill 2026",
+        "r": "Australian Treasury",
+        "d": "Filed 2026",
+        "v": "crypto",
+        "s": "submitted",
+        "a": "Josh + António"
+      }
+    ]
+  },
+  {
+    "id": "malaysia",
+    "flag": "🇲🇾",
+    "n": "Malaysia",
+    "lat": 4.2,
+    "lng": 108,
+    "r": "asia",
+    "tier": "t2",
+    "crypto": {
+      "s": "active",
+      "h": "SC Malaysia + BNM dual oversight. DCGG filed response to BNM asset tokenisation discussion paper Feb 2026.",
+      "reg": [
+        "SC Malaysia",
+        "BNM"
+      ],
+      "tl": [
+        {
+          "d": "2019",
+          "e": "SC Malaysia digital asset framework",
+          "done": true
+        },
+        {
+          "d": "Feb 2026",
+          "e": "DCGG BNM asset tokenisation response filed",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "BNM cross-border payment oversight. USDT for remittances."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "SC Malaysia CASP classification."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON as stablecoin layer."
+        },
+        "marketmaker": {
+          "l": "MEDIUM",
+          "n": "SC Malaysia ATS licence."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "active",
+      "h": "Malaysia National AI Roadmap 2021-2025. MDEC active.",
+      "reg": [
+        "MDEC",
+        "MCMC"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "live",
+      "h": "PDPA 2010 in force. JPDP active.",
+      "reg": [
+        "JPDP"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "market": {
+      "s": "active",
+      "h": "Bursa Malaysia exploring tokenisation. SC Malaysia active.",
+      "reg": [
+        "SC Malaysia",
+        "Bursa Malaysia"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": [
+      {
+        "t": "BNM Malaysia Asset Tokenisation — Response",
+        "r": "BNM",
+        "d": "Filed Feb 2026",
+        "v": "crypto",
+        "s": "submitted",
+        "a": "Timothy"
+      }
+    ]
+  },
+  {
+    "id": "philippines",
+    "flag": "🇵🇭",
+    "n": "Philippines",
+    "lat": 13,
+    "lng": 122,
+    "r": "asia",
+    "tier": "t2",
+    "crypto": {
+      "s": "active",
+      "h": "BSP Virtual Asset Service Provider (VASP) framework. Philippines has one of highest crypto adoption rates globally.",
+      "reg": [
+        "BSP",
+        "SEC Philippines"
+      ],
+      "tl": [
+        {
+          "d": "2021",
+          "e": "BSP VASP guidelines",
+          "done": true
+        },
+        {
+          "d": "2023",
+          "e": "BSP updated VASP framework",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "USDT dominant for remittances. BSP framework directly covers issuers."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "Ledger classification."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON as USDT delivery — large remittance flows."
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "early",
+      "h": "National AI Strategy developing.",
+      "reg": [
+        "DICT Philippines"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "live",
+      "h": "Data Privacy Act 2012. NPC active.",
+      "reg": [
+        "NPC Philippines"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "market": {
+      "s": "active",
+      "h": "PSE exploring tokenisation. SEC Philippines active.",
+      "reg": [
+        "SEC Philippines",
+        "PSE"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": []
+  },
+  {
+    "id": "vietnam",
+    "flag": "🇻🇳",
+    "n": "Vietnam",
+    "lat": 16,
+    "lng": 108,
+    "r": "asia",
+    "tier": "t2",
+    "crypto": {
+      "s": "active",
+      "h": "SBV (State Bank of Vietnam) — crypto not legal tender but widespread P2P use. Government studying comprehensive framework 2025-2026.",
+      "reg": [
+        "SBV",
+        "SSC Vietnam"
+      ],
+      "tl": [
+        {
+          "d": "2025",
+          "e": "Government study group on crypto regulation launched",
+          "done": true
+        },
+        {
+          "d": "2026",
+          "e": "Draft framework expected",
+          "done": false
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "USDT dominant. Framework clarity critical for operations."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "Ledger classification."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON as USDT delivery."
+        },
+        "marketmaker": {
+          "l": "LOW",
+          "n": "N/A"
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "active",
+      "h": "National AI Strategy 2030. MoST active.",
+      "reg": [
+        "MoST Vietnam"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "live",
+      "h": "Personal Data Protection Decree 2023.",
+      "reg": [
+        "MPS Vietnam"
+      ],
+      "tl": [
+        {
+          "d": "2023",
+          "e": "Data Protection Decree enacted",
+          "done": true
+        }
+      ],
+      "impact": {}
+    },
+    "market": {
+      "s": "early",
+      "h": "HoSE/HNX exploring tokenisation.",
+      "reg": [
+        "SSC Vietnam"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": []
+  },
+  {
+    "id": "indonesia",
+    "flag": "🇮🇩",
+    "n": "Indonesia",
+    "lat": -5,
+    "lng": 120,
+    "r": "asia",
+    "tier": "t2",
+    "crypto": {
+      "s": "active",
+      "h": "OJK took crypto oversight from BAPPEBTI 2025. Indonesia = world's largest crypto market by user adoption in SE Asia.",
+      "reg": [
+        "OJK",
+        "BAPPEBTI"
+      ],
+      "tl": [
+        {
+          "d": "2025",
+          "e": "OJK takes crypto oversight from BAPPEBTI",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "USDT widely used. OJK framework directly impacts operations."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "OJK VASP classification."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON as USDT delivery — largest SE Asia market."
+        },
+        "marketmaker": {
+          "l": "MEDIUM",
+          "n": "OJK exchange rules."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "active",
+      "h": "Indonesia AI National Strategy 2020-2045. Kominfo active.",
+      "reg": [
+        "Kominfo",
+        "BSSN"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "live",
+      "h": "Personal Data Protection Law 2022 — GDPR-modelled.",
+      "reg": [
+        "Kominfo",
+        "BSSN"
+      ],
+      "tl": [
+        {
+          "d": "2022",
+          "e": "PDP Law enacted",
+          "done": true
+        }
+      ],
+      "impact": {}
+    },
+    "market": {
+      "s": "active",
+      "h": "IDX exploring tokenisation. OJK active.",
+      "reg": [
+        "OJK",
+        "IDX"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": []
+  },
+  {
+    "id": "thailand",
+    "flag": "🇹🇭",
+    "n": "Thailand",
+    "lat": 15,
+    "lng": 101,
+    "r": "asia",
+    "tier": "t2",
+    "crypto": {
+      "s": "active",
+      "h": "SEC Thailand + BOT dual oversight. Digital Asset Business Act 2018. One of most developed SE Asia frameworks.",
+      "reg": [
+        "SEC Thailand",
+        "BOT"
+      ],
+      "tl": [
+        {
+          "d": "2018",
+          "e": "Digital Asset Business Act",
+          "done": true
+        },
+        {
+          "d": "2023",
+          "e": "SEC Thailand updated exchange rules",
+          "done": true
+        }
+      ],
+      "impact": {
+        "stablecoin": {
+          "l": "HIGH",
+          "n": "USDT widely used. SEC Thailand classification of stablecoins important."
+        },
+        "infrastructure": {
+          "l": "MEDIUM",
+          "n": "SEC Thailand CASP classification."
+        },
+        "layer1": {
+          "l": "MEDIUM",
+          "n": "TRON as USDT delivery."
+        },
+        "marketmaker": {
+          "l": "MEDIUM",
+          "n": "SEC Thailand market-making rules."
+        },
+        "chainanalytics": {
+          "l": "LOW",
+          "n": "N/A"
+        }
+      }
+    },
+    "ai": {
+      "s": "active",
+      "h": "Thailand National AI Strategy. DEPA active.",
+      "reg": [
+        "DEPA",
+        "ETDA"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "privacy": {
+      "s": "live",
+      "h": "PDPA (Personal Data Protection Act) 2022.",
+      "reg": [
+        "PDPC Thailand"
+      ],
+      "tl": [
+        {
+          "d": "2022",
+          "e": "PDPA Thailand in force",
+          "done": true
+        }
+      ],
+      "impact": {}
+    },
+    "market": {
+      "s": "active",
+      "h": "SET exploring tokenisation. SEC Thailand active.",
+      "reg": [
+        "SEC Thailand",
+        "SET"
+      ],
+      "tl": [],
+      "impact": {}
+    },
+    "consults": []
+  }
+]

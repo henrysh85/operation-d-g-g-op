@@ -1,0 +1,278 @@
+[
+  {
+    "id": "ap1",
+    "year": "2026",
+    "month": "Mar",
+    "region": "europe",
+    "country": "EU",
+    "title": "The Case for Decentralised Stablecoins under MiCA: A Legal and Policy Analysis",
+    "authors": [
+      "JJ Röber",
+      "Mina Iotova"
+    ],
+    "outlet": "DCGG Policy Paper",
+    "type": "policy_paper",
+    "abstract": "A comprehensive analysis of how USD-pegged foreign stablecoins issued by non-EU entities — specifically Tether USDt — can continue to operate in the European Union under MiCA while preserving financial stability. Argues for a \"Third Country Issuer\" equivalence framework distinct from EMT/ART classification.",
+    "tags": [
+      "MiCA",
+      "stablecoins",
+      "DeFi",
+      "EU law"
+    ],
+    "clients": [
+      "tether"
+    ],
+    "url": null,
+    "highlight": true
+  },
+  {
+    "id": "ap2",
+    "year": "2026",
+    "month": "Feb",
+    "region": "europe",
+    "country": "UK",
+    "title": "UK Stablecoin Regime Design: Lessons from the US GENIUS Act",
+    "authors": [
+      "Josh Townson",
+      "Mina Iotova"
+    ],
+    "outlet": "DCGG Comparative Policy Brief",
+    "type": "policy_brief",
+    "abstract": "Comparative analysis of the UK FCA/BoE stablecoin regime under development and the US GENIUS Act. Identifies regulatory arbitrage risks and proposes an \"outcomes equivalence\" model for foreign issuers including Tether, avoiding mandatory local entity requirements.",
+    "tags": [
+      "FCA",
+      "BoE",
+      "GENIUS Act",
+      "stablecoins",
+      "UK"
+    ],
+    "clients": [
+      "tether"
+    ],
+    "url": null,
+    "highlight": true
+  },
+  {
+    "id": "ap3",
+    "year": "2026",
+    "month": "Jan",
+    "region": "asia",
+    "country": "South Korea",
+    "title": "DABA Phase 2 and the 51% Bank Equity Rule: Implications for Global Stablecoin Issuers",
+    "authors": [
+      "Timothy Shin"
+    ],
+    "outlet": "DCGG Korea Policy Brief",
+    "type": "policy_brief",
+    "abstract": "Detailed legislative analysis of South Korea's Digital Asset Basic Act Phase 2 draft provisions, focusing on the proposed 51% bank equity requirement for stablecoin issuers. Argues the rule creates a de facto barrier to foreign issuers and proposes an alternative regulatory model drawing on EU MiCA.",
+    "tags": [
+      "DABA",
+      "South Korea",
+      "FSC",
+      "stablecoins",
+      "51% rule"
+    ],
+    "clients": [
+      "tether",
+      "tron"
+    ],
+    "url": null,
+    "highlight": false
+  },
+  {
+    "id": "ap4",
+    "year": "2025",
+    "month": "Nov",
+    "region": "europe",
+    "country": "EU",
+    "title": "Decentralised AI and Blockchain: Navigating the EU AI Act for Autonomous On-Chain Agents",
+    "authors": [
+      "Norberto de Andrade",
+      "Maira Aivalioti"
+    ],
+    "outlet": "DCGG AI Policy Paper",
+    "type": "policy_paper",
+    "abstract": "Examination of how the EU AI Act's definition of \"high-risk AI\" interacts with autonomous agents operating on public blockchains such as TRON. Proposes a \"DeAI Safe Harbour\" framework for fully decentralised AI agents that do not involve a single identifiable deployer, drawing on DCGG's engagement with the EU AI Office.",
+    "tags": [
+      "AI Act",
+      "DeAI",
+      "autonomous agents",
+      "TRON",
+      "EU AI Office"
+    ],
+    "clients": [
+      "tron"
+    ],
+    "url": null,
+    "highlight": true
+  },
+  {
+    "id": "ap5",
+    "year": "2025",
+    "month": "Oct",
+    "region": "europe",
+    "country": "EU",
+    "title": "CSAM and End-to-End Encryption: Why Chat Control Threatens the Infrastructure of Digital Finance",
+    "authors": [
+      "Mina Iotova",
+      "JJ Röber"
+    ],
+    "outlet": "DCGG Privacy Policy Paper",
+    "type": "policy_paper",
+    "abstract": "Analysis of the EU Commission's ProtectEU strategy and the CSAM/Chat Control trilogue, focusing on the existential threat to hardware wallet encryption and secure key management. Argues that mandatory client-side scanning requirements would undermine the technical foundations of self-custody solutions like Ledger.",
+    "tags": [
+      "CSAM",
+      "Chat Control",
+      "encryption",
+      "Ledger",
+      "E2EE",
+      "GDPR"
+    ],
+    "clients": [
+      "ledger"
+    ],
+    "url": null,
+    "highlight": true
+  },
+  {
+    "id": "ap6",
+    "year": "2025",
+    "month": "Sep",
+    "region": "latam",
+    "country": "Brazil",
+    "title": "Brazil's BCB VASP Authorization Framework: A Model for Emerging Markets Stablecoin Regulation",
+    "authors": [
+      "Hugo Rodriguez"
+    ],
+    "outlet": "DCGG LatAm Policy Brief",
+    "type": "policy_brief",
+    "abstract": "Assessment of Brazil's new Banco Central do Brasil authorization regime for VASPs, effective February 2026. Examines the cross-border stablecoin treatment as \"foreign exchange operations\" and its implications for Tether's operational model in Latin America, with recommendations drawn from DCGG's Consultations 109/110/111 filings.",
+    "tags": [
+      "BCB",
+      "Brazil",
+      "stablecoins",
+      "VASP",
+      "LGPD"
+    ],
+    "clients": [
+      "tether"
+    ],
+    "url": null,
+    "highlight": false
+  },
+  {
+    "id": "ap7",
+    "year": "2025",
+    "month": "Aug",
+    "region": "mena",
+    "country": "UAE",
+    "title": "The UAE Regulatory Archipelago: Navigating VARA, ADGM FSRA, DFSA and CBUAE for Digital Asset Firms",
+    "authors": [
+      "Soha Ragab",
+      "Francesca Salierno"
+    ],
+    "outlet": "DCGG MENA Policy Guide",
+    "type": "policy_guide",
+    "abstract": "Comprehensive practitioner guide to the UAE's multi-jurisdictional regulatory landscape for digital asset firms. Analyses the division of competence between VARA (Dubai mainland), DFSA (DIFC), ADGM FSRA (Abu Dhabi), and CBUAE at the federal level. Includes an entity mapping tool for stablecoin issuers, Layer 1 blockchains, and hardware wallet providers.",
+    "tags": [
+      "UAE",
+      "VARA",
+      "DFSA",
+      "ADGM",
+      "CBUAE",
+      "stablecoins"
+    ],
+    "clients": [
+      "tether",
+      "tron",
+      "ledger"
+    ],
+    "url": null,
+    "highlight": true
+  },
+  {
+    "id": "ap8",
+    "year": "2025",
+    "month": "Jul",
+    "region": "africa",
+    "country": "Nigeria",
+    "title": "Africa's Crypto Regulatory Convergence: ISA 2025, CBK Kenya, and FSCA South Africa in Comparative Perspective",
+    "authors": [
+      "Breitner Nyantika"
+    ],
+    "outlet": "DCGG Africa Policy Brief",
+    "type": "policy_brief",
+    "abstract": "Comparative regulatory analysis across Nigeria (ISA 2025), Kenya (CBK VASP Draft SI), and South Africa (FSCA CASP licensing). Maps the regulatory treatment of USD stablecoins across all three jurisdictions and identifies the African Union harmonisation agenda as a strategic opportunity for DCGG member engagement.",
+    "tags": [
+      "Nigeria",
+      "Kenya",
+      "South Africa",
+      "ISA 2025",
+      "FSCA",
+      "stablecoins",
+      "Africa"
+    ],
+    "clients": [
+      "tether",
+      "tron"
+    ],
+    "url": null,
+    "highlight": false
+  },
+  {
+    "id": "ap9",
+    "year": "2025",
+    "month": "Jun",
+    "region": "asia",
+    "country": "Hong Kong",
+    "title": "Hong Kong's Stablecoins Ordinance and the OTC Dealer Question: A Win for USD Stablecoin Access",
+    "authors": [
+      "Timothy Shin",
+      "Nick"
+    ],
+    "outlet": "DCGG Asia Policy Brief",
+    "type": "policy_brief",
+    "abstract": "Analysis of the Hong Kong Stablecoins Ordinance (effective August 2025) and FSTB/SFC guidance permitting licensed OTC dealers to offer USDT to professional investors. Documents the policy win secured by DCGG and outlines next steps for first-mover stablecoin licensing under the HKMA framework.",
+    "tags": [
+      "Hong Kong",
+      "HKMA",
+      "SFC",
+      "stablecoins",
+      "OTC",
+      "USDT"
+    ],
+    "clients": [
+      "tether"
+    ],
+    "url": null,
+    "highlight": true
+  },
+  {
+    "id": "ap10",
+    "year": "2025",
+    "month": "Apr",
+    "region": "europe",
+    "country": "EU",
+    "title": "MiCA Article 70 and the Non-Custodial Exemption: Protecting Self-Custody Hardware Wallets",
+    "authors": [
+      "JJ Röber",
+      "Mina Iotova"
+    ],
+    "outlet": "DCGG Position Paper (co-authored with Ledger)",
+    "type": "policy_paper",
+    "abstract": "Analysis of MiCA Article 70 and its application to hardware wallet manufacturers that do not hold customer private keys. Argues that Ledger and similar non-custodial providers are categorically excluded from MiCA's CASP licensing requirements and should not face indirect regulatory burden through ESMA technical standards.",
+    "tags": [
+      "MiCA",
+      "non-custodial",
+      "Ledger",
+      "ESMA",
+      "Article 70",
+      "hardware wallet"
+    ],
+    "clients": [
+      "ledger"
+    ],
+    "url": null,
+    "highlight": false
+  }
+]

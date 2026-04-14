@@ -1,0 +1,2782 @@
+[
+  {
+    "id": "e1",
+    "date": "2026-02-05",
+    "type": "event",
+    "title": "Decentralized & Agentic AI Policy Event — Brussels EP",
+    "desc": "100+ attendees at the European Parliament. MEP Jarubas host. 2 panels: DeAI definitions + regulatory gaps, Agentic AI liability. LinkedIn campaign: 266K impressions. Directly led to AI Office November 2026 workshop invitation.",
+    "vertical": "ai",
+    "region": "eu",
+    "clients": [
+      "tether"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [
+      "AI_DCGG_Progress_Report.pdf"
+    ],
+    "highlight": true
+  },
+  {
+    "id": "e2",
+    "date": "2025-06-15",
+    "type": "event",
+    "title": "DCGG Asia Tether Policy Seminar — Singapore",
+    "desc": "Regional policy seminar for Tether APAC team. Covered MAS PSA, HKMA Stablecoins Ordinance, Korea VAUPA developments. Materials shared with Tether APAC team.",
+    "vertical": "crypto",
+    "region": "asia",
+    "clients": [
+      "tether"
+    ],
+    "owner": "timothy",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [
+      "Asia_Tether_Policy_Seminar_Jun2025.pdf"
+    ],
+    "highlight": true
+  },
+  {
+    "id": "e3",
+    "date": "2025-05-20",
+    "type": "event",
+    "title": "DCGG Africa Tether Policy Seminar",
+    "desc": "Africa-focused policy roundtable. Nigeria ISA 2025 stablecoin classification, Ghana BOG engagement, Kenya CBK draft SI preview. Attended by Tether Africa team.",
+    "vertical": "crypto",
+    "region": "africa",
+    "clients": [
+      "tether"
+    ],
+    "owner": "breitner",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [
+      "Africa_Tether_Policy_Seminar_May2025.pdf"
+    ],
+    "highlight": true
+  },
+  {
+    "id": "e4",
+    "date": "2026-05-12",
+    "type": "event",
+    "title": "Seoul National Assembly Seminar",
+    "desc": "DCGG-hosted seminar at National Assembly of Korea. Co-hosts: Rep. Min Byung-duk + Rep. Lee Kang-il. Sponsors: DAXA. Confirmed: Leonardo Real (Tether CCO). DABA Phase 2 + 51% bank equity rule focus.",
+    "vertical": "crypto",
+    "region": "korea",
+    "clients": [
+      "tether"
+    ],
+    "owner": "timothy",
+    "status": "planned",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "e5",
+    "date": "2026-03-28",
+    "type": "event",
+    "title": "FATF Targeted Report — Stablecoin Policy Roundtable",
+    "desc": "Internal roundtable on FATF T3 implications following March 2026 targeted report on stablecoins and unhosted wallets. Briefing prepared for Tether team.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [
+      "Global_FATF_Stablecoins_Unhosted_Wallets_Report_Mar2026.pdf"
+    ],
+    "highlight": false
+  },
+  {
+    "id": "e6",
+    "date": "2025-12-16",
+    "type": "event",
+    "title": "Ghana BOG & SEC Meeting — TRON & Tether",
+    "desc": "In-person meeting with Bank of Ghana Virtual Assets Regulatory Office and Ghana SEC. Attended by John Hurston (TRON). Key outcome: no restrictions planned on USDT secondary market. AML workshop follow-up planned.",
+    "vertical": "crypto",
+    "region": "africa",
+    "clients": [
+      "tether",
+      "tron"
+    ],
+    "owner": "breitner",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [
+      "DCGG Policy Materials (All markets)/Meetings Prep Briefings/BOG and Ghana SEC Tron Meeting Brief.pdf"
+    ],
+    "highlight": true
+  },
+  {
+    "id": "m1",
+    "date": "2026-01-20",
+    "type": "meeting",
+    "title": "Bank of England Meeting — Sterling Stablecoins",
+    "desc": "Meeting with BoE team to discuss stablecoin issuance regime design. Attendees: Tom Mutton (Director), Emma Butterworth, Pavel Chickkanov. DCGG position on 80% HQLA/20% deposits presented. Payment Arranger model discussed.",
+    "vertical": "crypto",
+    "region": "uk",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [
+      "UK_BoE_GBP_Stablecoins_Response_Feb2026.pdf"
+    ],
+    "highlight": true
+  },
+  {
+    "id": "m2",
+    "date": "2026-02-10",
+    "type": "meeting",
+    "title": "FCA Meeting — CP25-40/41 Policy Discussion",
+    "desc": "Meeting with FCA Payments + Digital Finance team. Attendees: Matthew Long (Director), Janet Ho. Discussed Payment Arranger model — ultimately dropped from the regime.",
+    "vertical": "crypto",
+    "region": "uk",
+    "clients": [
+      "tether",
+      "ledger"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [
+      "UK_FCA_CP25-40_Regulating_Cryptoassets_Response_Feb2026.pdf"
+    ],
+    "highlight": false
+  },
+  {
+    "id": "m3",
+    "date": "2026-02-04",
+    "type": "meeting",
+    "title": "HMT Meeting — T-Bills & Stablecoin Regulatory Engagement",
+    "desc": "Engagement with HM Treasury cryptoasset team. Will Morello + Tom Mead. Discussed DCGG position on UK stablecoin framework. Tether as structural gilts buyer argument presented.",
+    "vertical": "crypto",
+    "region": "uk",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [
+      "UK_HMT_TBills_Market_Response_Feb2026.pdf"
+    ],
+    "highlight": true
+  },
+  {
+    "id": "m4",
+    "date": "2026-02-06",
+    "type": "meeting",
+    "title": "EU AI Office — Meeting with Małgorzata Nikowska",
+    "desc": "Meeting with EU AI Office Head of Unit. Discussed DCGG DeAI vertical and Tether QVAC project. Invited to November 2026 AI Month flagship workshop. Strong relationship established.",
+    "vertical": "ai",
+    "region": "eu",
+    "clients": [
+      "tether"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "m5",
+    "date": "2026-02-06",
+    "type": "meeting",
+    "title": "MEP Adam Jarubas — AI Policy Discussion (Brussels)",
+    "desc": "Meeting with MEP Jarubas (EPP, SANT Committee Chair) at the European Parliament. Discussed DCGG AI strategy and next steps. MEP agreed to host another DCGG event.",
+    "vertical": "ai",
+    "region": "eu",
+    "clients": [
+      "tether"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "m6",
+    "date": "2026-03-01",
+    "type": "meeting",
+    "title": "BNM Malaysia Meeting — Asset Tokenisation",
+    "desc": "Follow-up meeting with Bank Negara Malaysia following DCGG response to tokenisation discussion paper. Building bilateral relationship ahead of new regulation.",
+    "vertical": "crypto",
+    "region": "asia",
+    "clients": [
+      "tether"
+    ],
+    "owner": "timothy",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [
+      "Asia_BNM_Malaysia_Asset_Tokenisation_Response_Feb2026.pdf"
+    ],
+    "highlight": false
+  },
+  {
+    "id": "m7",
+    "date": "2026-03-27",
+    "type": "meeting",
+    "title": "Tether — MISP Non-Paper Briefing (Giles Dixon)",
+    "desc": "Briefing delivered to Giles Dixon (Tether Global Head Regulatory Affairs) on German-Italian non-paper proposing EC equivalence mechanism for MiCA CASPs. DCGG analysis shared.",
+    "vertical": "crypto",
+    "region": "eu",
+    "clients": [
+      "tether"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [
+      "EU_MISP_Position_Paper.pdf"
+    ],
+    "highlight": false
+  },
+  {
+    "id": "m8",
+    "date": "2026-03-19",
+    "type": "meeting",
+    "title": "Tether — QVAC Value Chain Policy Brief Delivered",
+    "desc": "QVAC Value Chain Policy Brief delivered to Giles Dixon for Tether review. EU AI Act value-chain duties for decentralised AI. Next: 2-3 technical calls with Marco/Alberto team (via Giles).",
+    "vertical": "ai",
+    "region": "eu",
+    "clients": [
+      "tether"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [
+      "AI_QVAC_Value_Chain_Policy_Brief.pdf"
+    ],
+    "highlight": true
+  },
+  {
+    "id": "m9",
+    "date": "2025-11-20",
+    "type": "meeting",
+    "title": "Tezos / Nomadic Labs — BD Scoping Call",
+    "desc": "Second call with Tezos / Nomadic Labs team. Discussing BRA consultation project and DCGG membership pathway. Tokenised securities regulatory scope as entry point.",
+    "vertical": "crypto",
+    "region": "eu",
+    "clients": [],
+    "owner": "marvin",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "m10",
+    "date": "2026-04-01",
+    "type": "meeting",
+    "title": "AI BD Outreach — SingularityNET (Janet Adams, COO) — Positive Reply",
+    "desc": "Janet Adams (SingularityNET COO) replied positively to DCGG AI membership outreach. Conversion call to be booked. DeAI regulation briefing package prepared.",
+    "vertical": "ai",
+    "region": "global",
+    "clients": [],
+    "owner": "marvin",
+    "status": "pending",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "p1",
+    "date": "2026-02-28",
+    "type": "publication",
+    "title": "FCA CP25-41 (A&D + MARC) — Consultation Response",
+    "desc": "Formal response to FCA CP25-41 on Admissions & Disclosures and Market Abuse Regime for Cryptoassets. DCGG position: market integrity criteria not retail suitability; differentiate infrastructure providers from CASPs.",
+    "vertical": "crypto",
+    "region": "uk",
+    "clients": [
+      "tether",
+      "ledger"
+    ],
+    "owner": "mina",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [
+      "UK_FCA_CP25-41_AD_MARC_Response_Feb2026.pdf"
+    ],
+    "highlight": true
+  },
+  {
+    "id": "p2",
+    "date": "2026-02-28",
+    "type": "publication",
+    "title": "FCA CP25-40 (Regulating Cryptoasset Activities) — Consultation Response",
+    "desc": "Formal response advocating for outcomes-based approach. Payment Arranger model challenged. Foreign stablecoin treatment flagged.",
+    "vertical": "crypto",
+    "region": "uk",
+    "clients": [
+      "tether"
+    ],
+    "owner": "mina",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [
+      "UK_FCA_CP25-40_Regulating_Cryptoassets_Response_Feb2026.pdf"
+    ],
+    "highlight": false
+  },
+  {
+    "id": "p3",
+    "date": "2026-02-28",
+    "type": "publication",
+    "title": "BoE GBP Systemic Stablecoins — Consultation Response",
+    "desc": "DCGG response to BoE proposed regime for GBP systemic stablecoins. Key positions: 80% HQLA/20% deposits; remove holding limits; oppose BoE mandatory custody. Tether $135B treasury holdings referenced.",
+    "vertical": "crypto",
+    "region": "uk",
+    "clients": [
+      "tether"
+    ],
+    "owner": "mina",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [
+      "UK_BoE_GBP_Stablecoins_Response_Feb2026.pdf"
+    ],
+    "highlight": true
+  },
+  {
+    "id": "p4",
+    "date": "2026-02-28",
+    "type": "publication",
+    "title": "HMT T-Bills Market Review — Consultation Response",
+    "desc": "DCGG response to HMT consultation on UK Treasury bills market. Key argument: stablecoins (Tether) as structural gilt buyers — $135B US Treasury holdings directly relevant.",
+    "vertical": "crypto",
+    "region": "uk",
+    "clients": [
+      "tether"
+    ],
+    "owner": "mina",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [
+      "UK_HMT_TBills_Market_Response_Feb2026.pdf"
+    ],
+    "highlight": false
+  },
+  {
+    "id": "p5",
+    "date": "2026-03-01",
+    "type": "publication",
+    "title": "FSRC House of Lords Stablecoin Inquiry — Response",
+    "desc": "Formal submission to Financial Services Regulation Committee stablecoin inquiry in the House of Lords. Comprehensive DCGG position on UK stablecoin regulatory framework.",
+    "vertical": "crypto",
+    "region": "uk",
+    "clients": [
+      "tether"
+    ],
+    "owner": "mina",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [
+      "UK_FSRC_HouseLords_Stablecoin_Inquiry_Response_Mar2026.pdf"
+    ],
+    "highlight": false
+  },
+  {
+    "id": "p6",
+    "date": "2026-03-01",
+    "type": "publication",
+    "title": "FCA CP26-4 / GC26-2 — Consultation Response",
+    "desc": "Response to FCA Consumer Duty Handbook changes.",
+    "vertical": "crypto",
+    "region": "uk",
+    "clients": [
+      "tether"
+    ],
+    "owner": "mina",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [
+      "UK_FCA_CP26-4_GC26-2_Response_Mar2026.pdf"
+    ],
+    "highlight": false
+  },
+  {
+    "id": "p7",
+    "date": "2026-02-28",
+    "type": "publication",
+    "title": "EC DAC8 Simplification — Consultation Response",
+    "desc": "DCGG response to European Commission DAC8 simplification consultation. Key position: limit CAO scope to MiCA CASPs only. \"Crypto-asset operator\" definition too broad and must be narrowed.",
+    "vertical": "crypto",
+    "region": "eu",
+    "clients": [
+      "tether"
+    ],
+    "owner": "mina",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [
+      "EU_DAC8_Simplification_Response_Feb2026.pdf"
+    ],
+    "highlight": false
+  },
+  {
+    "id": "p8",
+    "date": "2026-02-28",
+    "type": "publication",
+    "title": "Swiss Federal Council — Consultation Response",
+    "desc": "DCGG response to Swiss Federal Council consultation on digital assets regulatory framework.",
+    "vertical": "crypto",
+    "region": "eu",
+    "clients": [
+      "tether"
+    ],
+    "owner": "mina",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [
+      "EU_Swiss_Federal_Council_Response_Feb2026.pdf"
+    ],
+    "highlight": false
+  },
+  {
+    "id": "p9",
+    "date": "2026-03-05",
+    "type": "publication",
+    "title": "Colombia Bill 510/2025 — Position Paper (6 Amendments)",
+    "desc": "Formal DCGG position paper on Colombian VASP regulation Bill 510/2025. Six specific legislative amendments proposed. Filed with SFC and congressional committee.",
+    "vertical": "crypto",
+    "region": "latam",
+    "clients": [
+      "tether"
+    ],
+    "owner": "carolina",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "p10",
+    "date": "2026-03-24",
+    "type": "publication",
+    "title": "Uruguay BCU PSAV — Second Consultation Response",
+    "desc": "DCGG second consultation response to Banco Central del Uruguay on PSAV (stablecoin/virtual asset) regulatory framework.",
+    "vertical": "crypto",
+    "region": "latam",
+    "clients": [
+      "tether"
+    ],
+    "owner": "hugo",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "p11",
+    "date": "2026-02-28",
+    "type": "publication",
+    "title": "Kenya CBK Draft SI on VASPs — Response",
+    "desc": "DCGG response to Central Bank of Kenya draft statutory instrument on Virtual Asset Service Providers. Filed February 2026.",
+    "vertical": "crypto",
+    "region": "africa",
+    "clients": [
+      "tether"
+    ],
+    "owner": "breitner",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [
+      "Africa_Kenya_VASP_Regulations_Response_Feb2026.pdf"
+    ],
+    "highlight": false
+  },
+  {
+    "id": "p12",
+    "date": "2026-03-01",
+    "type": "publication",
+    "title": "BNM Malaysia Asset Tokenisation — Response",
+    "desc": "DCGG response to Bank Negara Malaysia discussion paper on asset tokenisation in the Malaysian financial sector.",
+    "vertical": "crypto",
+    "region": "asia",
+    "clients": [
+      "tether"
+    ],
+    "owner": "timothy",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [
+      "Asia_BNM_Malaysia_Asset_Tokenisation_Response_Feb2026.pdf"
+    ],
+    "highlight": false
+  },
+  {
+    "id": "p13",
+    "date": "2026-03-30",
+    "type": "publication",
+    "title": "Tether AI Policy Brief 3 — Policy Asks",
+    "desc": "Third and final DCGG policy brief for Tether: concrete asks to EU regulators. Postpone high-risk AI obligations; define AI agents; recognise DeAI as category; open-source safe harbour.",
+    "vertical": "ai",
+    "region": "eu",
+    "clients": [
+      "tether"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [
+      "AI_PolicyBrief3_Policy_Asks.pdf"
+    ],
+    "highlight": true
+  },
+  {
+    "id": "p14",
+    "date": "2026-01-15",
+    "type": "publication",
+    "title": "Tether AI Policy Brief 1 — Overreaching AI Policy Solutions",
+    "desc": "First DCGG policy brief for Tether: EU AI Act overreach analysis. DeAI as EU competitive and sovereignty tool. EU strategic alternative to US/China AI hegemony.",
+    "vertical": "ai",
+    "region": "eu",
+    "clients": [
+      "tether"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [
+      "AI_PolicyBrief1_Overreaching_AI_Policy_Solutions.pdf"
+    ],
+    "highlight": true
+  },
+  {
+    "id": "p15",
+    "date": "2026-02-15",
+    "type": "publication",
+    "title": "Tether AI Policy Brief 2 — Regulatory Threats Assessment",
+    "desc": "Second DCGG policy brief: 9 threats identified. Agentic AI definition gap = VERY HIGH risk. FLOPs threshold = MEDIUM-HIGH. EU AI Act open-source model assessment.",
+    "vertical": "ai",
+    "region": "eu",
+    "clients": [
+      "tether"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [
+      "AI_PolicyBrief2_Regulatory_Threats.pdf"
+    ],
+    "highlight": false
+  },
+  {
+    "id": "p16",
+    "date": "2026-03-19",
+    "type": "publication",
+    "title": "QVAC Value Chain Policy Brief — Portable Compliance Packet",
+    "desc": "Comprehensive policy brief on EU AI Act value-chain duties for Tether QVAC decentralised AI system. Sent to Giles Dixon March 19 2026.",
+    "vertical": "ai",
+    "region": "eu",
+    "clients": [
+      "tether"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [
+      "AI_QVAC_Value_Chain_Policy_Brief.pdf"
+    ],
+    "highlight": true
+  },
+  {
+    "id": "p17",
+    "date": "2026-04-15",
+    "type": "consultation",
+    "title": "HMRC Stablecoin Taxation — UPCOMING DEADLINE",
+    "desc": "Response to HMRC call for evidence on stablecoin taxation. Three categories: issuance, exchange, lending. DEADLINE 7 MAY 2026.",
+    "vertical": "crypto",
+    "region": "uk",
+    "clients": [
+      "tether",
+      "ledger"
+    ],
+    "owner": "mina",
+    "status": "in-progress",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "p18",
+    "date": "2026-02-01",
+    "type": "publication",
+    "title": "DCGG MISP Position Paper — Oppose ESMA Central Supervision",
+    "desc": "DCGG position paper on Market Integration and Supervision Package. Strongly opposes ESMA as supervisor for CASPs. Advocates NCA supervision / supervisory college model. German-Italian non-paper response included.",
+    "vertical": "crypto",
+    "region": "eu",
+    "clients": [
+      "tether"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [
+      "EU_MISP_Position_Paper.pdf"
+    ],
+    "highlight": true
+  },
+  {
+    "id": "na1",
+    "date": "2025-05-15",
+    "type": "publication",
+    "title": "HMT Draft SI — FSMA 2000 Cryptoassets Order 2025 — Response",
+    "desc": "Response to the actual UK Statutory Instrument text bringing cryptoassets under FSMA. Filed with HMT (cryptoasset.legislation@hmtreasury.gov.uk). DCGG describes itself as \"boutique trade association\" in submission. Tether directly named as primary member.",
+    "vertical": "crypto",
+    "region": "uk",
+    "clients": [
+      "tether",
+      "ledger"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "na2",
+    "date": "2025-06-01",
+    "type": "publication",
+    "title": "FCA CP25/15 — Prudential Regime for Cryptoasset Firms — Response",
+    "desc": "Response to FCA consultation on capital requirements and prudential rules for crypto firms. DCGG welcomed effort but recommended refinements for proportionality, clarity and operational flexibility.",
+    "vertical": "crypto",
+    "region": "uk",
+    "clients": [
+      "tether",
+      "ledger",
+      "wm"
+    ],
+    "owner": "mina",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "na3",
+    "date": "2025-09-01",
+    "type": "publication",
+    "title": "FCA CP25/25 Chapters 1-5 — Application of FCA Handbook — Response",
+    "desc": "Part 1 of 2. DCGG welcomed FCA applying existing handbook to regulated cryptoasset activities. Consumer Duty application welcomed with sector-specific guidance request.",
+    "vertical": "crypto",
+    "region": "uk",
+    "clients": [
+      "tether",
+      "tron",
+      "ledger"
+    ],
+    "owner": "mina",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "na4",
+    "date": "2025-09-15",
+    "type": "publication",
+    "title": "FCA CP25/25 Chapters 6-7 — Application of FCA Handbook — Response",
+    "desc": "Part 2 of 2. Application of Consumer Duty and conduct frameworks to regulated cryptoasset activities.",
+    "vertical": "crypto",
+    "region": "uk",
+    "clients": [
+      "tether",
+      "tron",
+      "ledger"
+    ],
+    "owner": "mina",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "na5",
+    "date": "2025-07-01",
+    "type": "publication",
+    "title": "IOSCO Finfluencers Report — Consultation Response",
+    "desc": "DCGG supported objective of protecting retail investors from misleading financial influencer content. Called for clear definitions, proportionate measures, and effective supervisory mechanisms. Important for stablecoin marketing rules.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "na6",
+    "date": "2025-04-01",
+    "type": "publication",
+    "title": "EU Data Retention Strategy and Roadmap — Feedback",
+    "desc": "DCGG expressed serious concerns about proposed data retention obligations for service providers. Privacy implications for encrypted communications and self-custody wallet providers highlighted.",
+    "vertical": "privacy",
+    "region": "eu",
+    "clients": [
+      "tether",
+      "ledger"
+    ],
+    "owner": "mina",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "na7",
+    "date": "2025-06-15",
+    "type": "publication",
+    "title": "EU Capital Markets Integration — Consultation Response",
+    "desc": "DCGG responded to EC targeted consultation on integration of EU capital markets. Advocated for simplification, burden reduction, and proportional treatment of digital assets in capital markets framework.",
+    "vertical": "market",
+    "region": "eu",
+    "clients": [
+      "tether",
+      "wm"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "na8",
+    "date": "2025-03-01",
+    "type": "publication",
+    "title": "ESMA Reverse Solicitation Guidelines — Position Paper",
+    "desc": "DCGG position paper arguing ESMA reverse solicitation guidelines exceed MiCA legal mandate. Overly broad definition of solicitation risks misclassifying general marketing, events attendance, and multilingual websites. Creates regulatory uncertainty for Tether and TRON international operations.",
+    "vertical": "crypto",
+    "region": "eu",
+    "clients": [
+      "tether",
+      "tron"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "na9",
+    "date": "2025-04-01",
+    "type": "publication",
+    "title": "European Technological Sovereignty — Position Paper",
+    "desc": "DCGG position paper supporting EU technological sovereignty ambitions. Argues DeAI and blockchain are EU strategic assets. Submitted to MEP Sarah Knafo own-initiative report process. Key amendments by Stefan Berger (EPP) introduce blockchain + zero-knowledge proof references.",
+    "vertical": "ai",
+    "region": "eu",
+    "clients": [
+      "tether"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "na10",
+    "date": "2025-03-15",
+    "type": "publication",
+    "title": "DCGG/Ledger — DeFi Decentralisation Position Paper (DFSA framework)",
+    "desc": "Joint DCGG and Ledger position paper responding to Danish FSA (DFSA) briefing on principles for assessing decentralisation in crypto markets. Argues MiCA DeFi exemption needs clear methodology. EU and French AMF/ACPR approaches referenced.",
+    "vertical": "crypto",
+    "region": "eu",
+    "clients": [
+      "ledger",
+      "tether"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "na11",
+    "date": "2025-01-15",
+    "type": "publication",
+    "title": "ACPR/AMF Smart Contract Certification — Consultation Response",
+    "desc": "DCGG response to French ACPR/AMF joint consultation on smart contract certification. Opposed mandatory certification requirements as overly technical and disproportionate. Key markets: France, EU.",
+    "vertical": "crypto",
+    "region": "eu",
+    "clients": [
+      "tether"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "na12",
+    "date": "2025-06-30",
+    "type": "publication",
+    "title": "Hong Kong FSTB/SFC OTC Virtual Assets — Briefing for Tether",
+    "desc": "DCGG analysis of HK OTC Virtual Assets consultation paper. KEY WIN: 2025 framework explicitly allows licensed OTC dealers to offer USDT to professional investors without Tether needing HKMA stablecoin issuer licence. Departure from 2024 consultation that banned all unlicensed stablecoins. Significant commercial opportunity preserved.",
+    "vertical": "crypto",
+    "region": "hongkong",
+    "clients": [
+      "tether"
+    ],
+    "owner": "timothy",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "na13",
+    "date": "2025-04-10",
+    "type": "event",
+    "title": "Ledger — Eurofi Warsaw Meetings (Seth Hertlein + Julien David)",
+    "desc": "Ledger Global Head of Public Affairs (Seth Hertlein) and Head of EU Policy (Julien David) held bilateral meetings at Eurofi Warsaw 9-11 April 2025. Key meeting: Bartosz Drej, Deputy Director Financial Market Development, Ministry of Finance Poland. Topics: Polish EU Presidency priorities, MiCA/AML/DORA simplification, mid-cap firm proportionality.",
+    "vertical": "crypto",
+    "region": "eu",
+    "clients": [
+      "ledger"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "na14",
+    "date": "2026-01-08",
+    "type": "meeting",
+    "title": "UK Regulatory Meetings — FCA + BoE (Giles, Philip, Josh, Simon)",
+    "desc": "Three-meeting London series 8-9 Jan 2026. FCA meeting 1: A&D and Market Abuse (Giles, Philip, Josh). BoE meeting: Systemic Regime CP Feedback (Giles, Philip, Josh, Simon). FCA meeting 2: Stablecoins/Prudential Requirements (Giles, Philip, Josh, Simon). Note: \"Simon\" is an attendee not previously documented — identity unclear. Key context: Tether will not be directly regulated under UK regime except for secondary market conduct, market integrity and marketing rules.",
+    "vertical": "crypto",
+    "region": "uk",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "na15",
+    "date": "2025-03-01",
+    "type": "publication",
+    "title": "DCGG EU-US Cryptoasset Legislation Alignment Briefing — MiCA vs GENIUS Act",
+    "desc": "Comparative analysis of EU MiCA and US GENIUS Act stablecoin provisions. Advocates EU simplification to remain competitive vs US regulatory approach. Key issue: MiCA multi-issuance model concerns from ECB. GENIUS Act simpler reserve requirements may attract issuers away from EU.",
+    "vertical": "crypto",
+    "region": "eu",
+    "clients": [
+      "tether"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "na16",
+    "date": "2025-02-20",
+    "type": "publication",
+    "title": "Argentina: LIBRA Scandal Context Briefing",
+    "desc": "President Milei endorsed $LIBRA memecoin, then retracted 48hrs later after a 93% crash ($4B → near zero). ~40,000 buyers affected. Hayden Davis (CEO Kelsier Ventures, creator of $MELANIA) involved. Political scandal triggered congressional investigation. Significant negative context for DCGG Argentina regulatory work — creates toxicity around crypto in Buenos Aires political sphere going into elections.",
+    "vertical": "crypto",
+    "region": "latam",
+    "clients": [
+      "tether"
+    ],
+    "owner": "hugo",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "na17",
+    "date": "2025-03-17",
+    "type": "event",
+    "title": "UK Government Regulatory Action Plan — FCA/PSR reform announced",
+    "desc": "Government published plan to reduce regulatory burden by 25%. PSR (Payment Systems Regulator) to be abolished and consolidated into the FCA. Simplification of UK regulatory architecture. Positive for DCGG advocacy goal of streamlined crypto oversight. Digital Gilt Instrument procurement started. PM Starmer scrapping NHS England quango — signal of broader deregulation intent.",
+    "vertical": "crypto",
+    "region": "uk",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "na18",
+    "date": "2025-01-13",
+    "type": "event",
+    "title": "UK AI Opportunities Action Plan — Matt Clifford, 50 recommendations",
+    "desc": "Government unveiled AI Opportunities Action Plan by Matt Clifford (Chair ARIA). 50 recommendations across 3 pillars: invest in AI foundations, drive adoption, position UK as AI maker not taker. All 50 accepted except visa rules and copyright (partial). Clifford appointed PM AI Opportunities Adviser. Positive context for DCGG AI vertical work — UK government actively wants AI industry engagement.",
+    "vertical": "ai",
+    "region": "uk",
+    "clients": [
+      "tether"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "na19",
+    "date": "2025-03-10",
+    "type": "event",
+    "title": "Eurogroup: ESM warns USD stablecoins threaten EU monetary sovereignty",
+    "desc": "ESM Managing Director Pierre Gramegna stated at Eurogroup that US administration favouring dollar-denominated stablecoins poses a threat to Eurozone monetary sovereignty. US tech giants may use USD stablecoins for mass payments, potentially displacing euro. Gramegna cited MiCA and Digital Euro as countermeasures. CRITICAL strategic context: European regulators now view Tether USDT as a sovereignty threat, not just a regulatory compliance issue.",
+    "vertical": "crypto",
+    "region": "eu",
+    "clients": [
+      "tether"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "na20",
+    "date": "2025-04-23",
+    "type": "event",
+    "title": "MEP Ondřej Kovařík steps down — key pro-crypto voice lost",
+    "desc": "MEP Ondřej Kovařík (Renew, Czech Republic) announced he will step down as MEP. He was one of DCGGs key pro-crypto contacts in the European Parliament and a vocal advocate for the industry in Renew group. His departure creates a gap in DCGGs EP stakeholder network. Successor to be identified.",
+    "vertical": "crypto",
+    "region": "eu",
+    "clients": [
+      "tether",
+      "tron",
+      "ledger"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "na21",
+    "date": "2025-04-14",
+    "type": "event",
+    "title": "ECB: MiCA multi-issuance model gives Tether unfair advantage",
+    "desc": "At Financial Services Committee meeting 14 April, ECB stated MiCA is \"too lenient\" toward the multi-issuance model where an EU entity jointly issues a stablecoin with a third-country entity. ECB believes third-country entities (i.e. Tether) gain competitive advantage because MiCA requirements dont apply to them equally. ECB pushing for stricter MiCA review provisions. DCGG must counter this narrative in MiCA review consultation.",
+    "vertical": "crypto",
+    "region": "eu",
+    "clients": [
+      "tether"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "na22",
+    "date": "2026-03-01",
+    "type": "publication",
+    "title": "Australian Treasury — PSP Tranche 1 (Payment Entities Bill 2026) — Consultation Response",
+    "desc": "DCGG response to Australian Treasury Tranche 1 draft legislation on regulation of Payment Service Providers. Australia is a NEW MARKET for DCGG. Key positions: (1) Preserve Reg 7.6.02AG(2C) AFS licence exemption so Tether can operate via licensed Australian exchanges without Australian licence. (2) Exclude foreign-currency stablecoins (USDT) from $200M major SVF provider threshold — only AUD-denominated SVFs should count. (3) Primary/secondary market distinction for redemption obligations. (4) Commend explicit self-custody exclusion (positive for Ledger). Reference to UK model for overseas issuer disclosure documents.",
+    "vertical": "crypto",
+    "region": "asia",
+    "clients": [
+      "tether",
+      "tron",
+      "ledger"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "web1",
+    "date": "2025-01-29",
+    "type": "event",
+    "title": "Pioneering Progress 2025 Summit — El Salvador",
+    "desc": "Bellini Balduino represented DCGG at Pioneering Progress 2025 in El Salvador — first country to accept Bitcoin as legal tender. Summit focused on Stablecoins and Digital Currencies, Regulatory Dynamics, and Tokenisation of Real-World Assets (RWAs). Key LatAm and global regulatory outreach event.",
+    "vertical": "crypto",
+    "region": "latam",
+    "clients": [
+      "tether",
+      "tron"
+    ],
+    "owner": "bellini",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "web2",
+    "date": "2025-03-01",
+    "type": "event",
+    "title": "DCGG Co-Hosts Webinar — Crypto Licensing 2025: MiCAR vs. Canadas MSB",
+    "desc": "DCGG co-hosted webinar comparing EU MiCA licensing regime with Canadas Money Services Business (MSB) framework. Important comparative analysis event positioning DCGG as global licensing expertise hub.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether",
+      "ledger"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "web3",
+    "date": "2024-10-15",
+    "type": "event",
+    "title": "INSEAD-DCGG NFT Report Launch — Houses of Parliament",
+    "desc": "Official launch of INSEAD and DCGG joint report \"Regulating NFTs: Striking the Balance between Business Innovation and Risks\" at the Houses of Parliament. Lord Iain McNicol hosted. Speakers: Peter Zemsky (INSEAD), Frederic Godart (INSEAD), Seth Hertlein (Ledger). First NFT exhibition inside Palace of Westminster. Key milestone establishing DCGG-INSEAD academic partnership.",
+    "vertical": "crypto",
+    "region": "uk",
+    "clients": [
+      "ledger"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "web4",
+    "date": "2024-08-01",
+    "type": "event",
+    "title": "European Blockchain Convention EBC10 — JJ Rober Moderator",
+    "desc": "JJ Rober served as moderator at the 10th European Blockchain Convention (EBC10). DCGG community partner for second consecutive year. Strengthens Brussels presence and EU industry network.",
+    "vertical": "crypto",
+    "region": "eu",
+    "clients": [
+      "tether",
+      "tron",
+      "ledger"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "web5",
+    "date": "2025-12-01",
+    "type": "publication",
+    "title": "Portugal Finalises MiCA Implementation — DCGG Analysis",
+    "desc": "DCGG published analysis on Portugal finalising MiCA domestic transposition. Described as \"A Turning Point for Crypto Businesses.\" Part of DCGG country-specific MiCA guidance service for members operating in or entering Portuguese market.",
+    "vertical": "crypto",
+    "region": "eu",
+    "clients": [
+      "tether"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "wf1",
+    "date": "2024-11-01",
+    "type": "publication",
+    "title": "DCGG Whitepaper — Decentralized Finance and the Evolution of Staking",
+    "desc": "DCGG published comprehensive white paper on staking in DeFi. Explores how staking drives security, liquidity and governance. Calls for balanced policy approaches in digital finance. Directly relevant to ZKValidator member interests and TRON validation activities.",
+    "vertical": "crypto",
+    "region": "eu",
+    "clients": [
+      "tether",
+      "tron"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [
+      "Decentralized-Finance-and-the-Evolution-of-Staking-DCGGs-Whitepaper.pdf"
+    ],
+    "highlight": false
+  },
+  {
+    "id": "wf2",
+    "date": "2024-06-01",
+    "type": "publication",
+    "title": "DCGG Position Paper — VASP and Stablecoin Regulations in Argentina",
+    "desc": "DCGG published dedicated position paper on VASP and stablecoin regulations in Argentina for the CNV regulatory framework. Direct advocacy output for Tether in Argentine market.",
+    "vertical": "crypto",
+    "region": "latam",
+    "clients": [
+      "tether"
+    ],
+    "owner": "hugo",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "wf3",
+    "date": "2023-10-25",
+    "type": "event",
+    "title": "European Blockchain Convention EBC9 — Barcelona",
+    "desc": "DCGG at EBC9 in Barcelona. DCGG community partner. Panel on CBDCs and Stablecoins. JJ Rober represented DCGG.",
+    "vertical": "crypto",
+    "region": "eu",
+    "clients": [
+      "tether",
+      "ledger"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "wf4",
+    "date": "2025-02-01",
+    "type": "publication",
+    "title": "DCGG Position Paper — Simplification of MiCAR RTS and Guidelines",
+    "desc": "DCGG published position paper on simplification of MiCAR Regulatory Technical Standards and Guidelines. Advocates for proportionate, innovation-friendly implementation.",
+    "vertical": "crypto",
+    "region": "eu",
+    "clients": [
+      "tether",
+      "tron",
+      "ledger"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "wf5",
+    "date": "2023-09-01",
+    "type": "publication",
+    "title": "INSEAD-DCGG Report — Regulating NFTs: Striking the Balance",
+    "desc": "Joint research report with INSEAD Business School on NFT regulation. Launched at Houses of Parliament (Lord Iain McNicol hosting). Speakers: Peter Zemsky, Frederic Godart (INSEAD), Seth Hertlein (Ledger). First NFT exhibition inside Palace of Westminster. Establishes DCGG academic credibility.",
+    "vertical": "market",
+    "region": "uk",
+    "clients": [
+      "ledger"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "pr1",
+    "date": "2026-03-24",
+    "type": "event",
+    "title": "TETHER — Signs Big Four firm for first full independent audit",
+    "desc": "Tether signs engagement with a Big Four accounting firm for its first full independent financial statement audit — described as the biggest inaugural audit in financial markets history. Major de-risking event for EU/UK regulatory engagement. Key DCGG argument: Tether operates to highest transparency standards.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "pr2",
+    "date": "2026-03-17",
+    "type": "event",
+    "title": "TETHER QVAC — Worlds first cross-platform BitNet LoRA framework launched",
+    "desc": "QVAC Fabric launches worlds first cross-platform LoRA fine-tuning framework for Microsofts BitNet 1-bit LLMs. Enables billion-parameter AI models on consumer GPUs, laptops and smartphones. No cloud, no API keys. Key Norberto/DCGG AI work — QVAC is the core DeAI product driving EU AI Act engagement.",
+    "vertical": "ai",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "pr3",
+    "date": "2026-03-27",
+    "type": "event",
+    "title": "TETHER GOLD — Listed on BNB Chain (gold surged 64% in 2025)",
+    "desc": "Tether Gold (XAUt) — worlds leading tokenised gold product — now available on BNB Chain. XAUt market cap: $3.2B. Gold surged 64% in 2025, largest annual gain in 40 years. Regulatory note: XAUt may be classified as ART under MiCA (asset-referenced token).",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "pr4",
+    "date": "2026-03-20",
+    "type": "event",
+    "title": "TRON DAO — Diamond Sponsor DC Blockchain Summit 2026",
+    "desc": "TRON DAO Diamond Sponsor at DC Blockchain Summit 2026 (Mar 17-18, Washington DC). Justin Sun keynote: \"Building the Rails for a Unified Financial System.\" Adrian Wall (TRON DAO Senior Director US Policy) moderated CLARITY panel with Rep. Dusty Johnson (R-SD). Signals TRON strengthening US policy engagement under Trump administration.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tron"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "pr5",
+    "date": "2026-04-07",
+    "type": "event",
+    "title": "TRON DAO — Ruby Sponsor at EthCC[9] Cannes + Agentic AI payments keynote",
+    "desc": "TRON DAO at EthCC[9] Cannes (Mar 30 - Apr 2 2026). Justin Sun keynoted on agentic AI payments infrastructure. \"TRON is the best solution for agentic AI payment infrastructure\" (Sun). Co-hosted MetaMask Builder Nights Cannes with Sam Elfarra on cross-chain commerce. Directly relevant to DCGG AI work — TRON positioning USDT as the settlement layer for AI agents.",
+    "vertical": "ai",
+    "region": "eu",
+    "clients": [
+      "tron",
+      "tether"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "pr6",
+    "date": "2026-03-27",
+    "type": "event",
+    "title": "TRON — Anchorage Digital adds TRX institutional custody (first US federally chartered bank)",
+    "desc": "Anchorage Digital (first federally chartered US crypto bank) adds TRX custody support. Phased: TRX first, then TRC-20 assets and staking. Major institutional validation of TRON network. Tron Inc. (Nasdaq: TRON) holdings: ~686.8M TRX (~$206M). Daily accumulation strategy: $50K/day for 360 days.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tron"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "pr7",
+    "date": "2026-02-04",
+    "type": "event",
+    "title": "LEDGER x Lamborghini — Custom Lamborghini Ledger Stax collaboration",
+    "desc": "Ledger x Lamborghini partnership — custom Lamborghini Ledger Stax device presented. Part of Ledgers strategy to expand brand beyond crypto into luxury/lifestyle. Ledger Op3n 2025 introduced: Nano Gen5, rebranding hardware wallets as \"signers\", N3XT program.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "ledger"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "pr8",
+    "date": "2026-04-07",
+    "type": "publication",
+    "title": "LEDGER — Q1 2026 Release Notes: Trade Different — Ledger Wallet 4.0",
+    "desc": "Ledger Wallet 4.0 (formerly Ledger Live) released Q1 2026. Redesigned portfolio page, new DEX integrations (OKX, 1inch, Velora), improved swap and earn. Key regulatory note: Ledger Wallet is web3 gateway — any MiCA CASP rules on wallet software affects Ledger users. Regulatory clarity on non-custodial wallet regulation remains critical for Ledger.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "ledger"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "pr9",
+    "date": "2026-03-05",
+    "type": "event",
+    "title": "TRON — SEC drops all claims against Justin Sun, Tron Foundation, BitTorrent Foundation",
+    "desc": "SEC moves to dismiss all claims against Justin Sun, Tron Foundation and BitTorrent Foundation (Feb-Mar 2025 under Trump administration). Sun: \"I never stopped building. Will continue to focus on accelerating innovation in the United States.\" Rainberry Inc. (TRON-affiliated) reaches separate settlement with SEC. Key: removes major US regulatory overhang from TRON narrative.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tron"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "tn01",
+    "date": "2026-04-09",
+    "type": "event",
+    "title": "TETHER — QVAC SDK launched: open-source universal AI building block",
+    "desc": "QVAC SDK: fully open-source cross-platform Software Development Kit. Vision: 10B humans + 10B machines + 1 trillion AI agents. \"Stable Intelligence Era.\" QVAC = modular, local-first AI platform running on any device from industrial server to chip in a light bulb. Standardised, stackable, infinitely scalable. CRITICAL for DCGG: Norberto/Maira must position QVAC SDK as the implementation of DCGG DeAI policy asks under EU AI Act.",
+    "vertical": "ai",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "tn02",
+    "date": "2026-03-17",
+    "type": "event",
+    "title": "TETHER QVAC — Worlds first BitNet LoRA framework (1-bit LLMs on consumer hardware)",
+    "desc": "QVAC Fabric: worlds first cross-platform LoRA fine-tuning framework for Microsoft BitNet 1-bit LLMs. Runs billion-parameter models on laptops, AMD, Intel, Apple Silicon, mobile GPUs — 77.8% less VRAM than comparable models. Technical paper on Hugging Face. REGULATORY IMPLICATION: QVAC runs entirely local — no cloud, no API keys. EU AI Act \"General Purpose AI\" classification does not apply. This is the core DeAI/open-source safe harbour argument DCGG is making.",
+    "vertical": "ai",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [
+      "AI_QVAC_Value_Chain_Policy_Brief.pdf"
+    ],
+    "highlight": true
+  },
+  {
+    "id": "tn03",
+    "date": "2025-12-22",
+    "type": "publication",
+    "title": "TETHER QVAC Genesis II — 148 billion token educational dataset released",
+    "desc": "QVAC Genesis II: 107B new tokens added (total: 148B tokens across 19 educational domains). Includes chemistry, computer science, statistics, ML, astronomy, geography, econometrics, electrical engineering. Worlds largest publicly available synthetic educational dataset for AI pre-training. DCGG relevance: reinforces Tether as serious AI infrastructure player, not just crypto company.",
+    "vertical": "ai",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn04",
+    "date": "2025-11-12",
+    "type": "event",
+    "title": "TETHER — Leases 20,000+ GPU network (Rumble + Northern Data) for QVAC and freedom-first AI",
+    "desc": "Tether signs agreement to lease significant share of 20,000+ GPU network (Rumble/Northern Data alliance). Powers AI research, creator tools, QVAC Infinite Intelligence platform. Statement: \"freedom of money, freedom of speech, freedom of thought.\" DCGG angle: Tethers AI infrastructure positions it as challenger to Big Tech AI hegemony — central to DeAI and European technological sovereignty arguments.",
+    "vertical": "ai",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "tn05",
+    "date": "2025-05-14",
+    "type": "event",
+    "title": "TETHER — QVAC announced (QuantumVerse Automatic Computer): DeAI development platform",
+    "desc": "QVAC officially announced: development platform for Infinite Intelligence. Local-first, no cloud dependency, P2P device-to-device communication. First apps: QVAC/Translate. Scale to trillions of AI agents. WDK integration allows AI agents to autonomously transact in Bitcoin and USDt. CEO Ardoino: \"If you need an API key to use your AI, it isnt truly yours.\" CRITICAL DCGG work: This announcement triggered the entire DCGG AI vertical engagement with EU AI Act on DeAI, agentic AI liability, and open-source safe harbour.",
+    "vertical": "ai",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [
+      "AI_PolicyBrief1_Overreaching_AI_Policy_Solutions.pdf"
+    ],
+    "highlight": true
+  },
+  {
+    "id": "tn06",
+    "date": "2026-01-30",
+    "type": "publication",
+    "title": "TETHER Q4 2025 Attestation — $10B+ profits 2025, $6.3B excess reserves, $141B US Treasuries",
+    "desc": "Q4 2025 attestation by BDO. Full year 2025: net profits >$10 billion, excess reserves $6.3B, US Treasury exposure $141B (all-time record). USD₮ in circulation: $186B+ (all-time high). Near $50B in new USD₮ issued in 2025 alone. Total reserve assets ~$193B. 17th largest holder of US debt. REGULATORY CONTEXT: These numbers are Tethers central argument for legitimacy — stronger balance sheet than most G20 central banks. DCGG uses in all UK/EU regulatory briefings.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "tn07",
+    "date": "2025-10-31",
+    "type": "publication",
+    "title": "TETHER Q3 2025 Attestation — $10B+ YTD profits, $135B US Treasuries, 500M+ users",
+    "desc": "Q3 2025 by BDO. YTD profits >$10B. US Treasury exposure $135B (= 17th largest holder of US debt globally — more than Taiwan and South Korea). Over 500 million users globally. \"17th largest holder of US debt\" — key DCGG argument for Tether as structural gilts/Treasury buyer in UK/US regulatory discussions.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn08",
+    "date": "2025-07-31",
+    "type": "publication",
+    "title": "TETHER Q2 2025 Attestation — $127B US Treasuries, $4.9B net profit, 7th largest US debt buyer",
+    "desc": "Q2 2025 by BDO. $127B US Treasury exposure (approaching record). $4.9B net profit Q2. $20B new USD₮ issued YTD, bringing circulating supply to >$157B. First quarter under El Salvador regulatory supervision (licensed stablecoin issuer under Digital Assets framework). \"7th largest buyer of US Treasuries in last 12 months compared to countries.\" Total assets $149.3B, liabilities $143.7B.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn09",
+    "date": "2025-05-01",
+    "type": "publication",
+    "title": "TETHER Q1 2025 Attestation — Approaching $120B US Treasuries, >$1B quarterly profit",
+    "desc": "Q1 2025 by BDO. Approaching $120B US Treasuries (all-time high). Quarterly operating profit >$1B. First quarter of El Salvador regulatory supervision. Key note: Tether proprietary investments via Tether Investments (AI, energy, communications) NOT counted as reserves — purely additional equity. Total assets $149.3B.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn10",
+    "date": "2026-01-27",
+    "type": "event",
+    "title": "TETHER — USA₮ officially launched: GENIUS Act compliant US stablecoin",
+    "desc": "USA₮ officially launched. Issuer: Anchorage Digital Bank N.A. (Americas first federally regulated digital asset bank). CEO of Tether USA₮: Bo Hines (former White House Crypto Council Executive Director). Reserve custodian: Cantor Fitzgerald (also serves as preferred primary dealer). Platform: Hadron by Tether technology. Available to US users seeking dollar-backed token within GENIUS Act federal regime. CRITICAL DCGG CONTEXT: This creates a direct question for EU regulators — if USA₮ is US-regulated and USDt is El Salvador-regulated, does MiCA treat them differently? Feeds directly into MiCA review consultations.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "tn11",
+    "date": "2025-12-01",
+    "type": "event",
+    "title": "TETHER — USA₮ unveiled, Bo Hines appointed CEO of Tether USA₮",
+    "desc": "Tether unveils USA₮ before formal launch. GENIUS Act compliant design. Anchorage Digital Bank as issuer. Bo Hines (ex-White House Crypto Council) appointed CEO. Uses Hadron tokenisation platform. Key message: \"reinforcing US dominance and leadership in the evolving digital asset economy.\"",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn12",
+    "date": "2026-03-12",
+    "type": "event",
+    "title": "TETHER — Strategic investment in Ark Labs ($5.2M): stablecoins on programmable Bitcoin",
+    "desc": "Tether Investments invests in Ark Labs (team behind Arkade — programmable Bitcoin infrastructure). Part of $5.2M round. Expands USDt global access on Bitcoin network. Follows USDt integration with Bitcoin/Lightning announced at Plan B El Salvador forum (Jan 2025) with Lightning Labs/Elizabeth Stark. Ledger-relevant: Arkade is self-custodial infrastructure.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn13",
+    "date": "2026-03-05",
+    "type": "event",
+    "title": "TETHER — Investment in Axiym: global treasury and settlement fintech",
+    "desc": "Tether Investments invests in Axiym, fintech with globally distributed treasury and settlement infrastructure. Expands access to global financial systems. Consistent with Tethers TradeFi strategy — positioning USD₮ as institutional settlement asset.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn14",
+    "date": "2026-03-04",
+    "type": "event",
+    "title": "TETHER — $1.5B investment in Eight Sleep: QVAC Health + AI-powered sleep technology",
+    "desc": "Tether Investments invests in Eight Sleep at $1.5B valuation. Sleep tech + embedded AI sensors + personalized health insights. Plans to build AI features on QVAC. Accompanies launch of QVAC Health — personal wellness platform unifying fitness/health data offline, on-device. \"Stable Intelligence Era\" applied to human biology. Falls under Tether Evo business line.",
+    "vertical": "ai",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn15",
+    "date": "2026-02-10",
+    "type": "event",
+    "title": "TETHER — Investment in LayerZero Labs: USDt0 cross-chain interoperability ($70B+ in 12 months)",
+    "desc": "Tether Investments invests in LayerZero Labs (creator of interoperability protocol behind USDt0 and XAUt0). USDt0 has facilitated >$70B cross-chain value transfer in under 12 months. Omnichain Fungible Token standard enables stablecoins to move across blockchains without fragmentation. Combined with WDK: \"most advanced foundational rail for agentic finance\" allowing AI agents to own autonomous wallets.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "tn16",
+    "date": "2026-02-06",
+    "type": "event",
+    "title": "TETHER — Investment in t-0 network: USD₮ settlement platform for licensed financial institutions",
+    "desc": "Tether Investments invests in t-0 network — USD₮-powered settlement platform for banks and fintechs enabling instant cross-border fiat-to-fiat payments. Banks as Tether infrastructure partners — directly relevant to UK BoE and HMT arguments about Tether as systemic financial infrastructure provider.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn17",
+    "date": "2026-02-05",
+    "type": "event",
+    "title": "TETHER — $100M investment in Anchorage Digital: regulated crypto bank infrastructure",
+    "desc": "Tether Investments makes $100M strategic equity investment in Anchorage Digital. Anchorage = Americas first federally regulated digital asset bank (staking, custody, governance, settlement, stablecoin issuance). Investment reflects shared focus on regulated infrastructure for next phase of digital asset adoption. Note: Anchorage is also the issuer of USA₮. DCGG context: demonstrates Tether commitment to regulated frameworks — counters ECB/ESMA narrative that Tether avoids regulation.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "tn18",
+    "date": "2026-02-05",
+    "type": "event",
+    "title": "TETHER — $150M investment in Gold.com: expanding tokenised and physical gold access",
+    "desc": "Tether Investments acquires minority stake in Gold.com. Long-term collaboration to expand access to gold across digital and traditional distribution channels. Complements XAUt gold stablecoin strategy. XAUt: 60% of total gold-backed stablecoin market (>$4B market cap, held >50% of total gold-backed stablecoins throughout 2025).",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn19",
+    "date": "2025-12-08",
+    "type": "event",
+    "title": "TETHER — Investment in Generative Bionics: Italian humanoid robots (IIT spinoff, €70M round)",
+    "desc": "Tether Investments joins €70M funding round for Generative Bionics — largest IIT (Italian Institute of Technology) spinoff, one of largest research spinoffs in Europe. 60+ humanoid robot prototypes refined over 20 years. Industrial deployment: manufacturing, logistics, healthcare, retail. QVAC architecture integration. Falls under Tether Evo vertical. Demonstrates Tether as physical AI/human evolution investor — relevant to DCGG AI brochure narrative.",
+    "vertical": "ai",
+    "region": "eu",
+    "clients": [
+      "tether"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn20",
+    "date": "2025-11-20",
+    "type": "event",
+    "title": "TETHER — Investment in Parfin: institutional digital asset custody in LATAM",
+    "desc": "Tether invests in Parfin — digital asset custody, tokenisation, trading platform for Latin America. Accelerates USD₮ adoption for institutional use cases. LATAM saw $1.5T in crypto transaction volume in 2025 (Chainalysis). Supports RWA tokenisation, trade finance receivables, credit markets. DCGG LATAM team (Hugo/Bellini/Larissa) should track Parfin as potential member BD prospect.",
+    "vertical": "crypto",
+    "region": "latam",
+    "clients": [
+      "tether"
+    ],
+    "owner": "hugo",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn21",
+    "date": "2025-11-18",
+    "type": "event",
+    "title": "TETHER — Investment in Ledn: bitcoin-backed consumer loans infrastructure",
+    "desc": "Tether invests in Ledn, global market leader in consumer bitcoin-backed loans. Empowers individuals and businesses to access credit without selling digital assets. Bitcoin as collateral — no forced selling. Aligns with Tethers financial inclusion mandate.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn22",
+    "date": "2025-12-16",
+    "type": "event",
+    "title": "TETHER — Leads $8M investment in Speed1: Bitcoin Lightning + stablecoin payments",
+    "desc": "Tether leads $8M round in Speed1 (Speed) — instant global settlement rails using Bitcoin Lightning Network and stablecoins. Ego death capital co-investor. Follows USDt on Lightning integration announced at Plan B El Salvador (Feb 2025) with Lightning Labs. Reinforces Bitcoin as Tether settlement layer alongside TRON.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn23",
+    "date": "2026-01-26",
+    "type": "event",
+    "title": "TETHER GOLD — XAU₮ surpasses $4B: >50% of entire gold-backed stablecoin market",
+    "desc": "XAU₮ holds >50% of total gold-backed stablecoin market supply throughout 2025. Market grew from ~$1.3B to >$4B in 2025. Each token = 1 fine troy ounce of physical gold in Swiss vaults (London Good Delivery bars). Q1 2025 attestation: 7.7+ tons physical gold backing. Issued under El Salvador Digital Asset Issuance Law. MiCA note: XAUt would qualify as ART (asset-referenced token) under MiCA if issued in EU.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn24",
+    "date": "2026-01-06",
+    "type": "event",
+    "title": "TETHER — Scudo introduced: new unit of account for XAU₮ to revive gold as payment",
+    "desc": "Scudo introduced as a new unit of account for Tether Gold (XAU₮), designed to enable gold as everyday means of payment. 1 Scudo = fraction of XAU₮ troy ounce. Designed for accessibility at historic high gold prices. Relevant to EU regulation: Scudo-denominated payments = ART payments under MiCA.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn25",
+    "date": "2025-12-17",
+    "type": "event",
+    "title": "TETHER — PearPass launched: P2P password manager (no cloud, device-only)",
+    "desc": "PearPass: peer-to-peer password manager. Credentials stored only on user devices, never in cloud. Direct P2P encrypted sync across selected devices. Zero servers, zero middlemen. Part of Tether Data business line (Keet, Holepunch, Pears.com ecosystem). DCGG privacy context: demonstrates Tether commitment to privacy-by-design — relevant to GDPR/CSAM/Chat Control advocacy.",
+    "vertical": "privacy",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "mina",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn26",
+    "date": "2025-08-29",
+    "type": "event",
+    "title": "TETHER — Legacy blockchain wind-down: Omni Layer, BCH SLP, Kusama, EOS, Algorand",
+    "desc": "Tether updates transition plan for 5 legacy blockchains. Will NOT freeze smart contracts (revised from original plan). Discontinues direct issuance and redemption only. Tokens remain transferable. Focus on ecosystems with strongest developer activity, scalability, user demand. DCGG note: consolidation of USDt on fewer chains (primarily TRON, Ethereum, Solana) = cleaner regulatory perimeter arguments.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn27",
+    "date": "2026-03-27",
+    "type": "event",
+    "title": "TETHER — OSCE report recognises Tether for supporting anti-human-trafficking investigations",
+    "desc": "OSCE (Organisation for Security and Co-operation in Europe) report on digital assets in human trafficking investigations explicitly recognises Tether collaboration with law enforcement. Tether to date: frozen ~$4.2B in USDt linked to illicit activity (updated Mar 2026). Works with 340+ law enforcement agencies across 65+ countries. DCGG regulatory argument: Tether is the most compliant stablecoin issuer globally — more compliant than any EU-regulated alternative.",
+    "vertical": "crypto",
+    "region": "eu",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "tn28",
+    "date": "2026-02-25",
+    "type": "event",
+    "title": "TETHER — DOJ acknowledgment: $61M USD₮ seizure from pig butchering fraud",
+    "desc": "DOJ acknowledges Tether assistance in seizure of ~$61M USDt linked to pig butchering fraud operation. Follows $225M seizure (Jun 2025). Compliance record: frozen $2.7B+ total illicit USDt, 255+ law enforcement agencies, 55+ countries. In 2025 also: helped US Secret Service freeze $23M linked to sanctioned exchange Garantex; worked with TRON, TRM Labs, Spanish authorities to freeze >$100M illicit funds.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn29",
+    "date": "2025-11-13",
+    "type": "event",
+    "title": "TETHER — Supports Royal Thai Police + US Secret Service: $12M USDT seized from scam network",
+    "desc": "Tether supports Royal Thai Police and US Secret Service in coordinated international operation. ~$12M USDT seized (~400M Thai baht) from major scam network. Growing international law enforcement cooperation footprint.",
+    "vertical": "crypto",
+    "region": "asia",
+    "clients": [
+      "tether"
+    ],
+    "owner": "timothy",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn30",
+    "date": "2025-06-18",
+    "type": "event",
+    "title": "TETHER — DOJ acknowledgment: $225M USD₮ seized from pig butchering fraud operation",
+    "desc": "DOJ acknowledges Tether assistance in major enforcement action — $225M USDt seized from pig butchering fraud (multiple jurisdictions). Largest single Tether-assisted seizure to date. Further cements DCGG narrative that Tether leads crypto compliance industry.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "tn31",
+    "date": "2026-03-03",
+    "type": "event",
+    "title": "TETHER + Lugano — Plan B Phase II (2026-2030): CHF 5M, digital infrastructure hub",
+    "desc": "Plan B Phase II MOU signed. CHF 5M contribution over 2026-2030 (expertise, infrastructure, applied research, training). 5 pillars: digital infrastructure, resilience, local capacity building. City governance authority maintained. Outcomes from Phase I: 400+ merchants accept BTC/USDt/LVGA; Bitcoin/USDt accepted for all municipal services including taxes. Fifth annual Plan B Forum Lugano: Oct 23-24, 2026.",
+    "vertical": "crypto",
+    "region": "eu",
+    "clients": [
+      "tether"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn32",
+    "date": "2025-10-30",
+    "type": "event",
+    "title": "TETHER — 4th Annual Plan B Forum Lugano: 4,000+ attendees, 64 countries, 800K viewers",
+    "desc": "4th Annual Plan B Forum Lugano (Oct 24-25, 2025). 4,000+ attendees from 64 countries (140% increase from 2022 inaugural). 800K+ livestream viewers on Rumble. Satoshi Nakamoto statue restored and re-unveiled by CEO Paolo Ardoino. Rumble CEO Chris Pavloski announced Bitcoin tipping integration for 51M users (in partnership with Tether). Expanded to El Salvador, Japan replicas.",
+    "vertical": "crypto",
+    "region": "eu",
+    "clients": [
+      "tether"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn33",
+    "date": "2025-02-05",
+    "type": "event",
+    "title": "TETHER — Plan B Forum El Salvador: sold out, 2,500 attendees, USDt on Bitcoin Lightning announced",
+    "desc": "First Plan B Forum El Salvador (Jan 30-31, 2025). 2,500 attendees. Key announcement: USDt integration with Bitcoin base layer and Lightning Network (with Lightning Labs/Elizabeth Stark using Taproot Assets). Second Satoshi Nakamoto statue unveiled. El Salvador: Tethers new home base after El Salvador Digital Assets licensing.",
+    "vertical": "crypto",
+    "region": "latam",
+    "clients": [
+      "tether"
+    ],
+    "owner": "hugo",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "tn34",
+    "date": "2026-02-04",
+    "type": "publication",
+    "title": "TETHER — USD₮ Q4 2025 Market Report: +$12.4B in Q4, 534.5M users, 139.1M on-chain holders",
+    "desc": "Official USD₮ Q4 2025 market report. Market cap grew $12.4B in Q4 to $187.3B. Total estimated USD₮ users: 534.5M (8th consecutive quarter adding >30M users). On-chain holders: 139.1M (largest quarterly increase ever). USD₮ wallets = 70.7% of all stablecoin wallets. Added 35.2M users in Q4. Tether added $28.2B of US Treasuries in 2025 = 7th largest buyer vs countries. Key: despite crypto liquidation cascade Oct 2025 (market cap fell 1/3), USD₮ grew 3.5%.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn35",
+    "date": "2025-03-03",
+    "type": "event",
+    "title": "TETHER — Simon McWilliams appointed CFO: Giancarlo Devasini becomes Chairman",
+    "desc": "Historic leadership transition: Simon McWilliams appointed CFO (replacing Giancarlo Devasini who moves to Chairman role). McWilliams: 20+ years finance experience, ex-CFO LetterOne, ex-COO Quantmetrics Capital Management, ex-WizzFinancial. Appointment explicitly tied to completing full financial audit. \"Simon expertise in financial audits makes him the perfect CFO to lead Tether into this new era of transparency\" (Ardoino). DCGG CONTEXT: This appointment was the prerequisite for the Big Four audit signed Mar 24 2026 — direct chain: McWilliams appointed Mar 2025 → Big Four signed Mar 2026.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "tn36",
+    "date": "2025-08-19",
+    "type": "event",
+    "title": "TETHER — Bo Hines appointed Strategic Advisor for Digital Assets and US Strategy",
+    "desc": "Tether appoints Bo Hines (former Executive Director of White House Crypto Council under Trump) as Strategic Advisor for Digital Assets and US Strategy. Directly preceded USA₮ launch (Jan 2026). Hines becomes CEO of Tether USA₮ at launch. DCGG context: Demonstrates Tethers deep connections to Trump administration — critical context for understanding regulatory tailwind for GENIUS Act and SEC case dismissals.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "tn37",
+    "date": "2025-08-14",
+    "type": "event",
+    "title": "TETHER — Lightspark/Spark integrated into WDK: Lightning-enabled self-custodial wallets",
+    "desc": "Tether and Lightspark announce integration of Spark Bitcoin Lightning infrastructure into Wallet Development Kit (WDK) open-source toolkit. Enables programmable, self-custodial wallets with Lightning payments. Developers can build Bitcoin/USDt wallet apps with Lightning natively. Follows Plan B El Salvador announcement of USDt on Bitcoin/Lightning (Jan 2025 with Lightning Labs). DCGG: WDK is now a full-stack Bitcoin + Lightning + USDt developer toolkit.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn38",
+    "date": "2025-10-14",
+    "type": "event",
+    "title": "TETHER — $299.5M Celsius Network bankruptcy settlement (BRIC/VanEck/GXD Labs)",
+    "desc": "Tether settles Celsius Network bankruptcy adversary proceeding for $299.5M (7% of the $4.3B sought). Filed Aug 2024 by Blockchain Recovery Investment Consortium (BRIC = GXD Labs + VanEck). Claim: Tether improperly liquidated 39,542 BTC collateral ahead of Celsius July 2022 bankruptcy. Tether had called it \"baseless shakedown.\" Settlement paid using proprietary investment capital (not reserves). Q3 2025 attestation notes settlement completed without affecting USD₮ reserves. RISK NOTE: Removes significant legal overhang from Tether balance sheet.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn39",
+    "date": "2025-11-26",
+    "type": "event",
+    "title": "TETHER — EUR₮ wind-down finalized: redemptions ceased Nov 27 2025",
+    "desc": "EUR₮ fully wound down. Last redemptions: Nov 27 2025. Last minting: 2022. Full wind-down of Tethers euro stablecoin. Part of broader strategy to focus on high-utility networks (USDt, XAUt). CRITICAL DCGG/EU CONTEXT: EUR₮ wind-down is a deliberate decision NOT to compete with MiCA-compliant EUR stablecoin market. This actually HELPS StablR (DCGG member) which issues EUR stablecoins — removes Tether as competitor. Also means ECB/ESM concerns about USD stablecoins cannot claim Tether \"deliberately avoided\" EU regulation — they withdrew from EUR entirely.",
+    "vertical": "crypto",
+    "region": "eu",
+    "clients": [
+      "tether"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "tn40",
+    "date": "2025-05-07",
+    "type": "event",
+    "title": "TETHER — USD₮ natively launched on Kaia blockchain (LINE NEXT, 196M monthly users)",
+    "desc": "Tether creates native USD₮ deployment on Kaia blockchain. LINE NEXT Corp (LINEs blockchain venture) integration. LINE = 196M monthly active users across Asia (Japan, Korea, Thailand, Taiwan). Users can: complete missions in Mini Dapps and earn USDt, send/receive USDt via in-app wallet in LINE Messenger. Key DCGG ASIA CONTEXT: Timothy Shin leads Korea — LINE is dominant in Korea/Japan. This is significant market penetration for USDt across the exact markets Timothy covers.",
+    "vertical": "crypto",
+    "region": "asia",
+    "clients": [
+      "tether"
+    ],
+    "owner": "timothy",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "tn41",
+    "date": "2026-03-12",
+    "type": "event",
+    "title": "TETHER — Zachary Lyons becomes CIO as Richard Heathcote moves to Non-Executive Advisor",
+    "desc": "CIO transition: Richard Heathcote (outgoing CIO) oversaw Tethers rapid reserve expansion to hundreds of billions, positioned Tether as one of largest private holders of US T-bills, built Wall Street partnerships. Moved to non-executive advisory to focus on personal/family priorities. Zachary Lyons (was deputy CIO) steps up as CIO. Paolo Ardoino: \"once in a century company.\" Lyons deeply involved in evaluating and executing many strategic investments.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tn42",
+    "date": "2025-11-26",
+    "type": "publication",
+    "title": "TETHER — CNH₮ (Chinese yuan stablecoin): strategic transition announced",
+    "desc": "Tether announces strategic transition for CNH₮ to better support community-driven product focus. Will cease CNH₮ redemptions on Nov 27 2025 (same as EUR₮). Part of product focus strategy. DCGG context: Tether is now exclusively focused on USD₮ (+ XAUt gold) and USA₮ for regulated US market. All EUR, CNH, GBP stablecoin markets left to others (like StablR).",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "lg01",
+    "date": "2026-03-20",
+    "type": "event",
+    "title": "LEDGER — New CFO John Andrews (ex-Circle) + NYC office opens: IPO positioning",
+    "desc": "John Andrews appointed CFO (from Circle, where he was Head of Capital Markets and Investor Relations). 25+ years finance experience. Multi-million dollar NYC office investment (multi-year deal with San Antonio Spurs preceded this). NYC office at heart of financial world. Dozens of new roles across Ledger Enterprise and marketing. DCGG CRITICAL: Andrews Circle background = stablecoin regulatory expertise. Ledger is preparing for NYSE IPO ($4B+ valuation; Goldman Sachs, Jefferies, Barclays retained per FT Jan 2026). Pascal Gauthier: \"Today the money for cryptocurrencies is in New York.\"",
+    "vertical": "market",
+    "region": "global",
+    "clients": [
+      "ledger"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "lg02",
+    "date": "2026-03-25",
+    "type": "event",
+    "title": "LEDGER Enterprise — HSM On-Premise announced: keys on-site, governance cloud",
+    "desc": "Ledger Enterprise HSM On-Premise: institutions keep hardware keys in their own data centres. Ledger hosts governance/orchestration layer. FIPS 140-2 Level 3 certified. Phase One build completes end May 2026, client integrations begin June 2026. Target clients: global banks, central banks, sovereign funds, regulated custodians, stablecoin issuers. Addresses EU data residency requirements (GDPR, DORA). DCGG LINK: explicitly targeting \"stablecoin issuers\" = potential Tether and StablR client. Sebastien Badault VP Enterprise leading rollout.",
+    "vertical": "crypto",
+    "region": "eu",
+    "clients": [
+      "ledger"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "lg03",
+    "date": "2026-04-02",
+    "type": "event",
+    "title": "LEDGER Enterprise + Tangany (BaFin/MiCA-licensed): secure tri-party institutional settlement",
+    "desc": "Ledger Enterprise partners with Tangany, BaFin-regulated and MiCA-licensed German custodian, for tri-party settlement framework via Tradelink. Institutional investors trade on global venues without surrendering assets to exchanges = zero counterparty risk. Mirrors traditional finance clearing house structures. DCGG EU CONTEXT: Tangany is MiCA-licensed — exactly the kind of regulated EU framework DCGG advocates for. VP Badault: \"gold standard for institutional trading.\" First major institutional-grade regulated EU integration for Ledger Tradelink.",
+    "vertical": "crypto",
+    "region": "eu",
+    "clients": [
+      "ledger"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "lg04",
+    "date": "2026-01-23",
+    "type": "event",
+    "title": "LEDGER — IPO plans reported: NYSE, $4B+ valuation, Goldman/Jefferies/Barclays",
+    "desc": "Financial Times reports Ledger preparing for NYSE IPO as early as 2026. Valuation: $4B+ (vs $1.5B in 2023 last funding round). Investment banks retained: Goldman Sachs, Jefferies, Barclays. John Andrews (ex-Circle Head of Capital Markets and IR) hired as CFO = IPO execution lead. Pascal Gauthier always cited preference for NYSE over Paris. DCGG NOTE: IPO would transform Ledger from startup to publicly listed company — formal Policy team likely to expand, potentially more structured DCGG membership engagement.",
+    "vertical": "market",
+    "region": "global",
+    "clients": [
+      "ledger"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "lg05",
+    "date": "2025-10-23",
+    "type": "event",
+    "title": "LEDGER Op3n 2025 — Nano Gen5 + signers rebrand + Ledger Wallet launched",
+    "desc": "Ledger Op3n annual event at Paris HQ (Marais district). Key announcements: (1) Ledger Nano Gen5: touchscreen signer at affordable price, Susan Kare badges, Ledger Recovery Key included. (2) Ledger Wallet (renamed from Ledger Live) — complete app redesign. (3) All hardware wallets → \"signers\" (DeFi/identity evolution). (4) Ledger N3XT university program. (5) New Ledger Multisig enterprise tools. (6) 1inch DEX integration (no extension needed). (7) Noah partnership (direct bank-to-Ledger Wallet transfers). (8) SUI $400K rewards campaign. (9) Clear Signing/Transaction Check for every transaction.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "ledger"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "lg06",
+    "date": "2025-07-14",
+    "type": "event",
+    "title": "LEDGER + San Antonio Spurs — multi-year global partnership: official jersey patch sponsor",
+    "desc": "Multi-year global partnership with San Antonio Spurs (5x NBA Champions). Ledger = official jersey patch partner 2025-2026+ season. Spurs committed $15M to STEM education/mental health/facility access in San Antonio. Ledger logo debuted on Spurs jerseys during 2025 NBA Draft and California Classic Summer League. \"Play Paris\" initiative from 2026 (Spurs youth development in France). Bridge between Paris HQ and Texas. EVP Ariel Wengroff: \"The Spurs fanbase is a generation shaping what comes next.\" Ledger holds 2.8M estimated hardware wallets sold in US alone.",
+    "vertical": "market",
+    "region": "global",
+    "clients": [
+      "ledger"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "lg07",
+    "date": "2025-10-17",
+    "type": "event",
+    "title": "LEDGER — Official Naming Partner of Young Star Game (French basketball, 3-year deal)",
+    "desc": "Ledger becomes Official Naming Partner of Young Star Game for 3 years. French basketball pre-draft showcase. Inaugural 2025 event: 2,300 spectators, 27 NBA scouts from 20 franchises → 3 players drafted to NBA (Nolan Traore, Noah Penda, Mohamed Diawara). 2026 event: Mar 3-4 at Palais des Sports Marcel-Cerdan, Levallois-Perret. France = Ledgers home country. Partnership springboarded Spurs deal. EVP Wengroff: \"from our home country, France.\" Ledger Academy: Rookie to Pro series uses basketball analogies to explain crypto.",
+    "vertical": "market",
+    "region": "eu",
+    "clients": [
+      "ledger"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "lg08",
+    "date": "2025-11-13",
+    "type": "event",
+    "title": "LEDGER N3XT Program launched at Op3n 2025: university blockchain education initiative",
+    "desc": "Ledger N3XT: long-term university education program. 25 student leaders, 12 blockchain clubs at inaugural Op3n event. Provides: tailored educational content, R&D opportunities, on-campus events, access to resources. Mission: inspire and support next-generation Web3 and digital sovereignty leaders. DCGG RELEVANCE: aligns with AI/digital literacy policy education agenda. Potential pathway to recruit junior policy talent.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "ledger"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "lg09",
+    "date": "2026-02-04",
+    "type": "event",
+    "title": "LEDGER x Lamborghini — custom Lamborghini Ledger Stax collaboration",
+    "desc": "Ledger x Lamborghini partnership. Custom Lamborghini-branded Ledger Stax device unveiled. Part of Ledgers luxury/lifestyle brand extension strategy. Follows earlier collaborations. Positions Ledger in premium consumer market alongside physical asset security (Stax designed with Tony Fadell, father of iPod).",
+    "vertical": "market",
+    "region": "global",
+    "clients": [
+      "ledger"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "LOW",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "lg10",
+    "date": "2026-02-10",
+    "type": "publication",
+    "title": "LEDGER — \"Agentic AI Is Loose. Your Security Model Is Not Ready.\" (CTO Guillemet)",
+    "desc": "Ledger CTO Charles Guillemet publishes thought leadership on Agentic AI security risks and key management for AI agents. Demonstrates Ledger actively positioning as solution for AI agent wallet security. Research includes ClawHub malicious skills, prompt injection vulnerabilities, delegation vs execution separation. DCGG CRITICAL: Directly relevant to TRON \"agentic AI payments\" strategy and QVAC autonomous transaction model. Ledger Hardware = the secure signing layer for AI agents that own wallets.",
+    "vertical": "ai",
+    "region": "global",
+    "clients": [
+      "ledger"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "lg11",
+    "date": "2026-03-17",
+    "type": "publication",
+    "title": "LEDGER — \"Security in the AI Agent Era\" thought leadership",
+    "desc": "Ledger publishes dedicated analysis on security implications of the AI agent era. Part of growing Ledger thought leadership push on AI + security. Key message: Ledger signers are the hardware security layer for AI agent wallets.",
+    "vertical": "ai",
+    "region": "global",
+    "clients": [
+      "ledger"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "lg12",
+    "date": "2026-04-07",
+    "type": "publication",
+    "title": "LEDGER Q1 2026 Release Notes — Ledger Wallet 4.0: \"Trade Different\"",
+    "desc": "Q1 2026 Release Notes. Ledger Wallet 4.0 (renamed from Ledger Live): redesigned portfolio page, DEX integrations (OKX, 1inch, Velora), improved swap/earn. CL Card: intuitive spending with crypto in everyday life. REGULATORY NOTE: Ledger Wallet 4.0 connects to DEXs natively — ESMA reverse solicitation guidelines apply to the DEX providers. Velora DEX integration = Dutch DEX (Uniswap). 1inch = EU-accessible aggregator. MiCA CASP classification questions for DEX integrations are a core DCGG advocacy position.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "ledger"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "lg13",
+    "date": "2025-09-11",
+    "type": "event",
+    "title": "LEDGER Enterprise — Full TRON integration: secure TRON transactions for institutions",
+    "desc": "Full TRON integration in Ledger Enterprise announced. Institutional clients can now securely manage TRON assets (TRX, TRC-20 tokens including USDT on TRON) using Ledger Enterprise. MAJOR DCGG CROSS-MEMBER LINK: Tether (primary client) issues $86B+ USDT on TRON. TRON is also a DCGG member. Ledger is a DCGG member. This integration creates direct DCGG ecosystem value: Tether USDT on TRON secured by Ledger Enterprise = DCGG member ecosystem working together.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "ledger",
+      "tether",
+      "tron"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "lg14",
+    "date": "2026-02-13",
+    "type": "publication",
+    "title": "LEDGER Enterprise — New terminology: \"Vault\" retired, 3-tier framework: Enterprise / Tradelink / Multisig",
+    "desc": "Ledger Enterprise 2026 rebrand: officially retiring \"Vault\" as product name. Three core offerings: (1) Ledger Enterprise (full platform, HSM-backed), (2) Ledger Enterprise Tradelink (off-exchange institutional settlement), (3) Ledger Enterprise Multisig (on-chain governance). HSM = Hardware Security Module (FIPS 140-2 Level 3). PSDs = Personal Security Devices (enterprise name for Ledger Stax/signers). Clear separation: Ledger = technology provider only (not financial advisor or regulated exchange).",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "ledger"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tr01",
+    "date": "2026-04-07",
+    "type": "event",
+    "title": "TRON DAO — EthCC[9] Cannes: Justin Sun keynote \"Agentic AI and the Financial Rails of the Future\"",
+    "desc": "TRON Ruby Sponsor at EthCC[9] Cannes (Mar 30 - Apr 2 2026). Justin Sun headlined Monroe Main Stage \"AI Agents and Automation\" track. Keynote: \"Agentic AI and the Financial Rails of the Future.\" Sun: \"TRON is the best solution for agentic AI payment infrastructure.\" Sam Elfarra co-hosted MetaMask Builder Nights Cannes — panel \"Building the Infrastructure for Cross-Chain Commerce\" (with Stellar, Somnia, SDQ, moderated by Consensys). DCGG hosted the event in France — directly relevant to JJ/EU team positioning.",
+    "vertical": "ai",
+    "region": "eu",
+    "clients": [
+      "tron",
+      "tether"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "tr02",
+    "date": "2026-04-01",
+    "type": "event",
+    "title": "TRON DAO — Penn Blockchain Conference 2026: hackathon support + Sam Elfarra panel at Wharton",
+    "desc": "TRON DAO at Penn Blockchain Conference 2026 (Mar 27-28, Penn Museum, Philadelphia). Supported hackathon with $3K in bounties: payments/DeFi demos, infrastructure integrations, AI/agentic commerce. TRON Track workshop Mar 24. Sam Elfarra on \"Building in a New Interoperability Paradigm\" panel (Wharton Professor Sami Ahmed moderating). Demonstrates TRON deepening US academic and policy engagement. Connects to TRON Academy Harvard/Yale/MIT/Princeton network.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tron"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tr03",
+    "date": "2026-03-31",
+    "type": "event",
+    "title": "TRON DAO + zerohash — enterprise access to TRX + TRC-20 USDT for fintechs",
+    "desc": "TRON DAO announces integration with zerohash (leading crypto/stablecoin/tokenized asset infrastructure for fintechs). Enterprise and fintech clients get access to TRX + TRC-20 USDT for: custody, trading, liquidity, cross-border payments, remittance, payroll, tokenization. \"zerohash expertise accelerates institutional connectivity to the TRON network\" (Sam Elfarra). DCGG LINK: Wintermute (market maker) and potential BD targets in fintech/payments space can now access TRON via zerohash.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tron",
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tr04",
+    "date": "2026-03-24",
+    "type": "event",
+    "title": "TRON DAO — AI Fund expanded from $100M to $1 BILLION: agentic economy thesis confirmed",
+    "desc": "TRON DAO scales AI Fund 10x: $100M → $1B. Targets: (1) Agent identity systems, (2) stablecoin-based payment rails, (3) tokenized RWAs, (4) developer tooling for autonomous financial systems. Fund thesis from 2023: AI + blockchain will converge for programmable/permissionless financial infrastructure. TRON = 370M+ users, $21B+ daily volume, $85B+ USDT = proven infrastructure for agentic payments. Confirmation time: 3 seconds vs 12s Ethereum = better for high-frequency AI agent transactions. AI fund contact: [email protected]. DCGG CRITICAL: largest single investment commitment by any blockchain to AI economy. Norberto/Maira must engage on policy frameworks for AI agent payments and TRON as rail.",
+    "vertical": "ai",
+    "region": "global",
+    "clients": [
+      "tron",
+      "tether"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "tr05",
+    "date": "2026-03-20",
+    "type": "event",
+    "title": "TRON DAO — DC Blockchain Summit 2026 Diamond Sponsor: Adrian Wall + Justin Sun keynote",
+    "desc": "TRON DAO Diamond Sponsor at DC Blockchain Summit 2026 (Mar 17-18, Washington DC). Justin Sun keynote: \"Building the Rails for a Unified Financial System.\" Adrian Wall (Senior Director US Policy, TRON DAO) moderated CLARITY panel with Rep. Dusty Johnson (R-SD). TRON DAO VIP Lounge at Capital Turnaround. KEY DCGG CONTACT: Adrian Wall is the US policy lead — this is the contact to cultivate for GENIUS Act + US stablecoin regulatory alignment.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tron"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "tr06",
+    "date": "2026-03-16",
+    "type": "event",
+    "title": "TRON — Joins Mastercard Crypto Partner Program: TRX + USDT at 90M+ global merchants",
+    "desc": "TRON DAO joins Mastercard Crypto Partner Program. Reflects shared belief that next phase of onchain payments = collaboration between blockchain and global payment systems. Mastercard network bridges digital assets and traditional commerce. TRON: high throughput, deep liquidity, low costs. Enables TRX/USDT use at 90M+ Mastercard global merchants. DCGG: TRON is now embedded in mainstream payments infrastructure — strengthens narrative for TRON as compliant settlement layer vs. \"crypto speculation\" characterization.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tron",
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "tr07",
+    "date": "2026-03-10",
+    "type": "event",
+    "title": "TRON DAO — Becomes governing member of Agentic AI Foundation (AAIF)",
+    "desc": "TRON DAO joins Agentic AI Foundation as governing member. Positions TRON blockchain infrastructure as potential payment rails for autonomous AI agents. Foundation focuses on AI agent economy standards. TRON = stablecoin liquidity + fast settlement for machine-to-machine commerce. Aligns with $1B AI Fund and EthCC[9] keynote themes.",
+    "vertical": "ai",
+    "region": "global",
+    "clients": [
+      "tron"
+    ],
+    "owner": "norberto",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tr08",
+    "date": "2026-02-26",
+    "type": "event",
+    "title": "TRON Academy — Expands to 12 universities: NEW Oxford, Cambridge, Princeton, Dartmouth",
+    "desc": "TRON Academy 2025-2026: adds Dartmouth, Princeton University, Oxford University, Cambridge University. Total now 12 top universities. Previous: Columbia, Harvard, Yale, MIT, Cornell, Imperial College London, UC Berkeley. Student blockchain organizations: 100 to 2,500 active members per campus. TRON provides: mentorship, technical resources, rewards for real-world blockchain solutions. Sam Elfarra: \"University blockchain organizations are playing a critical role.\" Oxford + Cambridge = UK presence — RELEVANT to Josh/DCGG UK policy work.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tron"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tr09",
+    "date": "2026-01-15",
+    "type": "event",
+    "title": "TRON — MetaMask native integration LIVE: 100M MetaMask users access TRON",
+    "desc": "MetaMask mobile + browser extension natively supports TRON (announced Aug 19 2025, live Jan 15 2026). TRON = 3rd non-EVM chain on MetaMask (after Solana, Sei). 100M+ MetaMask users can now: manage TRX/USDT, interact with TRON dApps, swap across TRON/EVM/Solana/Bitcoin within one wallet. No third-party bridges. Sam Elfarra: \"empowers more users worldwide to interact with TRONs growing ecosystem.\" MetaMask PM Rizvi Haider: \"part of our broader multichain expansion strategy.\" DCGG: MetaMask = Consensys (EU-based, regulated, MiCA-aware) + TRON = institutional/compliant convergence.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tron"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "tr10",
+    "date": "2025-12-22",
+    "type": "event",
+    "title": "TRON + ADGM FSRA — USDT on TRON accepted as \"Accepted Fiat-Referenced Token\" in Abu Dhabi",
+    "desc": "MASSIVE DCGG WIN: ADGM Financial Services Regulatory Authority (FSRA) accepts USDT on TRON as Accepted Fiat-Referenced Token (AFRT) in Abu Dhabi Global Market. ADGM-licensed entities can now use USDT on TRON in regulated activity. Strengthens TRON institutional positioning as compliant stablecoin rail. DCGG DIRECT CONNECTION: Soha Ragab leads MENA policy; CBUAE Innovation Hub date pending (End May 2026); FATF UAE T3 workshop preparation (June 2026). This acceptance directly validates DCGGs UAE regulatory engagement work. Wai Lum Kwok (ADGM FSRA) is a DCGG stakeholder.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tron",
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "tr11",
+    "date": "2025-12-19",
+    "type": "event",
+    "title": "TRON integrates with Base (Coinbase L2) via LayerZero: TRX now on Aerodrome DEX",
+    "desc": "TRON integrates with Base (Ethereum L2 incubated by Coinbase) via LayerZero. TRX bridgeable to Base and accessible via Base App on Base-native DEXs including Aerodrome (largest Base DEX). Expands TRX liquidity and utility beyond TRON execution environment. Follows TRON-LayerZero relationship (also used for USDt0 cross-chain). DCGG: combines three DCGG clients: TRON + LayerZero (Tether investment) + Base (Coinbase L2) = DCGG ecosystem convergence in DeFi interoperability space.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tron",
+      "tether"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tr12",
+    "date": "2025-11-19",
+    "type": "event",
+    "title": "TRON DAO — DevConnect Buenos Aires: co-hosted MetaMask Builder Night",
+    "desc": "TRON DAO co-hosts MetaMask Builder Night at DevConnect Buenos Aires (Nov 17 2025). Sam Elfarra on \"Scaling Trust: Future of Custody, Payments, Cross-Chain Infra\" panel. MetaMask collaboration: joint marketing across product development and global community engagement. Context: MetaMask native TRON integration announced Aug 2025, now building developer community. DCGG LatAm: DevConnect Buenos Aires = Hugo Rodriguez territory. TRON active in Argentine/LatAm developer ecosystem.",
+    "vertical": "crypto",
+    "region": "latam",
+    "clients": [
+      "tron"
+    ],
+    "owner": "hugo",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tr13",
+    "date": "2025-10-22",
+    "type": "publication",
+    "title": "TRON — Messari State of TRON Q3 2025: revenue ATH $1.2B, only L1 turning net profit",
+    "desc": "Messari Q3 2025 report. TRON revenue: $1.2B (all-time high, +30.5% QoQ). Only major Layer-1 blockchain turning net profit (Kaiko, Messari). TVL: +34.1% QoQ to $6.2B. JustLend TVL: +46.1% to $5.0B. USDT on TRON: 99.1% share, 42.7% of global USDT. SunPerp launch: $1.6B trading volume. T3 FCU: $250M+ frozen. US Dept of Commerce: selected TRON to record GDP data on-chain. TRX circulating supply: deflationary (-0.2% Q3). DCGG CRITICAL: profitability data is the killer argument for Tether regulatory discussions.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tron",
+      "tether"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "tr14",
+    "date": "2025-08-19",
+    "type": "event",
+    "title": "TRON — MetaMask strategic partnership announced: native TRON integration agreement",
+    "desc": "TRON DAO + MetaMask (Consensys) announce strategic agreement for native TRON integration. TRON = 3rd non-EVM chain (after Solana, Sei). MetaMask has estimated 100M+ users. Angel Gonzalez-Capizzi (MetaMask BD Director): \"With TRONs strong presence in Asia, this builds bridges across regions.\" Justin Sun: \"As stablecoin adoption accelerates, networks with high throughput, liquidity, low costs emerge as backbone of digital finance.\" TRON at time: 324M accounts, $26B TVL, $82B USDT.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tron"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tr15",
+    "date": "2025-07-16",
+    "type": "event",
+    "title": "TRON — USD1 (World Liberty Financial / Trump family) launches on TRON",
+    "desc": "USD1, stablecoin by World Liberty Financial (Trump family crypto project), launches on TRON Jul 16 2025. Within Q3: 76,708 holders. Adds to stablecoin ecosystem diversity on TRON. DCGG NOTE: political sensitivity — Trump administration connection explains SEC case dismissal, GENIUS Act tailwind. USA₮ (Tether US product) also GENIUS Act compliant (Jan 2026). TRON positioned as preferred settlement layer for Trump-era US dollar stablecoin ecosystem.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tron"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "tr16",
+    "date": "2025-07-11",
+    "type": "event",
+    "title": "TRON + US Department of Commerce — selected to record GDP data on TRON blockchain",
+    "desc": "US Department of Commerce selects TRON to record GDP data on its network. Q3 2025 Messari report highlights this as strengthening TRONs global influence. Unprecedented government recognition of TRON as trusted data infrastructure. DCGG: validates TRON as legitimate institutional infrastructure — directly relevant to GENIUS Act debates and US regulatory positioning. Adrian Wall (TRON US Policy) likely involved in securing this recognition.",
+    "vertical": "crypto",
+    "region": "global",
+    "clients": [
+      "tron"
+    ],
+    "owner": "josh",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "wm01",
+    "date": "2026-04-09",
+    "type": "event",
+    "title": "WINTERMUTE — NODE Yield Dashboard launched: electronic options-based yield for 50+ assets",
+    "desc": "Wintermute launches NODE Yield Dashboard: first-of-kind electronic pricing for options-based yield strategies across 50+ major digital assets. Daily indicative pricing from derivatives desk. Counterparties can: compare yield strategies, assess fit for portfolio, limit information leakage before requesting quote. Particularly useful for token projects with illiquid treasury holdings. Follows doubling of options volumes in 2025. DCGG LINK: Tether (DCGG primary client) holds large BTC and gold reserves — Wintermute Yield Dashboard = potential yield management tool for Tether treasury. ACCESS: Wintermute NODE portal (institutional only).",
+    "vertical": "market",
+    "region": "global",
+    "clients": [
+      "wm"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "wm02",
+    "date": "2026-03-24",
+    "type": "event",
+    "title": "WINTERMUTE Asia — 24/7 WTI crude oil CFD trading launched: weekend gap risk solved",
+    "desc": "Wintermute Asia (Singapore) launches WTI crude oil CFDs via OTC desk. 24/7 including weekends and holidays. Zero-fee. Wide fiat and crypto margin collateral. Triggered by weekend geopolitical event causing WTI to swing 13.5% intraday before Monday open. CEO Gaevoy: \"A Wintermute counterparty could have traded the weekend move before the Monday gap.\" Tradeable via chat, electronic OTC platform, or API. SIGNIFICANCE: Wintermute is now trading traditional commodities (oil, gold) on crypto infrastructure — becoming a multi-asset liquidity provider. This is the \"TradFi convergence\" story that DCGG uses in UK/EU market structure advocacy.",
+    "vertical": "market",
+    "region": "global",
+    "clients": [
+      "wm"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "wm03",
+    "date": "2026-02-16",
+    "type": "event",
+    "title": "WINTERMUTE — Tokenized Gold OTC launched: PAXG + XAUt (Tether Gold), forecasts $15B market",
+    "desc": "Wintermute OTC desk launches algorithmically optimized spot execution in PAXG (Paxos) and XAUt/Tether Gold (Tether). Tradeable vs USDT, USDC, fiat, major crypto. Q4 2025 tokenized gold volume: $126B — exceeded combined volume of top 5 gold ETFs. On-chain gold market cap grew 80% in 3 months to $5.4B. Gaevoy: \"Gold is now following the same infrastructure evolution that turned FX into the worlds largest market. We expect the tokenized gold market to reach $15B in 2026.\" MAJOR DCGG CROSS-MEMBER LINK: XAUt = Tether Gold = Tether product (primary DCGG client). Wintermute is now market-making Tethers gold token.",
+    "vertical": "market",
+    "region": "global",
+    "clients": [
+      "wm",
+      "tether"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "wm04",
+    "date": "2026-01-13",
+    "type": "publication",
+    "title": "WINTERMUTE — Digital Asset OTC Markets 2025 Annual Report: 4-year cycle is dead",
+    "desc": "Wintermute biannual OTC report for full year 2025. KEY FINDINGS: (1) 4-year cycle breaking down: gains in BTC/ETH no longer recycle into altcoins. (2) Options volumes DOUBLED year-over-year — systematic yield and risk management leading flow for first time. (3) Altcoin rallies averaged 19 days (down from 60 days 2024) — narrative-driven rallies dying. (4) OTC execution grew — participants prioritised discretion, certainty, capital efficiency. \"Market transitioning away from clean, narrative-driven cycles toward more structurally constrained and execution-led regime.\" THREE scenarios for 2026 recovery: ETF/DAT mandate expansion, strong BTC/ETH price increase, return of retail attention. DCGG: This framing of institutional maturation is exactly what DCGG uses to justify proportionate regulation.",
+    "vertical": "market",
+    "region": "global",
+    "clients": [
+      "wm"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "wm05",
+    "date": "2025-11-14",
+    "type": "event",
+    "title": "WINTERMUTE — 4 Senior US Appointments: Bridgewater, EDX Markets, Hidden Road, Tower Research",
+    "desc": "Four senior US hires announced, all from top TradFi institutions: (1) David Micley, Head US BD (ex-Bridgewater Associates, Floating Point Group — built 100+ institutional relationships). (2) Matthew Pizzo, Chief Compliance Officer (ex-Tower Research Capital, AWS, NYSE — 13+ years compliance). (3) Dmitry Kotov, Lead US Counsel (ex-EDX Markets Deputy GC, ex-SEC/FINRA associate — regulatory insider). (4) H. Branch Johnson, Managing Director (ex-Hidden Road — acquired by Ripple for $1.25B — ex-Bank of America Merrill Lynch). DCGG SIGNIFICANCE: Wintermute now has heavyweight US compliance AND a former SEC/FINRA lawyer. This dramatically strengthens their GENIUS Act / tokenized securities engagement. Builds on Ron Hammond (Head Policy) hire from May 2025.",
+    "vertical": "market",
+    "region": "global",
+    "clients": [
+      "wm"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "wm06",
+    "date": "2025-09-17",
+    "type": "event",
+    "title": "WINTERMUTE — NODE Insights launched: trader-curated market intelligence for counterparties",
+    "desc": "NODE Insights: new feature inside NODE Portal. Delivers market snapshots, trader commentary on what is moving and why, upcoming catalysts with context, proprietary research. Built from Wintermute OTC desk flow perspective ($15B+ daily). \"Anyone can surface information in a dashboard, but we want to give our counterparties something more.\" Exclusive to Wintermute counterparties. NODE = onboarding + trading + insights combined. DCGG link: Wintermute publishes market color on MiCA, stablecoin regulation impacts — Josh should receive this for regulatory market intelligence.",
+    "vertical": "market",
+    "region": "global",
+    "clients": [
+      "wm"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "wm07",
+    "date": "2025-09-03",
+    "type": "event",
+    "title": "WINTERMUTE — SEC Crypto Task Force feedback on tokenized securities: \"policy-agnostic\" broker",
+    "desc": "Wintermute submits formal feedback to SEC Crypto Task Force on tokenized securities (Sep 3 2025). Positions itself as \"policy-agnostic\" neutral market expert. \"We have a direct stake in adoption of crypto-infrastructure in financial markets.\" Provides practical guidance on how tokenized securities can achieve broader adoption with clear and workable rules. CRITICAL DCGG CONTEXT: CEO Gaevoy also met directly with SEC Crypto Task Force. Ron Hammond (Head Policy, Capitol Hill 10 years) is leading this engagement. Wintermute = ideal bridge between DCGG stablecoin/tokenisation asks and US SEC/CFTC, because they are seen as neutral infrastructure rather than advocacy group.",
+    "vertical": "market",
+    "region": "global",
+    "clients": [
+      "wm"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "wm08",
+    "date": "2025-05-15",
+    "type": "event",
+    "title": "WINTERMUTE — US HQ established in New York City + Ron Hammond hired as Head Policy & Advocacy",
+    "desc": "Wintermute establishes US HQ in New York City (May 15 2025). Ron Hammond appointed Head of Policy and Advocacy — ex-Senior Director Government Relations Blockchain Association, author of Token Taxonomy Act (first bipartisan crypto market structure bill), ~10 years Capitol Hill experience from 2016. Hammond: \"With the regulatory climate in the US becoming more constructive, we see tremendous opportunity.\" Gaevoy: \"Wintermutes integration throughout the ecosystem renders us policy-agnostic, which allows us to connect with policymakers neutrally.\" Expanding BD/partnership team in US. DCGG CRITICAL: Ron Hammond is the key DCGG US policy contact via Wintermute.",
+    "vertical": "market",
+    "region": "global",
+    "clients": [
+      "wm"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "wm09",
+    "date": "2025-08-01",
+    "type": "publication",
+    "title": "WINTERMUTE — OTC Market Review 1H25: derivatives surge, institutional vs retail divergence",
+    "desc": "Wintermute biannual report H1 2025. KEY FINDINGS: (1) Crypto derivatives volumes surged — institutional options trading dominant. (2) Traditional finance crypto adoption: +32% YoY growth in Wintermute OTC volumes from TradFi institutions. Tokenized platforms gaining traction, tokenized equity pilots active. (3) Retail/institutional strategies diverged for first time: institutions held BTC/ETH, retail diversified across altcoins (doubled number of tokens traded). (4) Wintermute OTC volumes grew 2.4x faster than broader exchange market. Seasonal trading patterns persisted in H1. DCGG: Institutional maturation = key argument for proportionate, not restrictive, regulation.",
+    "vertical": "market",
+    "region": "global",
+    "clients": [
+      "wm"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": false
+  },
+  {
+    "id": "wm10",
+    "date": "2026-01-06",
+    "type": "publication",
+    "title": "WINTERMUTE — Market Update Jan 6 2025: MiCA causes largest USDT supply drop since Nov 2022",
+    "desc": "Wintermute OTC Desk market update documents: \"USDT sees the largest weekly supply percentage drop since November 2022, following the full implementation of MiCA rules.\" Also notes: \"AI Agents sector seeing over 400% in quarterly growth.\" CRITICAL DCGG INTELLIGENCE: This is Wintermute as market witness to MiCA impact. Direct evidence that MiCA full implementation caused a measurable Tether supply reduction. This data point can be used by DCGG in: (1) arguing MiCA has structural impact on stablecoin liquidity, (2) MiCA review consultations showing EU users reduced access to USD stablecoins, (3) Tether-specific advocacy explaining EU market dynamics.",
+    "vertical": "market",
+    "region": "eu",
+    "clients": [
+      "wm",
+      "tether"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "HIGH",
+    "outputs": [],
+    "highlight": true
+  },
+  {
+    "id": "wm11",
+    "date": "2025-10-23",
+    "type": "event",
+    "title": "WINTERMUTE — Pave Bank investment ($39M round, with Tether Investments, Oct 2025)",
+    "desc": "Wintermute Ventures co-invests in Pave Bank alongside Tether Investments, Accel, FT Partners, Quona Capital, Yolo Investments. Pave Bank: fully licensed commercial bank built for on-chain era. $39M+ round. \"Pioneer in next-generation programmable banking infrastructure.\" DCGG CROSS-MEMBER LINK: Tether Investments and Wintermute Ventures are co-investors in Pave Bank. This is the most concrete example of DCGG cross-member commercial alignment outside of direct token/liquidity relationships.",
+    "vertical": "market",
+    "region": "global",
+    "clients": [
+      "wm",
+      "tether"
+    ],
+    "owner": "jj",
+    "status": "completed",
+    "impact": "MEDIUM",
+    "outputs": [],
+    "highlight": true
+  }
+]

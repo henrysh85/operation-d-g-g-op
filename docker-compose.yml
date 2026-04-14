@@ -18,7 +18,7 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB}
     ports:
-      - "5432:5432"
+      - "127.0.0.1:5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
@@ -38,8 +38,8 @@ services:
       MINIO_ROOT_USER: ${MINIO_ROOT_USER}
       MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
     ports:
-      - "9000:9000"
-      - "9001:9001"
+      - "127.0.0.1:9000:9000"
+      - "127.0.0.1:9001:9001"
     volumes:
       - miniodata:/data
       - miniodata:/root/.minio
@@ -87,12 +87,16 @@ services:
       - .env
     ports:
       - "8080:8080"
+    volumes:
+      - ./prototype:/prototype:ro
     networks:
       - dcgg-net
 
   frontend:
     build:
       context: ./frontend
+      args:
+        VITE_API_BASE: ${VITE_API_BASE}
     container_name: dcgg-frontend
     restart: unless-stopped
     depends_on:
@@ -100,7 +104,7 @@ services:
     env_file:
       - .env
     ports:
-      - "5173:5173"
+      - "127.0.0.1:5173:5173"
       - "80:80"
     networks:
       - dcgg-net

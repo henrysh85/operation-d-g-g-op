@@ -1,0 +1,478 @@
+{
+  "tether": {
+    "id": "tether",
+    "name": "Tether",
+    "fullName": "Tether Limited",
+    "clientKey": "tether",
+    "color": "#16a34a",
+    "bgColor": "#f0fdf4",
+    "icon": "₮",
+    "category": "Stablecoin Issuer",
+    "hq": "El Salvador (licensed) · BVI (incorporated)",
+    "tier": "Founding Member",
+    "metrics": [
+      {
+        "val": "$186B+",
+        "lbl": "USDT circulating",
+        "note": "Q4 2025 ATH"
+      },
+      {
+        "val": "$10B+",
+        "lbl": "2025 net profit",
+        "note": "BDO-attested"
+      },
+      {
+        "val": "$141B",
+        "lbl": "US Treasuries",
+        "note": "17th largest holder"
+      },
+      {
+        "val": "500M+",
+        "lbl": "Global users",
+        "note": "Q3 2025"
+      }
+    ],
+    "summary": "World's largest stablecoin issuer. USDt circulates at $186B+ — more than 4× the nearest competitor. Tether holds a regulatory licence in El Salvador (since Q2 2025) and operates globally via the third-country model. In 2025 Tether launched QVAC (decentralised AI platform) and USA₮ (GENIUS Act-compliant US product via Anchorage Digital Bank N.A., CEO Bo Hines, reserve custodian Cantor Fitzgerald). With $141B in US Treasuries, Tether is the 17th largest holder of US government debt globally — the central legitimacy argument in all DCGG regulatory briefings. QVAC is now the foundation of DCGG's entire AI vertical, generating 3 policy briefs and a Value Chain Policy Brief.",
+    "risks": [
+      {
+        "level": "CRITICAL",
+        "title": "ECB anti-Tether narrative",
+        "desc": "ECB told EP Financial Services Committee (Apr 2025) that MiCA multi-issuance model gives Tether unfair competitive advantage. Actively pushing for stricter MiCA Review provisions. Must be countered by DCGG in MiCA Review consultation."
+      },
+      {
+        "level": "CRITICAL",
+        "title": "ESM monetary sovereignty narrative",
+        "desc": "ESM MD Pierre Gramegna told Eurogroup (Mar 2025) USD stablecoins threaten Eurozone monetary sovereignty. European regulators now view USDT as a structural geo-financial threat, not merely a compliance matter. Existential EU risk."
+      },
+      {
+        "level": "HIGH",
+        "title": "HMRC deadline — 7 May 2026",
+        "desc": "Response to HMRC Call for Evidence on stablecoin taxation. Three tax categories: issuance, exchange, lending. Currently in progress — Josh Townson + Mina Iotova. Co-filed with Ledger."
+      },
+      {
+        "level": "HIGH",
+        "title": "MiCA Review consultation",
+        "desc": "Expected Q1/Q2 2026. DCGG must counter the ECB multi-issuance narrative and advocate for preserving Tether's third-country operational model. The most important EU regulatory moment of 2026."
+      },
+      {
+        "level": "MEDIUM",
+        "title": "QVAC EU AI Act exposure",
+        "desc": "Agentic AI definition gap = VERY HIGH risk for QVAC platform (see AI Policy Brief 2). DCGG has filed 3 AI policy briefs + QVAC Value Chain Policy Brief. DeAI open-source safe harbour is the core position."
+      }
+    ],
+    "wins": [
+      {
+        "title": "ADGM AFRT — USDT on TRON accepted in Abu Dhabi",
+        "desc": "ADGM FSRA accepted USDT on TRON as Accepted Fiat-Referenced Token. ADGM-licensed entities can now use USDT in regulated activity in Abu Dhabi Global Market. Significant institutional validation win."
+      },
+      {
+        "title": "Hong Kong — OTC dealers can use USDT without Tether licence",
+        "desc": "2025 HK FSTB/SFC OTC framework explicitly allows licensed OTC dealers to offer USDT to professional investors without Tether needing a HKMA stablecoin issuer licence. Major departure from 2024 consultation."
+      },
+      {
+        "title": "UK — Tether not directly regulated",
+        "desc": "FCA confirmed: Tether is subject only to secondary market conduct, market integrity and marketing rules under UK regime. No direct FCA licensing required. DCGG UK engagement key to this outcome."
+      },
+      {
+        "title": "USA₮ launched under GENIUS Act framework",
+        "desc": "GENIUS Act-compliant US stablecoin launched via Anchorage Digital Bank N.A. (first federally regulated digital asset bank). Bo Hines (ex-White House Crypto Council) as CEO. Cantor Fitzgerald as preferred primary dealer reserve custodian."
+      },
+      {
+        "title": "Australia — foreign stablecoin AFS exemption preserved",
+        "desc": "DCGG filed to preserve Reg 7.6.02AG(2C) AFS licence exemption + argued foreign-currency stablecoins (USDT) should be excluded from $200M major SVF threshold. Self-custody exclusion explicitly commended."
+      }
+    ],
+    "dcggWork": [
+      "AI Policy Brief Series (3 briefs): EU AI Act overreach analysis, 9 regulatory threats assessment, concrete policy asks for EU regulators",
+      "QVAC Value Chain Policy Brief: mapping EU AI Act value-chain duties for decentralised AI platform (sent to Giles Dixon, Mar 2026)",
+      "HMRC Stablecoin Taxation response — deadline 7 May 2026 (Josh + Mina, co-filed with Ledger)",
+      "MiCA Review consultation preparation — countering ECB multi-issuance narrative, preserving third-country model",
+      "EU-US Alignment brief: MiCA vs GENIUS Act comparative analysis for EC/FISMA (JJ + Mina)",
+      "MISP position paper: opposing ESMA central supervision of large stablecoin issuers (JJ lead)",
+      "ECB / ESM counter-narrative strategy development for MiCA Review period",
+      "Australia PSP Tranche 1: AFS exemption preservation + foreign FX stablecoin threshold exclusion (Josh + António)"
+    ],
+    "teamOwners": [
+      {
+        "id": "josh",
+        "name": "Josh Townson",
+        "role": "UK Policy · Global Strategy"
+      },
+      {
+        "id": "jj",
+        "name": "JJ Röber",
+        "role": "EU Policy lead"
+      },
+      {
+        "id": "mina",
+        "name": "Mina Iotova",
+        "role": "Final review + publishing"
+      },
+      {
+        "id": "norberto",
+        "name": "Norberto de Andrade",
+        "role": "AI vertical (QVAC)"
+      }
+    ],
+    "crossLinks": [
+      {
+        "title": "Tether × Wintermute — Pave Bank co-investment",
+        "desc": "Tether Investments and Wintermute Ventures co-invested in Pave Bank alongside Accel and FT Partners ($39M round, Oct 2025). Most concrete example of DCGG cross-member commercial alignment."
+      },
+      {
+        "title": "Tether Gold (XAUt) × Wintermute — market making",
+        "desc": "Wintermute OTC desk launched algorithmically optimised execution in XAUt (Tether Gold) and PAXG. Q4 2025 tokenised gold volumes hit $126B. Wintermute is now primary market-maker for a Tether product."
+      },
+      {
+        "title": "USDt × TRON — 42.7% of global USDT supply",
+        "desc": "TRON carries 42.7% of all USDT in circulation. TRON is the primary settlement infrastructure for USDt. ADGM AFRT acceptance covers both entities in one regulatory approval."
+      },
+      {
+        "title": "USDt0 × TRON × LayerZero — cross-chain stablecoin",
+        "desc": "USDt0 is cross-chain USDt deployed via LayerZero (a Tether investment). Combines all three DCGG clients — Tether + TRON + LayerZero — in a single product. DeFi interoperability story."
+      }
+    ]
+  },
+  "tron": {
+    "id": "tron",
+    "name": "TRON",
+    "fullName": "TRON DAO / TRON Foundation",
+    "clientKey": "tron",
+    "color": "#dc2626",
+    "bgColor": "#fef2f2",
+    "icon": "T",
+    "category": "Layer-1 Blockchain",
+    "hq": "Singapore (TRON DAO)",
+    "tier": "Founding Member",
+    "metrics": [
+      {
+        "val": "$1.2B",
+        "lbl": "Q3 2025 Revenue",
+        "note": "ATH · only L1 net profit"
+      },
+      {
+        "val": "42.7%",
+        "lbl": "Global USDT share",
+        "note": "On-chain stablecoins"
+      },
+      {
+        "val": "324M+",
+        "lbl": "Accounts",
+        "note": "Q3 2025"
+      },
+      {
+        "val": "$6.2B",
+        "lbl": "TVL",
+        "note": "+34.1% QoQ · Q3 2025"
+      }
+    ],
+    "summary": "TRON is the only major Layer-1 blockchain turning net profit ($1.2B revenue, Q3 2025 ATH, +30.5% QoQ). It carries 42.7% of all USDT in global circulation and was selected by the US Department of Commerce to record GDP data on-chain. In 2025: MetaMask natively integrated TRON (100M+ users); the SEC dismissed all claims against Justin Sun and the Tron Foundation; USD1 (Trump family / World Liberty Financial) launched on TRON; TRON Academy expanded to 12 universities including Oxford, Cambridge and Princeton. JustLend TVL hit $5.0B (+46.1% QoQ). TRON is positioned as the preferred settlement layer for the Trump-era US dollar stablecoin ecosystem.",
+    "risks": [
+      {
+        "level": "CRITICAL",
+        "title": "South Korea DABA Phase 2 — 51% bank equity rule",
+        "desc": "Core TRON battleground. DABA Phase 2 may require stablecoin issuers to hold 51% bank equity. Seoul National Assembly Seminar scheduled 12 May 2026. Timothy Shin leads DCGG Korea engagement."
+      },
+      {
+        "level": "HIGH",
+        "title": "MiCA CASP licensing — exchanges on TRON",
+        "desc": "All CASPs operating on TRON must be MiCA-compliant. ESMA reverse solicitation guidelines risk classifying international TRON operations and events attendance as EU solicitation."
+      },
+      {
+        "level": "HIGH",
+        "title": "VAUPA Phase 2 (South Korea)",
+        "desc": "Virtual Asset User Protection Act Phase 2 coming in late 2026. Additional market integrity and conduct rules. Timothy Shin monitoring. DCGG Korea engagement critical."
+      },
+      {
+        "level": "MEDIUM",
+        "title": "MiCA multi-issuance ECB exposure",
+        "desc": "ECB narrative targeting multi-issuance model could affect TRON as stablecoin settlement infrastructure even though TRON is not the issuer. Reputational collateral from Tether ECB narrative."
+      }
+    ],
+    "wins": [
+      {
+        "title": "SEC — all claims dismissed against Justin Sun + Tron Foundation",
+        "desc": "Under Trump administration, SEC moved to dismiss all claims against Justin Sun, Tron Foundation and BitTorrent Foundation. Removes the major US regulatory overhang entirely."
+      },
+      {
+        "title": "MetaMask native integration — 100M+ users access TRON",
+        "desc": "TRON is the 3rd non-EVM chain on MetaMask (after Solana, Sei). 100M+ MetaMask users can manage TRX/USDT, interact with TRON dApps, and swap cross-chain — no bridges required."
+      },
+      {
+        "title": "ADGM AFRT — USDT on TRON accepted in Abu Dhabi",
+        "desc": "ADGM FSRA accepted USDT on TRON as Accepted Fiat-Referenced Token. Direct institutional validation of TRON as compliant stablecoin settlement rail in the world's leading crypto regulatory hub."
+      },
+      {
+        "title": "US Dept of Commerce — selected TRON to record GDP data on-chain",
+        "desc": "Q3 2025 Messari: US Department of Commerce selected TRON to record GDP data on its network. Unprecedented government recognition. Strongest US institutional endorsement to date."
+      },
+      {
+        "title": "USD1 (World Liberty Financial / Trump family) launches on TRON",
+        "desc": "Trump-affiliated stablecoin project chose TRON as primary settlement layer. Further reinforces TRON positioning in Trump-era US regulatory environment. 76,708 USD1 holders by Q3 2025."
+      }
+    ],
+    "dcggWork": [
+      "Seoul National Assembly Seminar — 12 May 2026 (Timothy Shin lead)",
+      "GENIUS Act positioning — TRON as compliant US dollar stablecoin infrastructure (Josh lead)",
+      "Australia PSP Tranche 1: TRON named as DCGG member; ensuring foreign-issuer exclusions cover TRON-based stablecoin activity (Josh + António)",
+      "ESMA Reverse Solicitation: preventing broad solicitation definition from capturing TRON ecosystem events and developer outreach (JJ lead)",
+      "MISP: opposing ESMA central supervision which could affect TRON-based CASP infrastructure (JJ lead)",
+      "South Korea VAUPA Phase 2 monitoring (Timothy Shin)"
+    ],
+    "teamOwners": [
+      {
+        "id": "timothy",
+        "name": "Timothy Shin",
+        "role": "Korea / Asia lead"
+      },
+      {
+        "id": "josh",
+        "name": "Josh Townson",
+        "role": "UK + Global policy"
+      },
+      {
+        "id": "jj",
+        "name": "JJ Röber",
+        "role": "EU policy"
+      }
+    ],
+    "crossLinks": [
+      {
+        "title": "TRON × Tether — 42.7% of global USDT settlement",
+        "desc": "TRON is the primary settlement infrastructure for all USDt. ADGM AFRT acceptance covers both entities in one regulatory approval. The two members are commercially inseparable."
+      },
+      {
+        "title": "TRON × LayerZero — USDt0 cross-chain + Base integration",
+        "desc": "USDt0 is cross-chain USDt deployed via LayerZero (a Tether investment). TRON also integrated with Coinbase's Base L2 via LayerZero — TRX accessible on Aerodrome DEX."
+      },
+      {
+        "title": "TRON Academy × UK Policy (Oxford + Cambridge)",
+        "desc": "TRON Academy expanded to Oxford University and Cambridge University in 2025-2026. Josh Townson / DCGG UK policy directly relevant — TRON has active academic presence in London/UK."
+      }
+    ]
+  },
+  "ledger": {
+    "id": "ledger",
+    "name": "Ledger",
+    "fullName": "Ledger SAS",
+    "clientKey": "ledger",
+    "color": "#1d4ed8",
+    "bgColor": "#eff6ff",
+    "icon": "L",
+    "category": "Hardware Wallet · Self-Custody",
+    "hq": "Paris, France (Marais district)",
+    "tier": "Founding Member",
+    "metrics": [
+      {
+        "val": "6M+",
+        "lbl": "Hardware devices sold",
+        "note": "Nano S · X · Stax · Flex"
+      },
+      {
+        "val": "Non-custodial",
+        "lbl": "Model",
+        "note": "Self-custody exclusively"
+      },
+      {
+        "val": "Sept 2026",
+        "lbl": "UAE Art. 62 deadline",
+        "note": "AED 1B fine risk"
+      },
+      {
+        "val": "v4.0",
+        "lbl": "Ledger Wallet",
+        "note": "Q1 2026 (fmr Ledger Live)"
+      }
+    ],
+    "summary": "Ledger is the world's leading hardware wallet and self-custody security company, headquartered in Paris. Its core products (Nano S/X/Stax/Flex, Ledger Wallet 4.0 — formerly Ledger Live) store private keys offline, making Ledger the primary beneficiary of non-custodial exemptions in MiCA and other regulatory regimes globally. Ledger's most pressing regulatory risk is the UAE Article 62 deadline (September 2026, AED 1B fine exposure). It is also the DCGG member most exposed to privacy regulation — Ledger's E2EE security model is directly threatened by the EU CSAM/Chat Control framework. Ledger was co-author with DCGG of the INSEAD NFT Report launched at the Houses of Parliament.",
+    "risks": [
+      {
+        "level": "CRITICAL",
+        "title": "UAE Article 62 — AED 1B fine risk · Sept 2026 deadline",
+        "desc": "DFSA/ADGM Article 62 compliance required by September 2026. Potential AED 1 billion fine if Ledger hardware wallets are classified as regulated VASP infrastructure. Nick + Soha lead. CBUAE Innovation Hub preparation underway (end May 2026)."
+      },
+      {
+        "level": "HIGH",
+        "title": "EU CSAM / Chat Control — E2EE threat",
+        "desc": "CSAM trilogue ongoing since Dec 2025. Chat Control legislation would require scanning of encrypted communications — existential threat to Ledger's E2EE architecture and the core value proposition of hardware security. Mina leads DCGG response."
+      },
+      {
+        "level": "HIGH",
+        "title": "MiCA non-custodial exemption — MiCA Review risk",
+        "desc": "Ledger's entire business model depends on the non-custodial wallet exemption under MiCA. MiCA Review (expected Q1/Q2 2026) could narrow or remove this exemption. JJ + Mina monitoring closely."
+      },
+      {
+        "level": "MEDIUM",
+        "title": "UK ICO Blockchain Guidance · HMRC CARF/RCASP classification",
+        "desc": "ICO published blockchain guidance Nov 2025 — right to erasure vs. on-chain immutability a live tension for Ledger UK users. HMRC CARF/RCASP rules may classify hardware wallet providers. Deadline 7 May 2026."
+      }
+    ],
+    "wins": [
+      {
+        "title": "Australia self-custody explicitly excluded from SVF classification",
+        "desc": "Australian Treasury PSP Tranche 1 explicitly excluded self-custody wallets from SVF provider classification. DCGG commended this preservation and filed to ensure it carries into final legislation."
+      },
+      {
+        "title": "UK — non-custodial hardware wallets not regulated under FCA regime",
+        "desc": "FCA regime does not require Ledger hardware wallet licensing. Non-custodial exclusion maintained in CP25-14 and all subsequent consultations. Clear, durable UK precedent."
+      },
+      {
+        "title": "INSEAD-DCGG NFT Report — Houses of Parliament launch",
+        "desc": "Joint report \"Regulating NFTs: Striking the Balance\" launched at Palace of Westminster hosted by Lord Iain McNicol. Seth Hertlein (Ledger Global Head of Public Affairs) spoke alongside INSEAD academics. First NFT exhibition inside Westminster."
+      },
+      {
+        "title": "Eurofi Warsaw — Polish EU Presidency contact opened",
+        "desc": "Seth Hertlein + Julien David (Head of EU Policy) met Bartosz Drej (Deputy Director, Financial Market Development, Ministry of Finance Poland) at Eurofi Warsaw. Polish EU Presidency MiCA simplification priorities directly engaged."
+      }
+    ],
+    "dcggWork": [
+      "UAE Article 62: regulatory engagement with DFSA/ADGM ahead of September 2026 deadline (Nick + Soha)",
+      "CBUAE Innovation Hub preparation — end May 2026 (Soha + Francesca)",
+      "HMRC Stablecoin Taxation response — CARF/RCASP hardware wallet classification (Josh + Mina, deadline 7 May 2026)",
+      "EU CSAM / Chat Control: E2EE protection position paper — six asks framework (Mina lead)",
+      "DCGG/Ledger DeFi Decentralisation Position Paper — Danish FSA (DFSA) MiCA DeFi exemption methodology",
+      "INSEAD-DCGG academic partnership (NFT report; potential follow-on research)",
+      "MiCA non-custodial exemption monitoring through MiCA Review period (JJ + Mina)",
+      "Australia PSP Tranche 1: self-custody exclusion preservation (Josh + António)"
+    ],
+    "teamOwners": [
+      {
+        "id": "mina",
+        "name": "Mina Iotova",
+        "role": "Privacy / EU lead"
+      },
+      {
+        "id": "jj",
+        "name": "JJ Röber",
+        "role": "EU Policy"
+      },
+      {
+        "id": "josh",
+        "name": "Josh Townson",
+        "role": "UK Policy"
+      }
+    ],
+    "crossLinks": [
+      {
+        "title": "Ledger × INSEAD — academic-industry partnership via DCGG",
+        "desc": "Joint NFT regulation report launched at Houses of Parliament. Seth Hertlein (Ledger) presented alongside INSEAD academics. DCGG-facilitated academic credibility for hardware wallet industry."
+      },
+      {
+        "title": "Ledger × Tether — HMRC joint filing",
+        "desc": "Both Ledger and Tether are co-clients on the HMRC Stablecoin Taxation response (7 May 2026 deadline). Hardware wallet tax classification and stablecoin issuance taxation are legally interlinked."
+      },
+      {
+        "title": "Ledger × TRON — non-custodial exemption / CASP licensing boundary",
+        "desc": "Ledger devices are the preferred self-custody option for TRON users holding TRX and USDT. Non-custodial exemption preservation directly protects the user relationship between Ledger hardware and TRON-based assets."
+      }
+    ]
+  },
+  "wm": {
+    "id": "wm",
+    "name": "Wintermute",
+    "fullName": "Wintermute Trading Ltd",
+    "clientKey": "wm",
+    "color": "#7c3aed",
+    "bgColor": "#f5f3ff",
+    "icon": "W",
+    "category": "Algorithmic Market Maker",
+    "hq": "London (HQ) · New York City (US HQ est. May 2025)",
+    "tier": "Member",
+    "metrics": [
+      {
+        "val": "$15B+",
+        "lbl": "Daily OTC volume",
+        "note": "NODE platform"
+      },
+      {
+        "val": "2×",
+        "lbl": "Options growth",
+        "note": "Year-on-year 2025"
+      },
+      {
+        "val": "50+",
+        "lbl": "Assets — Yield Dashboard",
+        "note": "NODE, Apr 2026"
+      },
+      {
+        "val": "2.4×",
+        "lbl": "OTC growth vs market",
+        "note": "H1 2025 vs exchange market"
+      }
+    ],
+    "summary": "Wintermute is one of the world's leading algorithmic market makers in digital assets, with $15B+ daily OTC volumes. In 2025, Wintermute made four senior US hires from Bridgewater, EDX Markets, Tower Research and Hidden Road; established a New York HQ; and appointed Ron Hammond (ex-Capitol Hill, author of Token Taxonomy Act) as Head of Policy. CEO Gaevoy met directly with the SEC Crypto Task Force. Wintermute launched the NODE Yield Dashboard (options-based yield across 50+ assets) and expanded into tokenised gold (PAXG, Tether Gold XAUt) and WTI crude oil CFDs (24/7). It co-invested with Tether in Pave Bank. Wintermute's OTC market data is also a direct evidence source for DCGG regulatory briefings — its Jan 2026 market update documented the largest weekly USDT supply drop since 2022 following MiCA implementation.",
+    "risks": [
+      {
+        "level": "HIGH",
+        "title": "MiCA CASP licence required for EU operations",
+        "desc": "Wintermute requires a MiCA CASP licence to continue operating in EU markets at scale. ESMA reverse solicitation guidelines also risk classifying existing European operations as solicitation. JJ leads DCGG response."
+      },
+      {
+        "level": "HIGH",
+        "title": "ESMA central supervision (MISP) — large market maker risk",
+        "desc": "MISP package proposes ESMA as direct supervisor for systemically important market makers. DCGG strongly opposes this — position paper filed (JJ lead). Supervisory college model advocated instead."
+      },
+      {
+        "level": "MEDIUM",
+        "title": "UK FCA A&D + MARC regime",
+        "desc": "Wintermute requires FCA authorisation for Arranging and Dealing (A&D) plus compliance with the Market Abuse Regulation for Crypto (MARC). All UK trading activity subject to market abuse rules. FCA Policy Statement H2 2026."
+      }
+    ],
+    "wins": [
+      {
+        "title": "Ron Hammond appointed Head Policy — ex-Capitol Hill, Token Taxonomy Act author",
+        "desc": "Ron Hammond: ~10 years Capitol Hill, ex-Senior Director Government Relations Blockchain Association, author of first bipartisan crypto market structure bill. Appointed May 2025. Key DCGG US policy channel for GENIUS Act and tokenised securities engagement."
+      },
+      {
+        "title": "CEO Gaevoy met SEC Crypto Task Force directly",
+        "desc": "Wintermute submitted formal feedback to SEC Crypto Task Force on tokenised securities (Sep 2025). CEO Gaevoy met SEC directly. Positions Wintermute as \"policy-agnostic\" neutral market infrastructure expert — stronger credibility than advocacy group."
+      },
+      {
+        "title": "4 senior US TradFi hires — Bridgewater, EDX Markets, Tower Research, Hidden Road",
+        "desc": "David Micley (Bridgewater), Matthew Pizzo (Tower Research/NYSE), Dmitry Kotov (EDX Markets GC / ex-SEC), H. Branch Johnson (Hidden Road/Ripple). Dramatically strengthens GENIUS Act / tokenised securities regulatory engagement."
+      },
+      {
+        "title": "NODE Yield Dashboard — first electronic options pricing across 50+ assets",
+        "desc": "First-of-kind electronic pricing for options-based yield strategies across 50+ major digital assets. Positions Wintermute as institutional treasury management infrastructure — directly relevant to Tether reserve management."
+      },
+      {
+        "title": "Tokenised gold OTC — XAUt (Tether Gold) + PAXG market making",
+        "desc": "Q4 2025 tokenised gold volume: $126B — exceeded combined top 5 gold ETFs. Wintermute now primary market-maker for Tether's XAUt product. On-chain gold market cap grew 80% in 3 months to $5.4B."
+      }
+    ],
+    "dcggWork": [
+      "MISP position paper: opposing ESMA as central supervisor for large CASPs and market makers (JJ lead)",
+      "EU Capital Markets Integration consultation: burden reduction and proportional treatment of digital assets in capital markets (JJ)",
+      "GENIUS Act / US regulatory liaison via Ron Hammond relationship — DCGG US policy intelligence feed",
+      "MiCA CASP licence strategy and ESMA reverse solicitation defence (JJ + Mina)",
+      "UK FCA A&D + MARC regulatory monitoring and submission support (Josh)",
+      "Market intelligence feed: Wintermute OTC data used in DCGG regulatory briefings (e.g. MiCA-driven USDT supply drop as evidence in MiCA Review advocacy)"
+    ],
+    "teamOwners": [
+      {
+        "id": "jj",
+        "name": "JJ Röber",
+        "role": "EU lead · Wintermute primary"
+      },
+      {
+        "id": "josh",
+        "name": "Josh Townson",
+        "role": "UK Policy"
+      }
+    ],
+    "crossLinks": [
+      {
+        "title": "Wintermute × Tether — Pave Bank co-investment",
+        "desc": "Wintermute Ventures and Tether Investments co-invested in Pave Bank ($39M round, Oct 2025) alongside Accel and FT Partners. The most concrete cross-member commercial alignment in DCGG."
+      },
+      {
+        "title": "Wintermute × Tether Gold — XAUt market making",
+        "desc": "Wintermute OTC desk provides algorithmically optimised execution for Tether Gold (XAUt). $126B in Q4 2025 tokenised gold volume. Wintermute is the primary market maker for a Tether financial product."
+      },
+      {
+        "title": "Wintermute market data × Tether MiCA advocacy",
+        "desc": "Wintermute Jan 2026 OTC market update documented the largest weekly USDT supply percentage drop since Nov 2022 following MiCA full implementation. DCGG uses this third-party Wintermute data as evidence in MiCA Review consultations."
+      }
+    ]
+  }
+}

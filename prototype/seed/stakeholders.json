@@ -1,0 +1,2550 @@
+{
+  "latam": {
+    "label": "Latin America",
+    "icon": "🌎",
+    "countries": {
+      "brazil": {
+        "label": "Brazil",
+        "flag": "🇧🇷",
+        "tier": 1,
+        "institutions": [
+          {
+            "id": "congress_br",
+            "label": "National Congress (Congresso Nacional)",
+            "type": "legislature",
+            "groups": [
+              {
+                "label": "Senate — CAE (Committee on Economic Affairs)",
+                "people": [
+                  {
+                    "n": "CAE Secretariat",
+                    "t": "Economic Affairs Committee — crypto/fintech legislation oversight",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "Chamber — Finance and Taxation Committee",
+                "people": [
+                  {
+                    "n": "Committee Secretariat",
+                    "t": "Finance Committee — crypto taxation + regulation",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "bcb",
+            "label": "Banco Central do Brasil (BCB)",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "Digital Finance + Regulation",
+                "people": [
+                  {
+                    "n": "BCB Digital Finance Division",
+                    "t": "VASP authorization + stablecoin regulation — Consultations 109/110/111",
+                    "rel": 3,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Very pleased with Tether El Salvador presentation"
+                    ]
+                  },
+                  {
+                    "n": "DEREF — Foreign Capital Division",
+                    "t": "Cross-border stablecoin transactions oversight",
+                    "rel": 2,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cvm_br",
+            "label": "CVM (Securities Commission)",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Digital Assets",
+                "people": [
+                  {
+                    "n": "CVM Digital Assets Team",
+                    "t": "Token classification + issuer regulation",
+                    "rel": 2,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "argentina": {
+        "label": "Argentina",
+        "flag": "🇦🇷",
+        "tier": 1,
+        "institutions": [
+          {
+            "id": "congress_ar",
+            "label": "Congreso de la Nación Argentina",
+            "type": "legislature",
+            "groups": [
+              {
+                "label": "Congress — Digital Assets Oversight",
+                "people": [
+                  {
+                    "n": "Congressional Digital Committee",
+                    "t": "Crypto/digital asset legislative oversight — LIBRA scandal investigation context",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "LIBRA scandal congressional investigation"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "bcra",
+            "label": "BCRA (Central Bank)",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "Payment Systems + Fintech",
+                "people": [
+                  {
+                    "n": "BCRA Digital Assets Team",
+                    "t": "Stablecoin regulator engagement",
+                    "rel": 2,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cnv",
+            "label": "CNV (Securities Commission)",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Virtual Assets Division",
+                "people": [
+                  {
+                    "n": "CNV VASP Team",
+                    "t": "CNV Resolution 1058/2025 — VASP framework. Political risk: LIBRA scandal.",
+                    "rel": 2,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "5 active files",
+                      "LIBRA scandal context"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "colombia": {
+        "label": "Colombia",
+        "flag": "🇨🇴",
+        "tier": 1,
+        "institutions": [
+          {
+            "id": "congress_co",
+            "label": "Congreso de la República de Colombia",
+            "type": "legislature",
+            "groups": [
+              {
+                "label": "Congress — Bill 510/2025",
+                "people": [
+                  {
+                    "n": "Congressional Committee",
+                    "t": "Bill 510/2025 VASP licensing — DCGG filed 6-amendment position paper Mar 2026",
+                    "rel": 2,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "DCGG position paper filed Mar 2026",
+                      "Bill 510/2025"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sfc",
+            "label": "Superintendencia Financiera (SFC)",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Digital Assets + Fintech",
+                "people": [
+                  {
+                    "n": "SFC Digital Assets Team",
+                    "t": "Bill 510/2025 oversight — lead regulator for VASP licensing",
+                    "rel": 2,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "DCGG position paper filed Mar 2026"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "mexico": {
+        "label": "Mexico",
+        "flag": "🇲🇽",
+        "tier": 1,
+        "institutions": [
+          {
+            "id": "congress_mx",
+            "label": "Congreso de la Unión",
+            "type": "legislature",
+            "groups": [
+              {
+                "label": "Chamber of Deputies + Senate",
+                "people": [
+                  {
+                    "n": "FinTech Oversight Committee",
+                    "t": "FinTech Law (2018) oversight — crypto exchange regulation",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "banxico",
+            "label": "Banxico",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "Digital Payments",
+                "people": [
+                  {
+                    "n": "Banxico Payments Policy",
+                    "t": "CBDC + stablecoin policy",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cnbv",
+            "label": "CNBV",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Digital Assets + FinTech",
+                "people": [
+                  {
+                    "n": "CNBV FinTech Division",
+                    "t": "FinTech Law oversight — crypto exchange restrictions",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "elsalvador": {
+        "label": "El Salvador",
+        "flag": "🇸🇻",
+        "tier": 1,
+        "institutions": [
+          {
+            "id": "asamblea",
+            "label": "Asamblea Legislativa",
+            "type": "legislature",
+            "groups": [
+              {
+                "label": "Legislative Assembly",
+                "people": [
+                  {
+                    "n": "Digital Assets Committee",
+                    "t": "Bitcoin Legal Tender Act oversight. Digital Assets Law. Tether licensed in El Salvador.",
+                    "rel": 2,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Bitcoin Legal Tender Act"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cnad",
+            "label": "CNAD (National Digital Assets Commission)",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Digital Assets",
+                "people": [
+                  {
+                    "n": "CNAD Regulatory Team",
+                    "t": "Tether's primary licensing jurisdiction — stablecoin issuer licence granted Q2 2025",
+                    "rel": 3,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Tether licensed here",
+                      "Bitcoin legal tender context"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "uruguay": {
+        "label": "Uruguay",
+        "flag": "🇺🇾",
+        "tier": 1,
+        "institutions": [
+          {
+            "id": "bcu",
+            "label": "BCU (Banco Central del Uruguay)",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "PSAV + Virtual Assets",
+                "people": [
+                  {
+                    "n": "BCU PSAV Team",
+                    "t": "PSAV (stablecoin/VA) framework — DCGG filed second consultation response Mar 2026",
+                    "rel": 2,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Second consultation filed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "paraguay": {
+        "label": "Paraguay",
+        "flag": "🇵🇾",
+        "tier": 1,
+        "institutions": [
+          {
+            "id": "congress_py",
+            "label": "Congreso Nacional",
+            "type": "legislature",
+            "groups": [
+              {
+                "label": "Congress — Law 6859/2021",
+                "people": [
+                  {
+                    "n": "Digital Assets Oversight Committee",
+                    "t": "Law 6859/2021 crypto framework — monitoring implementation",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Law 6859/2021",
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "bcp",
+            "label": "BCP (Banco Central del Paraguay)",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "Virtual Assets Oversight",
+                "people": [
+                  {
+                    "n": "BCP Digital Assets Team",
+                    "t": "Law 6859/2021 implementation — crypto mining/trading framework",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed",
+                      "Major Bitcoin mining hub"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "europe": {
+    "label": "Europe",
+    "icon": "🇪🇺",
+    "countries": {
+      "uk": {
+        "label": "United Kingdom",
+        "flag": "🇬🇧",
+        "tier": 1,
+        "institutions": [
+          {
+            "id": "parliament",
+            "label": "UK Parliament",
+            "type": "legislature",
+            "groups": [
+              {
+                "label": "House of Lords — Financial Services Regulation Committee",
+                "people": [
+                  {
+                    "n": "Committee Members",
+                    "t": "Responded to DCGG stablecoin inquiry submission",
+                    "rel": 2,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Inquiry response filed Mar 2026"
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "House of Commons — Treasury Select Committee",
+                "people": [
+                  {
+                    "n": "Committee Staff",
+                    "t": "Treasury Select Committee — crypto regulation oversight",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Monitoring"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "boe",
+            "label": "Bank of England",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "Financial Market Infrastructure + Fintech",
+                "people": [
+                  {
+                    "n": "Tom Mutton",
+                    "t": "Director, CBDC + Fintech",
+                    "rel": 4,
+                    "dcgg": true,
+                    "v": [
+                      "crypto",
+                      "market"
+                    ],
+                    "tags": [
+                      "Senior relationship"
+                    ]
+                  },
+                  {
+                    "n": "Emma Butterworth",
+                    "t": "Head, Innovation + Payments Policy",
+                    "rel": 4,
+                    "dcgg": true,
+                    "v": [
+                      "crypto",
+                      "market"
+                    ],
+                    "tags": [
+                      "Key contact"
+                    ]
+                  },
+                  {
+                    "n": "Pavel Chickkanov",
+                    "t": "Senior Manager — stablecoins regime design",
+                    "rel": 3,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Stablecoin specialist"
+                    ]
+                  },
+                  {
+                    "n": "Kushal Balluck",
+                    "t": "Digital Securities Sandbox lead",
+                    "rel": 3,
+                    "dcgg": false,
+                    "v": [
+                      "market"
+                    ],
+                    "tags": [
+                      "DSS"
+                    ]
+                  },
+                  {
+                    "n": "Simon (identity TBC)",
+                    "t": "Unknown contact — attended Jan 2026 BoE + FCA meetings with Giles Dixon, Philip, Josh.",
+                    "rel": 2,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Identity unknown",
+                      "Jan 2026 UK meetings"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "hmt",
+            "label": "HM Treasury",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Cryptoasset + Digital Finance Unit",
+                "people": [
+                  {
+                    "n": "William Morello",
+                    "t": "Head of Cryptoasset Unit",
+                    "rel": 5,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Primary contact"
+                    ]
+                  },
+                  {
+                    "n": "Tom Mead",
+                    "t": "Senior Policy Adviser — Crypto",
+                    "rel": 4,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Consultation engagement"
+                    ]
+                  },
+                  {
+                    "n": "Tim Maloney",
+                    "t": "Head of Settlement + FMI Innovation (DSS)",
+                    "rel": 3,
+                    "dcgg": true,
+                    "v": [
+                      "market"
+                    ],
+                    "tags": [
+                      "Digital Securities Sandbox"
+                    ]
+                  },
+                  {
+                    "n": "Richard Knox",
+                    "t": "Director, International Financial Services (US-UK)",
+                    "rel": 3,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "International engagement"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "fca",
+            "label": "Financial Conduct Authority",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Payments + Digital Finance",
+                "people": [
+                  {
+                    "n": "David Geale",
+                    "t": "Executive Director, Payments + Digital Finance",
+                    "rel": 4,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Senior relationship"
+                    ]
+                  },
+                  {
+                    "n": "Matthew Long",
+                    "t": "Director, Payments + Digital Assets",
+                    "rel": 4,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Policy lead"
+                    ]
+                  },
+                  {
+                    "n": "Jane Moore",
+                    "t": "Head of Department, Payments + Digital Assets",
+                    "rel": 4,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Operational lead"
+                    ]
+                  },
+                  {
+                    "n": "Janet Ho",
+                    "t": "Manager — crypto policy (retail, OpRes, DeFi)",
+                    "rel": 3,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "FinProms key contact"
+                    ]
+                  },
+                  {
+                    "n": "Rupert Harrison",
+                    "t": "Senior Associate — wholesale crypto",
+                    "rel": 3,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": []
+                  },
+                  {
+                    "n": "Ruairi OConnell",
+                    "t": "Director — International (IOSCO, FSB)",
+                    "rel": 3,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "International"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "hmrc",
+            "label": "HMRC",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Digital Assets Taxation",
+                "people": [
+                  {
+                    "n": "Digital Assets Team",
+                    "t": "Stablecoin Taxation Call for Evidence lead",
+                    "rel": 2,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "DEADLINE 7 May 2026"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "eu": {
+        "label": "European Union (27 MS)",
+        "flag": "🇪🇺",
+        "tier": 1,
+        "institutions": [
+          {
+            "id": "ep",
+            "label": "European Parliament",
+            "type": "legislature",
+            "groups": [
+              {
+                "label": "EPP Group",
+                "people": [
+                  {
+                    "n": "MEP Markus Ferber",
+                    "t": "ECON Committee — MISP Rapporteur · Germany",
+                    "rel": 3,
+                    "dcgg": true,
+                    "v": [
+                      "crypto",
+                      "market"
+                    ],
+                    "tags": [
+                      "MISP Rapporteur",
+                      "ECON"
+                    ]
+                  },
+                  {
+                    "n": "MEP Adam Jarubas",
+                    "t": "SANT Committee Chair · Poland",
+                    "rel": 5,
+                    "dcgg": true,
+                    "v": [
+                      "ai"
+                    ],
+                    "tags": [
+                      "AI Event Host Feb 2026",
+                      "SANT Chair"
+                    ]
+                  },
+                  {
+                    "n": "MEP Stefan Berger",
+                    "t": "ECON — former MiCA Rapporteur",
+                    "rel": 2,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "MiCA history"
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "S&D Group",
+                "people": [
+                  {
+                    "n": "MEP Brando Benifei",
+                    "t": "AI Act Rapporteur (IMCO) · Italy",
+                    "rel": 3,
+                    "dcgg": true,
+                    "v": [
+                      "ai",
+                      "privacy"
+                    ],
+                    "tags": [
+                      "AI Act Rapporteur",
+                      "IMCO",
+                      "LIBE"
+                    ]
+                  },
+                  {
+                    "n": "MEP Eva María Poptcheva",
+                    "t": "LIBE Committee — privacy",
+                    "rel": 2,
+                    "dcgg": false,
+                    "v": [
+                      "privacy"
+                    ],
+                    "tags": [
+                      "LIBE"
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "Renew Europe Group",
+                "people": [
+                  {
+                    "n": "MEP Ondrej Kovarik",
+                    "t": "Crypto advocate · Czech Republic — STEPPING DOWN 2025",
+                    "rel": 2,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Stepping down 2025",
+                      "Successor needed"
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "Polish EU Presidency — Ministry of Finance",
+                "people": [
+                  {
+                    "n": "Bartosz Drej",
+                    "t": "Deputy Director, Financial Market Development · Poland · Met Ledger at Eurofi Warsaw Apr 2025",
+                    "rel": 2,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Polish Presidency",
+                      "Eurofi Warsaw",
+                      "MiCA simplification"
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "Greens/EFA Group",
+                "people": [
+                  {
+                    "n": "MEP Sergey Lagodinsky",
+                    "t": "Identified agentic AI definition gap · Germany",
+                    "rel": 3,
+                    "dcgg": true,
+                    "v": [
+                      "ai"
+                    ],
+                    "tags": [
+                      "Agentic AI gap"
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "Key Committees",
+                "people": [
+                  {
+                    "n": "ECON Committee",
+                    "t": "Economic and Monetary Affairs — MiCA, MISP, DAC8",
+                    "rel": 3,
+                    "dcgg": true,
+                    "v": [
+                      "crypto",
+                      "market"
+                    ],
+                    "tags": [
+                      "Primary committee for crypto"
+                    ]
+                  },
+                  {
+                    "n": "LIBE Committee",
+                    "t": "Civil Liberties — CSAM / Chat Control / Privacy",
+                    "rel": 3,
+                    "dcgg": true,
+                    "v": [
+                      "privacy"
+                    ],
+                    "tags": [
+                      "Chat Control"
+                    ]
+                  },
+                  {
+                    "n": "IMCO Committee",
+                    "t": "Internal Market — MiCA, AI Act",
+                    "rel": 2,
+                    "dcgg": false,
+                    "v": [
+                      "crypto",
+                      "ai"
+                    ],
+                    "tags": [
+                      "AI Act"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ec",
+            "label": "European Commission",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "DG FISMA",
+                "people": [
+                  {
+                    "n": "Peter Kerstens",
+                    "t": "Advisor, Financial Sector Digitalisation — DG FISMA",
+                    "rel": 4,
+                    "dcgg": true,
+                    "v": [
+                      "crypto",
+                      "market"
+                    ],
+                    "tags": [
+                      "Key EC contact",
+                      "MiCA policy"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ai_office",
+            "label": "EU AI Office",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "AI Innovation + Policy Coordination",
+                "people": [
+                  {
+                    "n": "Małgorzata Nikowska",
+                    "t": "Head of Unit — AI Innovation + Policy Coordination",
+                    "rel": 5,
+                    "dcgg": true,
+                    "v": [
+                      "ai"
+                    ],
+                    "tags": [
+                      "November workshop confirmed",
+                      "DeAI lead"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "esm",
+            "label": "ESM / EESC",
+            "type": "other",
+            "groups": [
+              {
+                "label": "ESM (European Stability Mechanism)",
+                "people": [
+                  {
+                    "n": "Pierre Gramegna",
+                    "t": "ESM Managing Director — warned Eurogroup Mar 2025 USD stablecoins threaten EU monetary sovereignty",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Sovereignty risk framing",
+                      "Key monitor — opposes Tether"
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "EESC Employers Group",
+                "people": [
+                  {
+                    "n": "Sandra Parthie",
+                    "t": "President, Employers Group",
+                    "rel": 4,
+                    "dcgg": true,
+                    "v": [
+                      "ai"
+                    ],
+                    "tags": [
+                      "Feb 5 AI event speaker"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "africa": {
+    "label": "Africa",
+    "icon": "🌍",
+    "countries": {
+      "nigeria": {
+        "label": "Nigeria",
+        "flag": "🇳🇬",
+        "tier": 1,
+        "institutions": [
+          {
+            "id": "nass",
+            "label": "National Assembly (NASS)",
+            "type": "legislature",
+            "groups": [
+              {
+                "label": "House of Representatives — Digital Assets Committee",
+                "people": [
+                  {
+                    "n": "House DA Committee",
+                    "t": "Digital assets legislative oversight — ISA 2025 implementation",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "ISA 2025",
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cbn",
+            "label": "Central Bank of Nigeria (CBN)",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "Fintech + Payments",
+                "people": [
+                  {
+                    "n": "CBN FinTech Division",
+                    "t": "Reversed crypto ban 2023 — evolving approach",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sec_ng",
+            "label": "SEC Nigeria",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Digital Assets Division",
+                "people": [
+                  {
+                    "n": "SEC Nigeria DA Team",
+                    "t": "ISA 2025 — stablecoins as securities. CBN reversed crypto ban 2023.",
+                    "rel": 2,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Monitoring stage",
+                      "ISA 2025"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "kenya": {
+        "label": "Kenya",
+        "flag": "🇰🇪",
+        "tier": 1,
+        "institutions": [
+          {
+            "id": "parliament_ke",
+            "label": "National Assembly Kenya",
+            "type": "legislature",
+            "groups": [
+              {
+                "label": "Finance & National Planning Committee",
+                "people": [
+                  {
+                    "n": "Finance Committee Secretariat",
+                    "t": "Virtual asset legislation oversight — CBK VASP Bill",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "CBK VASP Bill context"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cbk",
+            "label": "Central Bank of Kenya (CBK)",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "Financial Innovation",
+                "people": [
+                  {
+                    "n": "CBK VASP Policy Team",
+                    "t": "Draft SI on Virtual Asset Service Providers — DCGG response filed Feb 2026",
+                    "rel": 2,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "DCGG response filed Feb 2026"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cma_ke",
+            "label": "CMA Kenya",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Digital Assets",
+                "people": [
+                  {
+                    "n": "CMA Kenya Digital Team",
+                    "t": "Capital markets digital assets",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "ghana": {
+        "label": "Ghana",
+        "flag": "🇬🇭",
+        "tier": 1,
+        "institutions": [
+          {
+            "id": "parliament_gh",
+            "label": "Parliament of Ghana",
+            "type": "legislature",
+            "groups": [
+              {
+                "label": "Finance Committee",
+                "people": [
+                  {
+                    "n": "Finance Committee Secretariat",
+                    "t": "Virtual asset legislative framework — digital assets bill monitoring",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "bog",
+            "label": "Bank of Ghana (BOG)",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "Virtual Assets Regulatory Office",
+                "people": [
+                  {
+                    "n": "BOG VA Regulatory Office",
+                    "t": "Virtual Assets Regulatory Office — met DCGG Dec 2025. No USDT restrictions confirmed.",
+                    "rel": 4,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Met Dec 2025",
+                      "No USDT restrictions"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ghsec",
+            "label": "Ghana SEC",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Virtual Assets Team",
+                "people": [
+                  {
+                    "n": "Ghana SEC VA Team",
+                    "t": "Virtual asset exchange oversight — met DCGG Dec 2025",
+                    "rel": 4,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Met Dec 2025"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "southafrica": {
+        "label": "South Africa",
+        "flag": "🇿🇦",
+        "tier": 1,
+        "institutions": [
+          {
+            "id": "parliament_za",
+            "label": "Parliament of South Africa",
+            "type": "legislature",
+            "groups": [
+              {
+                "label": "Standing Committee on Finance",
+                "people": [
+                  {
+                    "n": "SCOF Secretariat",
+                    "t": "Crypto asset regulatory legislation oversight — FSCA CASP licensing",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sarb",
+            "label": "SARB",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "Financial Stability + Payments",
+                "people": [
+                  {
+                    "n": "SARB FinTech + Payments",
+                    "t": "CBDC + stablecoin policy. Prudential oversight of CASPs.",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "fsca",
+            "label": "FSCA",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Digital Assets",
+                "people": [
+                  {
+                    "n": "FSCA Crypto Assets Team",
+                    "t": "CASP licensing regime live from 2023. Most developed African regulator.",
+                    "rel": 2,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed",
+                      "CASP licensing live"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "tanzania": {
+        "label": "Tanzania",
+        "flag": "🇹🇿",
+        "tier": 2,
+        "institutions": [
+          {
+            "id": "bot_tz",
+            "label": "Bank of Tanzania",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "Digital Currency",
+                "people": [
+                  {
+                    "n": "BoT Digital Currency Team",
+                    "t": "Digital currency guidelines 2023",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Early stage"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rwanda": {
+        "label": "Rwanda",
+        "flag": "🇷🇼",
+        "tier": 2,
+        "institutions": [
+          {
+            "id": "nbr",
+            "label": "National Bank of Rwanda (NBR)",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "FinTech + Innovation",
+                "people": [
+                  {
+                    "n": "NBR FinTech Team",
+                    "t": "Monitoring digital assets. Innovation-friendly jurisdiction.",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Monitoring"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "senegal": {
+        "label": "Sénégal",
+        "flag": "🇸🇳",
+        "tier": 2,
+        "institutions": [
+          {
+            "id": "bceao",
+            "label": "BCEAO (West Africa)",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "Digital Assets — WAEMU Zone",
+                "people": [
+                  {
+                    "n": "BCEAO Digital Assets Team",
+                    "t": "BCEAO covers Senegal + 7 other WAEMU states. Digital asset guidelines 2022.",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "WAEMU zone coverage"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "ethiopia": {
+        "label": "Ethiopia",
+        "flag": "🇪🇹",
+        "tier": 2,
+        "institutions": [
+          {
+            "id": "nbe",
+            "label": "National Bank of Ethiopia (NBE)",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "Digital Assets",
+                "people": [
+                  {
+                    "n": "NBE Digital Assets Team",
+                    "t": "NBE forex directive covering crypto 2023. Fast-growing adoption market.",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "ivorycoast": {
+        "label": "Côte d'Ivoire",
+        "flag": "🇨🇮",
+        "tier": 2,
+        "institutions": [
+          {
+            "id": "bceao_ci",
+            "label": "BCEAO / CREPMF",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "WAEMU Zone Coverage",
+                "people": [
+                  {
+                    "n": "CREPMF Regional Team",
+                    "t": "WAEMU capital markets + crypto oversight for Francophone West Africa",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "WAEMU zone"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "uganda": {
+        "label": "Uganda",
+        "flag": "🇺🇬",
+        "tier": 2,
+        "institutions": [
+          {
+            "id": "bou",
+            "label": "Bank of Uganda (BOU)",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "FinTech + Payments",
+                "people": [
+                  {
+                    "n": "BOU FinTech Team",
+                    "t": "Cautionary stance. Growing P2P adoption.",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "mena": {
+    "label": "MENA",
+    "icon": "🕌",
+    "countries": {
+      "uae": {
+        "label": "UAE",
+        "flag": "🇦🇪",
+        "tier": 1,
+        "sub": "me",
+        "institutions": [
+          {
+            "id": "adgm",
+            "label": "ADGM FSRA",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Financial Services",
+                "people": [
+                  {
+                    "n": "Wai Lum Kwok",
+                    "t": "Senior Executive Director — ADGM FSRA",
+                    "rel": 3,
+                    "dcgg": true,
+                    "v": [
+                      "crypto",
+                      "market"
+                    ],
+                    "tags": [
+                      "Key ADGM contact"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "dfsa",
+            "label": "DFSA",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Crypto Token Regulation",
+                "people": [
+                  {
+                    "n": "Elizabeth Wallace",
+                    "t": "DFSA — USDT suitability contact. CP168 effective Jan 2026.",
+                    "rel": 3,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "CP168 contact"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "vara",
+            "label": "VARA",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Virtual Assets",
+                "people": [
+                  {
+                    "n": "VARA Policy Team",
+                    "t": "Dubai virtual assets regulation",
+                    "rel": 2,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cbuae",
+            "label": "CBUAE",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "FinTech + Innovation Hub",
+                "people": [
+                  {
+                    "n": "Head of CBUAE FinTech Office",
+                    "t": "Innovation Hub — confirmed meeting end May 2026",
+                    "rel": 3,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Meeting confirmed May 2026"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "saudi": {
+        "label": "Saudi Arabia",
+        "flag": "🇸🇦",
+        "tier": 1,
+        "sub": "me",
+        "institutions": [
+          {
+            "id": "cma_sa",
+            "label": "CMA Saudi Arabia",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Digital Assets",
+                "people": [
+                  {
+                    "n": "CMA Digital Assets Team",
+                    "t": "Developing crypto framework. Vision 2030 financial innovation.",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Q3 2026 engagement plan"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sama",
+            "label": "SAMA",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "Payments + FinTech",
+                "people": [
+                  {
+                    "n": "SAMA FinTech Team",
+                    "t": "CBDC (Project Aber) + stablecoin policy",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "bahrain": {
+        "label": "Bahrain",
+        "flag": "🇧🇭",
+        "tier": 1,
+        "sub": "me",
+        "institutions": [
+          {
+            "id": "cbb",
+            "label": "Central Bank of Bahrain (CBB)",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "Crypto Asset Module",
+                "people": [
+                  {
+                    "n": "CBB Crypto Asset Team",
+                    "t": "CBB crypto module — first comprehensive MENA framework (2019). Class M + Class E licences.",
+                    "rel": 2,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "First MENA framework 2019",
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "kuwait": {
+        "label": "Kuwait",
+        "flag": "🇰🇼",
+        "tier": 1,
+        "sub": "me",
+        "institutions": [
+          {
+            "id": "cma_kw",
+            "label": "CMA Kuwait",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Digital Assets",
+                "people": [
+                  {
+                    "n": "CMA Kuwait Digital Team",
+                    "t": "Developing digital asset framework 2023. Large retail crypto adoption.",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cbk",
+            "label": "Central Bank of Kuwait (CBK)",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "Payments + FinTech",
+                "people": [
+                  {
+                    "n": "CBK FinTech Team",
+                    "t": "Historically restrictive but evolving stance.",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "oman": {
+        "label": "Oman",
+        "flag": "🇴🇲",
+        "tier": 2,
+        "sub": "me",
+        "institutions": [
+          {
+            "id": "cma_om",
+            "label": "CMA Oman",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Virtual Assets",
+                "people": [
+                  {
+                    "n": "CMA Oman Virtual Assets Team",
+                    "t": "Virtual asset regulations issued 2023.",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Monitoring"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "qatar": {
+        "label": "Qatar",
+        "flag": "🇶🇦",
+        "tier": 2,
+        "sub": "me",
+        "institutions": [
+          {
+            "id": "qfcra",
+            "label": "QFCRA",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Digital Assets",
+                "people": [
+                  {
+                    "n": "QFCRA Digital Assets Team",
+                    "t": "QFC digital asset framework. QCB cautious on retail crypto.",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "QFC framework active"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "jordan": {
+        "label": "Jordan",
+        "flag": "🇯🇴",
+        "tier": 2,
+        "sub": "me",
+        "institutions": [
+          {
+            "id": "cbj",
+            "label": "Central Bank of Jordan (CBJ)",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "Digital Assets",
+                "people": [
+                  {
+                    "n": "CBJ Digital Team",
+                    "t": "Cautious approach. Growing framework under study.",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Monitoring"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "egypt": {
+        "label": "Egypt",
+        "flag": "🇪🇬",
+        "tier": 1,
+        "sub": "na",
+        "institutions": [
+          {
+            "id": "fra_eg",
+            "label": "FRA (Financial Regulatory Authority)",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Digital Assets",
+                "people": [
+                  {
+                    "n": "FRA Digital Assets Team",
+                    "t": "Virtual asset framework 2022. 100M+ population — large market.",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cbe",
+            "label": "Central Bank of Egypt (CBE)",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "FinTech + Payments",
+                "people": [
+                  {
+                    "n": "CBE FinTech Team",
+                    "t": "Historically restrictive but evolving. USDT widely used as EGP hedge.",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "morocco": {
+        "label": "Morocco",
+        "flag": "🇲🇦",
+        "tier": 1,
+        "sub": "na",
+        "institutions": [
+          {
+            "id": "bam",
+            "label": "Bank Al-Maghrib (BAM)",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "Digital Assets",
+                "people": [
+                  {
+                    "n": "BAM Digital Assets Team",
+                    "t": "Initiating formal digital asset regulation process 2025. Large informal crypto economy.",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ammc",
+            "label": "AMMC",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Capital Markets + Digital Assets",
+                "people": [
+                  {
+                    "n": "AMMC Digital Team",
+                    "t": "Capital markets regulator — crypto asset framework developing.",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "tunisia": {
+        "label": "Tunisia",
+        "flag": "🇹🇳",
+        "tier": 2,
+        "sub": "na",
+        "institutions": [
+          {
+            "id": "bct",
+            "label": "Banque Centrale de Tunisie (BCT)",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "Digital Assets",
+                "people": [
+                  {
+                    "n": "BCT Digital Assets Team",
+                    "t": "CBDC research. Crypto technically prohibited but P2P active.",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Monitoring"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "asia": {
+    "label": "Asia",
+    "icon": "🌏",
+    "countries": {
+      "southkorea": {
+        "label": "South Korea",
+        "flag": "🇰🇷",
+        "tier": 1,
+        "institutions": [
+          {
+            "id": "assembly",
+            "label": "National Assembly",
+            "type": "legislature",
+            "groups": [
+              {
+                "label": "Democratic Party of Korea (DP)",
+                "people": [
+                  {
+                    "n": "Rep. Min Byung-duk",
+                    "t": "Strategy and Finance Committee — Seoul seminar co-host 12 May 2026",
+                    "rel": 5,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Seminar co-host 12 May 2026"
+                    ]
+                  },
+                  {
+                    "n": "Rep. Lee Kang-il",
+                    "t": "National Assembly — seminar co-host",
+                    "rel": 5,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Seminar co-host"
+                    ]
+                  },
+                  {
+                    "n": "Rep. Park Ji-won",
+                    "t": "Sangsaenggwa Tongil Forum member",
+                    "rel": 4,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Korea forum"
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "Non-affiliated / Leadership",
+                "people": [
+                  {
+                    "n": "Vice Speaker Joo Ho-young",
+                    "t": "National Assembly Vice Speaker — Sangsaenggwa Tongil Forum",
+                    "rel": 4,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Senior relationship"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "fsc",
+            "label": "FSC / FSS",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Virtual Asset Policy",
+                "people": [
+                  {
+                    "n": "FSC Virtual Asset Division",
+                    "t": "DABA Phase 2 policy lead — 51% bank equity rule",
+                    "rel": 2,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed",
+                      "DABA Phase 2"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "bokr",
+            "label": "Bank of Korea",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "Digital Currency + Payments",
+                "people": [
+                  {
+                    "n": "Digital Currency Division",
+                    "t": "Won-stablecoin policy, CBDC",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "singapore": {
+        "label": "Singapore",
+        "flag": "🇸🇬",
+        "tier": 1,
+        "institutions": [
+          {
+            "id": "mas",
+            "label": "MAS",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "FinTech + Digital Assets",
+                "people": [
+                  {
+                    "n": "Kenneth Gay",
+                    "t": "Chief FinTech Officer (from Feb 2025)",
+                    "rel": 2,
+                    "dcgg": false,
+                    "v": [
+                      "crypto",
+                      "ai"
+                    ],
+                    "tags": [
+                      "Key MAS contact"
+                    ]
+                  },
+                  {
+                    "n": "Payments Policy Team",
+                    "t": "Stablecoin licensing + PSA 8th licence type framework",
+                    "rel": 2,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "New 8th licence type H1 2026"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "japan": {
+        "label": "Japan",
+        "flag": "🇯🇵",
+        "tier": 1,
+        "institutions": [
+          {
+            "id": "jfsa",
+            "label": "JFSA",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Digital Assets Division",
+                "people": [
+                  {
+                    "n": "Deputy Director Katsuya Terai",
+                    "t": "FSA Japan — stablecoin regulation. Meeting being arranged via Małgo.",
+                    "rel": 2,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Meeting being arranged — Małgo"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hongkong": {
+        "label": "Hong Kong",
+        "flag": "🇭🇰",
+        "tier": 1,
+        "institutions": [
+          {
+            "id": "hkma",
+            "label": "HKMA",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "FinTech + Digital Assets",
+                "people": [
+                  {
+                    "n": "HKMA Stablecoin Team",
+                    "t": "Stablecoin Ordinance (Aug 2025) — first licences expected 2026",
+                    "rel": 2,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Ordinance effective Aug 2025"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sfc",
+            "label": "SFC",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Virtual Asset Regulation",
+                "people": [
+                  {
+                    "n": "VATP Licensing Team",
+                    "t": "12 licensed VATPs. USDT OTC win: dealers can offer to professional investors.",
+                    "rel": 2,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "USDT OTC win Jun 2025"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "australia": {
+        "label": "Australia",
+        "flag": "🇦🇺",
+        "tier": 1,
+        "institutions": [
+          {
+            "id": "treasury_au",
+            "label": "Australian Treasury",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "PSP + Digital Assets",
+                "people": [
+                  {
+                    "n": "Treasury PSP Team",
+                    "t": "Payment Entities (Prudential Regulation) Bill 2026 — DCGG filed response. Self-custody explicitly excluded.",
+                    "rel": 2,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "DCGG response filed 2026",
+                      "Self-custody excluded"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "asic",
+            "label": "ASIC",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Digital Assets",
+                "people": [
+                  {
+                    "n": "ASIC Digital Assets Team",
+                    "t": "Crypto exchange oversight. AFS licensing for financial products.",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "malaysia": {
+        "label": "Malaysia",
+        "flag": "🇲🇾",
+        "tier": 2,
+        "institutions": [
+          {
+            "id": "bnm",
+            "label": "BNM (Bank Negara Malaysia)",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "Digital Finance",
+                "people": [
+                  {
+                    "n": "BNM Digital Finance Team",
+                    "t": "Asset tokenisation discussion paper — DCGG filed response Feb 2026",
+                    "rel": 2,
+                    "dcgg": true,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "DCGG response filed Feb 2026"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sc_my",
+            "label": "SC Malaysia",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Digital Assets",
+                "people": [
+                  {
+                    "n": "SC Malaysia DA Team",
+                    "t": "Digital asset framework since 2019",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "philippines": {
+        "label": "Philippines",
+        "flag": "🇵🇭",
+        "tier": 2,
+        "institutions": [
+          {
+            "id": "bsp",
+            "label": "BSP (Bangko Sentral ng Pilipinas)",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "Virtual Asset Service Providers",
+                "people": [
+                  {
+                    "n": "BSP VASP Team",
+                    "t": "VASP framework since 2021. Philippines = very high global crypto adoption.",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "vietnam": {
+        "label": "Vietnam",
+        "flag": "🇻🇳",
+        "tier": 2,
+        "institutions": [
+          {
+            "id": "sbv",
+            "label": "State Bank of Vietnam (SBV)",
+            "type": "central_bank",
+            "groups": [
+              {
+                "label": "Digital Assets",
+                "people": [
+                  {
+                    "n": "SBV Digital Assets Team",
+                    "t": "Government study group on crypto regulation launched 2025. Draft framework expected 2026.",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Monitoring — framework developing"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "indonesia": {
+        "label": "Indonesia",
+        "flag": "🇮🇩",
+        "tier": 2,
+        "institutions": [
+          {
+            "id": "ojk",
+            "label": "OJK (Financial Services Authority)",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Digital Assets",
+                "people": [
+                  {
+                    "n": "OJK Digital Assets Team",
+                    "t": "OJK took crypto oversight from BAPPEBTI 2025. Largest SE Asia crypto market.",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "thailand": {
+        "label": "Thailand",
+        "flag": "🇹🇭",
+        "tier": 2,
+        "institutions": [
+          {
+            "id": "sec_th",
+            "label": "SEC Thailand",
+            "type": "regulator",
+            "groups": [
+              {
+                "label": "Digital Asset Business",
+                "people": [
+                  {
+                    "n": "SEC Thailand DA Team",
+                    "t": "Digital Asset Business Act 2018. One of most developed SE Asia frameworks.",
+                    "rel": 1,
+                    "dcgg": false,
+                    "v": [
+                      "crypto"
+                    ],
+                    "tags": [
+                      "Add contact needed"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ package storage
 import (
 	"context"
 	"fmt"
+	"io"
 	"net/url"
 	"time"
 
@@ -40,6 +41,12 @@ func New(ctx context.Context, cfg *config.Config) (*Client, error) {
 	}
 	log.Info().Str("bucket", cfg.MinioBucket).Msg("minio ready")
 	return &Client{mc: mc, Bucket: cfg.MinioBucket}, nil
+}
+
+// PutObject uploads raw bytes to the bucket at the given key.
+func (c *Client) PutObject(ctx context.Context, key string, body io.Reader, size int64, contentType string) error {
+	_, err := c.mc.PutObject(ctx, c.Bucket, key, body, size, minio.PutObjectOptions{ContentType: contentType})
+	return err
 }
 
 func (c *Client) PresignedPut(ctx context.Context, key string, ttl time.Duration) (*url.URL, error) {

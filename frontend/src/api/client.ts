@@ -40,6 +40,9 @@ export interface Page<T> {
 }
 
 export async function list<T>(path: string, params?: Record<string, unknown>): Promise<T[]> {
-  const { data } = await http.get<T[] | Page<T>>(path, { params });
-  return Array.isArray(data) ? data : data.items;
+  const { data } = await http.get<T[] | Page<T> | { data: T[] }>(path, { params });
+  if (Array.isArray(data)) return data;
+  if ('items' in data && Array.isArray(data.items)) return data.items;
+  if ('data' in data && Array.isArray((data as { data: T[] }).data)) return (data as { data: T[] }).data;
+  return [];
 }

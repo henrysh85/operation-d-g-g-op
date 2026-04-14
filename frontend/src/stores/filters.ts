@@ -35,7 +35,7 @@ export const useFiltersStore = defineStore('filters', {
   },
   actions: {
     set<K extends keyof State>(key: K, value: State[K]) {
-      this[key] = value;
+      (this as State)[key] = value;
     },
     reset() {
       this.vertical = 'all';
