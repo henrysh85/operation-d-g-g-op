@@ -15,11 +15,7 @@ const isAuthRoute = computed(() => route.name === 'login');
     <div class="flex h-screen w-screen overflow-hidden bg-ink-50">
       <Sidebar />
       <main class="flex-1 flex flex-col overflow-hidden">
-        <router-view v-slot="{ Component, route: r }">
-          <transition name="fade" mode="out-in">
-            <component :is="Component" :key="r.path" />
-          </transition>
-        </router-view>
+        <router-view />
       </main>
     </div>
   </template>
