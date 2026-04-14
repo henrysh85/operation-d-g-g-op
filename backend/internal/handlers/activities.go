@@ -133,6 +133,25 @@ func (h *ActivitiesHandler) UploadOutput(c *gin.Context) {
 	})
 }
 
+// DeleteOutput removes an activity output (DB row + MinIO object).
+func (h *ActivitiesHandler) DeleteOutput(c *gin.Context) {
+	var key string
+	err := h.DB.QueryRow(c.Request.Context(),
+		`SELECT minio_key FROM activity_outputs WHERE id=$1 AND activity_id=$2`,
+		c.Param("fileId"), c.Param("id")).Scan(&key)
+	if err != nil {
+		c.JSON(http.StatusNotFound, gin.H{"error": "not found"})
+		return
+	}
+	_ = h.S3.Remove(c.Request.Context(), key)
+	if _, err := h.DB.Exec(c.Request.Context(),
+		`DELETE FROM activity_outputs WHERE id=$1`, c.Param("fileId")); err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+	c.Status(http.StatusNoContent)
+}
+
 // DownloadOutput streams a single activity output through the backend so the
 // browser doesn't need direct access to MinIO (presigned URLs from MinIO point
 // to the internal `minio:9000` endpoint and are unreachable from the public

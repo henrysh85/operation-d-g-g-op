@@ -4,13 +4,13 @@ import { activities, publications } from '@/api';
 import type { Activity, Publication } from '@/types';
 import { format } from 'date-fns';
 
-type Tab = 'roundtables' | 'meetings' | 'publications' | 'governance';
-const tab = ref<Tab>('roundtables');
+type Tab = 'events' | 'meetings' | 'publications' | 'consultations';
+const tab = ref<Tab>('events');
 const tabs: Array<{ id: Tab; label: string }> = [
-  { id: 'roundtables',  label: 'Roundtables' },
-  { id: 'meetings',     label: 'Meetings' },
-  { id: 'publications', label: 'Publications' },
-  { id: 'governance',   label: 'Governance' },
+  { id: 'events',        label: 'Events' },
+  { id: 'meetings',      label: 'Meetings' },
+  { id: 'publications',  label: 'Publications' },
+  { id: 'consultations', label: 'Consultations' },
 ];
 
 const acts = ref<Activity[]>([]);
@@ -27,20 +27,20 @@ onMounted(async () => {
   } finally { loading.value = false; }
 });
 
-function groupByRegion<T extends { region?: string; tags?: string[] }>(items: T[]): Array<[string, T[]]> {
+function groupByVertical<T extends Record<string, any>>(items: T[]): Array<[string, T[]]> {
   const m = new Map<string, T[]>();
   for (const i of items) {
-    const r = i.region ?? (i.tags?.find((t) => /^(EMEA|Americas|APAC|MENA|Africa|Global)$/.test(t))) ?? 'Unassigned';
-    if (!m.has(r)) m.set(r, []);
-    m.get(r)!.push(i);
+    const v = (i.vertical as string | undefined) ?? 'general';
+    if (!m.has(v)) m.set(v, []);
+    m.get(v)!.push(i);
   }
-  return Array.from(m.entries());
+  return Array.from(m.entries()).sort(([a], [b]) => a.localeCompare(b));
 }
 
-const roundtables = computed(() => groupByRegion(acts.value.filter((a) => a.tags?.includes('roundtable'))));
-const meetings    = computed(() => groupByRegion(acts.value.filter((a) => a.type === 'meeting')));
-const pubsByRegion = computed(() => groupByRegion(pubs.value));
-const governance  = computed(() => groupByRegion(acts.value.filter((a) => a.tags?.includes('governance'))));
+const events     = computed(() => groupByVertical(acts.value.filter((a) => (a.type as string) === 'event')));
+const meetings   = computed(() => groupByVertical(acts.value.filter((a) => (a.type as string) === 'meeting')));
+const consults   = computed(() => groupByVertical(acts.value.filter((a) => (a.type as string) === 'consultation')));
+const pubsByVert = computed(() => groupByVertical(pubs.value));
 </script>
 
 <template>
@@ -64,14 +64,15 @@ const governance  = computed(() => groupByRegion(acts.value.filter((a) => a.tags
 
     <template v-else>
       <template v-if="tab === 'publications'">
-        <div v-for="[region, list] in pubsByRegion" :key="region" class="space-y-2">
-          <div class="text-xxs font-semibold text-ink-400 uppercase tracking-wider">{{ region }}</div>
+        <div v-if="!pubs.length" class="dcgg-card text-xs text-ink-400">No publications.</div>
+        <div v-for="[vert, list] in pubsByVert" :key="vert" class="space-y-2">
+          <div class="text-xxs font-semibold text-ink-400 uppercase tracking-wider">{{ vert }}</div>
           <ul class="dcgg-card !p-0 divide-y divide-ink-100">
-            <li v-for="p in list" :key="p.id" class="px-4 py-2 flex items-center gap-3">
-              <span class="dcgg-tag capitalize">{{ p.kind }}</span>
-              <div class="flex-1 min-w-0">
-                <div class="text-sm text-ink-900 truncate">{{ p.title }}</div>
-                <div class="text-xxs text-ink-500">{{ format(new Date(p.publishedAt), 'PP') }}</div>
+            <li v-for="p in list" :key="p.id" class="px-4 py-2">
+              <div class="text-sm text-ink-900 truncate">{{ p.title }}</div>
+              <div class="text-xxs text-ink-500">
+                {{ p.publishedAt ? format(new Date(p.publishedAt), 'PP') : '—' }}
+                <span v-if="(p as any).venue"> · {{ (p as any).venue }}</span>
               </div>
             </li>
           </ul>
@@ -80,11 +81,11 @@ const governance  = computed(() => groupByRegion(acts.value.filter((a) => a.tags
 
       <template v-else>
         <div
-          v-for="[region, list] in (tab === 'roundtables' ? roundtables : tab === 'meetings' ? meetings : governance)"
-          :key="region"
+          v-for="[vert, list] in (tab === 'events' ? events : tab === 'meetings' ? meetings : consults)"
+          :key="vert"
           class="space-y-2"
         >
-          <div class="text-xxs font-semibold text-ink-400 uppercase tracking-wider">{{ region }}</div>
+          <div class="text-xxs font-semibold text-ink-400 uppercase tracking-wider">{{ vert }}</div>
           <ul class="dcgg-card !p-0 divide-y divide-ink-100">
             <li v-for="a in list" :key="a.id" class="px-4 py-2">
               <div class="text-sm text-ink-900">{{ a.title }}</div>
@@ -92,6 +93,8 @@ const governance  = computed(() => groupByRegion(acts.value.filter((a) => a.tags
             </li>
           </ul>
         </div>
+        <div v-if="(tab === 'events' ? events : tab === 'meetings' ? meetings : consults).length === 0"
+             class="dcgg-card text-xs text-ink-400">No items.</div>
       </template>
     </template>
   </section>

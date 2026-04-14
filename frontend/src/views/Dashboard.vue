@@ -2,7 +2,6 @@
 import { onMounted, ref } from 'vue';
 import { dashboard } from '@/api';
 import type { DashboardSummary } from '@/api/dashboard';
-import FilterBar from '@/components/FilterBar.vue';
 import ImpactBadge from '@/components/ImpactBadge.vue';
 import { format } from 'date-fns';
 
@@ -22,8 +21,6 @@ onMounted(async () => {
     <h1 class="text-base font-semibold text-ink-900">Dashboard</h1>
     <p class="text-xs text-ink-500 mt-0.5">Intelligence overview across all clients and jurisdictions.</p>
   </header>
-
-  <FilterBar />
 
   <section class="flex-1 overflow-y-auto p-6 space-y-6">
     <div v-if="error" class="dcgg-card text-xs text-err">{{ error }}</div>

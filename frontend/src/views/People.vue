@@ -74,6 +74,11 @@ async function decideHoliday(id: string, status: 'approved' | 'rejected') {
   await hr.setHolidayStatus(id, status).catch(() => null);
   await loadHolidays();
 }
+async function deleteHoliday(id: string) {
+  if (!confirm('Withdraw this holiday request?')) return;
+  await hr.deleteHoliday(id).catch(() => null);
+  await loadHolidays();
+}
 
 // --- Reviews ---
 const reviews = ref<Review[]>([]);
@@ -238,7 +243,8 @@ const columns = [
                 </td>
                 <td class="text-right">
                   <button v-if="h.status!=='approved'" class="text-xxs text-ok hover:underline mr-2" @click="decideHoliday(h.id,'approved')">Approve</button>
-                  <button v-if="h.status!=='rejected'" class="text-xxs text-err hover:underline" @click="decideHoliday(h.id,'rejected')">Reject</button>
+                  <button v-if="h.status!=='rejected'" class="text-xxs text-err hover:underline mr-2" @click="decideHoliday(h.id,'rejected')">Reject</button>
+                  <button class="text-xxs text-ink-500 hover:text-err hover:underline" @click="deleteHoliday(h.id)">Delete</button>
                 </td>
               </tr>
             </tbody>

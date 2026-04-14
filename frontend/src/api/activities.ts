@@ -58,4 +58,7 @@ export const activities = {
     });
     return data;
   },
+  async deleteOutput(activityId: string, fileId: string): Promise<void> {
+    await http.delete(`/activities/${activityId}/outputs/${fileId}`);
+  },
 };

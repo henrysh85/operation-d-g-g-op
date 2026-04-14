@@ -55,6 +55,13 @@ async function openFiles(a: Activity) {
   fileList.value = await activities.listOutputs(a.id).catch(() => []);
 }
 
+async function deleteFile(fileId: string) {
+  if (!filesFor.value) return;
+  if (!confirm('Delete this file?')) return;
+  await activities.deleteOutput(filesFor.value.id, fileId).catch(() => null);
+  fileList.value = await activities.listOutputs(filesFor.value.id);
+}
+
 async function handleUpload(ev: Event) {
   if (!filesFor.value) return;
   const input = ev.target as HTMLInputElement;
@@ -102,6 +109,7 @@ const columns = [
         <li v-for="f in fileList" :key="f.id" class="py-2 flex items-center gap-2">
           <a :href="f.url" target="_blank" class="text-xs text-brand-600 hover:underline truncate flex-1">{{ f.label }}</a>
           <span class="text-xxs text-ink-400">{{ (f.size_bytes / 1024).toFixed(1) }} KB</span>
+          <button class="text-xxs text-err hover:underline" @click="deleteFile(f.id)">Delete</button>
         </li>
       </ul>
       <label class="block">

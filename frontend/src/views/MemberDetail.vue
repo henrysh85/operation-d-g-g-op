@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { onMounted, ref, watch } from 'vue';
-import { membership, activities } from '@/api';
-import type { Member, Activity } from '@/types';
+import { onMounted, ref, watch, computed } from 'vue';
+import { membership } from '@/api';
+import type { Member } from '@/types';
 import type { MemberIntel } from '@/api/membership';
 import StatusBadge from '@/components/StatusBadge.vue';
 import { format } from 'date-fns';
@@ -18,17 +18,13 @@ const tabs: Array<{ id: Tab; label: string }> = [
 ];
 
 const member = ref<Member | null>(null);
-const acts = ref<Activity[]>([]);
 const loading = ref(true);
 const error = ref<string | null>(null);
-
 const intel = ref<MemberIntel | null>(null);
 
 onMounted(async () => {
-  try {
-    member.value = await membership.get(props.id);
-    acts.value = await activities.list({ memberId: props.id }).catch(() => []);
-  } catch (e) { error.value = (e as Error).message; }
+  try { member.value = await membership.get(props.id); }
+  catch (e) { error.value = (e as Error).message; }
   finally { loading.value = false; }
 });
 
@@ -36,7 +32,9 @@ async function loadIntel() {
   if (!member.value || intel.value) return;
   intel.value = await membership.intel(member.value.id).catch(() => null);
 }
-watch(tab, (t) => { if (t === 'risks' || t === 'intelligence') loadIntel(); });
+watch(tab, (t) => { if (t === 'risks' || t === 'intelligence' || t === 'activity') loadIntel(); });
+
+const acts = computed(() => intel.value?.activities ?? []);
 </script>
 
 <template>
@@ -102,13 +100,15 @@ watch(tab, (t) => { if (t === 'risks' || t === 'intelligence') loadIntel(); });
       </div>
 
       <div v-else-if="tab === 'activity'">
-        <ul v-if="acts.length" class="dcgg-card !p-0 divide-y divide-ink-100">
-          <li v-for="a in acts" :key="a.id" class="px-4 py-2">
-            <div class="text-sm text-ink-900">{{ a.title }}</div>
-            <div class="text-xxs text-ink-500">{{ a.type }} · {{ format(new Date(a.occurredAt), 'PPp') }}</div>
+        <div v-if="!intel" class="text-xs text-ink-400">Loading…</div>
+        <ul v-else-if="acts.length" class="dcgg-card !p-0 divide-y divide-ink-100">
+          <li v-for="a in acts" :key="a.id" class="px-4 py-2 flex items-baseline gap-2">
+            <span class="text-sm text-ink-900 flex-1">{{ a.title }}</span>
+            <span class="text-xxs text-ink-500">{{ a.tag }}</span>
+            <span class="text-xxs text-ink-400">{{ a.when?.slice(0,10) }}</span>
           </li>
         </ul>
-        <div v-else class="dcgg-card text-xs text-ink-400">No activity recorded.</div>
+        <div v-else class="dcgg-card text-xs text-ink-400">No activity recorded for this jurisdiction.</div>
       </div>
 
       <div v-else-if="tab === 'intelligence'" class="space-y-3">

@@ -107,6 +107,7 @@ func New(cfg *config.Config, db *pgxpool.Pool, s3 *storage.Client, jwtMgr *auth.
 			authed.GET("/activities/:id/outputs", activitiesH.ListOutputs)
 			authed.POST("/activities/:id/outputs", auth.RequireRole("admin", "lead", "staff"), activitiesH.UploadOutput)
 			authed.GET("/activities/:id/outputs/:fileId/download", activitiesH.DownloadOutput)
+			authed.DELETE("/activities/:id/outputs/:fileId", auth.RequireRole("admin", "lead", "staff"), activitiesH.DeleteOutput)
 			authed.DELETE("/activities/:id", auth.RequireRole("admin", "lead"), activitiesH.Delete)
 
 			authed.GET("/clients", clientsH.List)
