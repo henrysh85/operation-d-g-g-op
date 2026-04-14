@@ -178,6 +178,176 @@ func (h *HRHandler) HolidayBalances(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"year": year, "data": out})
 }
 
+// ---------------- Reviews ----------------
+
+type reviewRow struct {
+	ID         string    `json:"id"`
+	PersonID   string    `json:"personId"`
+	PersonName string    `json:"personName"`
+	ReviewerID *string   `json:"reviewerId,omitempty"`
+	Period     string    `json:"period"`
+	Rating     *int      `json:"rating,omitempty"`
+	Summary    *string   `json:"summary,omitempty"`
+	CreatedAt  time.Time `json:"createdAt"`
+}
+
+func (h *HRHandler) ListReviews(c *gin.Context) {
+	q := `SELECT r.id, r.person_id, p.name, r.reviewer_id, r.period, r.rating, r.summary, r.created_at
+	      FROM reviews r JOIN people p ON p.id = r.person_id
+	      WHERE 1=1`
+	args := []any{}
+	if pid := c.Query("person_id"); pid != "" {
+		args = append(args, pid)
+		q += " AND r.person_id = $" + itoaH(len(args))
+	}
+	q += " ORDER BY r.created_at DESC LIMIT 500"
+	rows, err := h.DB.Query(c.Request.Context(), q, args...)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+	defer rows.Close()
+	out := []*reviewRow{}
+	for rows.Next() {
+		r := &reviewRow{}
+		if err := rows.Scan(&r.ID, &r.PersonID, &r.PersonName, &r.ReviewerID, &r.Period, &r.Rating, &r.Summary, &r.CreatedAt); err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+			return
+		}
+		out = append(out, r)
+	}
+	c.JSON(http.StatusOK, gin.H{"data": out})
+}
+
+type reviewInput struct {
+	PersonID   string  `json:"personId"  binding:"required"`
+	ReviewerID *string `json:"reviewerId"`
+	Period     string  `json:"period"    binding:"required"`
+	Rating     *int    `json:"rating"`
+	Summary    *string `json:"summary"`
+}
+
+func (h *HRHandler) CreateReview(c *gin.Context) {
+	var in reviewInput
+	if err := c.ShouldBindJSON(&in); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+	var id string
+	err := h.DB.QueryRow(c.Request.Context(), `
+		INSERT INTO reviews (person_id, reviewer_id, period, rating, summary)
+		VALUES ($1,$2,$3,$4,$5) RETURNING id`,
+		in.PersonID, in.ReviewerID, in.Period, in.Rating, in.Summary,
+	).Scan(&id)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+	c.JSON(http.StatusCreated, gin.H{"id": id})
+}
+
+// ---------------- Expenses ----------------
+
+type expenseRow struct {
+	ID         string    `json:"id"`
+	PersonID   string    `json:"personId"`
+	PersonName string    `json:"personName"`
+	Amount     float64   `json:"amount"`
+	Currency   string    `json:"currency"`
+	Category   *string   `json:"category,omitempty"`
+	IncurredOn time.Time `json:"incurredOn"`
+	Memo       *string   `json:"memo,omitempty"`
+	Status     string    `json:"status"`
+	CreatedAt  time.Time `json:"createdAt"`
+}
+
+func (h *HRHandler) ListExpenses(c *gin.Context) {
+	q := `SELECT e.id, e.person_id, p.name, e.amount, e.currency, e.category,
+	             e.incurred_on, e.memo, e.status, e.created_at
+	      FROM expenses e JOIN people p ON p.id = e.person_id
+	      WHERE 1=1`
+	args := []any{}
+	if pid := c.Query("person_id"); pid != "" {
+		args = append(args, pid)
+		q += " AND e.person_id = $" + itoaH(len(args))
+	}
+	if s := c.Query("status"); s != "" {
+		args = append(args, s)
+		q += " AND e.status = $" + itoaH(len(args))
+	}
+	q += " ORDER BY e.incurred_on DESC LIMIT 500"
+	rows, err := h.DB.Query(c.Request.Context(), q, args...)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+	defer rows.Close()
+	out := []*expenseRow{}
+	for rows.Next() {
+		r := &expenseRow{}
+		if err := rows.Scan(&r.ID, &r.PersonID, &r.PersonName, &r.Amount, &r.Currency, &r.Category, &r.IncurredOn, &r.Memo, &r.Status, &r.CreatedAt); err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+			return
+		}
+		out = append(out, r)
+	}
+	c.JSON(http.StatusOK, gin.H{"data": out})
+}
+
+type expenseInput struct {
+	PersonID   string  `json:"personId"   binding:"required"`
+	Amount     float64 `json:"amount"     binding:"required"`
+	Currency   string  `json:"currency"`
+	Category   *string `json:"category"`
+	IncurredOn string  `json:"incurredOn" binding:"required"`
+	Memo       *string `json:"memo"`
+}
+
+func (h *HRHandler) CreateExpense(c *gin.Context) {
+	var in expenseInput
+	if err := c.ShouldBindJSON(&in); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+	if in.Currency == "" {
+		in.Currency = "USD"
+	}
+	var id string
+	err := h.DB.QueryRow(c.Request.Context(), `
+		INSERT INTO expenses (person_id, amount, currency, category, incurred_on, memo)
+		VALUES ($1,$2,$3,$4,$5::date,$6) RETURNING id`,
+		in.PersonID, in.Amount, in.Currency, in.Category, in.IncurredOn, in.Memo,
+	).Scan(&id)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+	c.JSON(http.StatusCreated, gin.H{"id": id})
+}
+
+type expenseDecision struct {
+	Status string `json:"status" binding:"required,oneof=submitted approved rejected paid"`
+}
+
+func (h *HRHandler) PatchExpense(c *gin.Context) {
+	var in expenseDecision
+	if err := c.ShouldBindJSON(&in); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+	ct, err := h.DB.Exec(c.Request.Context(),
+		`UPDATE expenses SET status=$1 WHERE id=$2`, in.Status, c.Param("id"))
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+	if ct.RowsAffected() == 0 {
+		c.JSON(http.StatusNotFound, gin.H{"error": "not found"})
+		return
+	}
+	c.Status(http.StatusNoContent)
+}
+
 // minimal Sscan wrapper to avoid pulling fmt across the file's surface area.
 func fmtSscan(s string, v *int) (int, error) {
 	var n int

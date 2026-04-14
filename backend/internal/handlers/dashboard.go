@@ -51,5 +51,33 @@ func (h *DashboardHandler) Summary(c *gin.Context) {
 			"id": id, "title": title, "occurred_on": occurredOn, "vertical": vertical,
 		})
 	}
-	c.JSON(http.StatusOK, gin.H{"counts": counts, "highlights": highlights})
+	deadlineRows, err := h.DB.Query(ctx, `
+		SELECT c.id, c.title, c.deadline,
+		       COALESCE(c.metadata->>'regulator', '') AS regulator,
+		       c.vertical
+		FROM consultations c
+		WHERE c.status NOT IN ('closed','rejected','withdrawn')
+		  AND c.deadline IS NOT NULL
+		  AND c.deadline >= CURRENT_DATE
+		ORDER BY c.deadline ASC
+		LIMIT 10`)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+	defer deadlineRows.Close()
+	deadlines := []gin.H{}
+	for deadlineRows.Next() {
+		var id, title, regulator, vertical string
+		var deadline interface{}
+		if err := deadlineRows.Scan(&id, &title, &deadline, &regulator, &vertical); err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+			return
+		}
+		deadlines = append(deadlines, gin.H{
+			"id": id, "title": title, "deadline": deadline, "regulator": regulator, "vertical": vertical,
+		})
+	}
+
+	c.JSON(http.StatusOK, gin.H{"counts": counts, "highlights": highlights, "deadlines": deadlines})
 }

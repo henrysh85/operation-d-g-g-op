@@ -41,4 +41,49 @@ export const hr = {
     });
     return data;
   },
+
+  async listReviews(params?: Record<string, unknown>): Promise<Review[]> {
+    const { data } = await http.get<{ data: Review[] }>('/hr/reviews', { params });
+    return data.data ?? [];
+  },
+  async createReview(payload: { personId: string; period: string; rating?: number; summary?: string; reviewerId?: string }): Promise<{ id: string }> {
+    const { data } = await http.post<{ id: string }>('/hr/reviews', payload);
+    return data;
+  },
+
+  async listExpenses(params?: Record<string, unknown>): Promise<Expense[]> {
+    const { data } = await http.get<{ data: Expense[] }>('/hr/expenses', { params });
+    return data.data ?? [];
+  },
+  async createExpense(payload: { personId: string; amount: number; currency?: string; category?: string; incurredOn: string; memo?: string }): Promise<{ id: string }> {
+    const { data } = await http.post<{ id: string }>('/hr/expenses', payload);
+    return data;
+  },
+  async setExpenseStatus(id: string, status: 'submitted' | 'approved' | 'rejected' | 'paid'): Promise<void> {
+    await http.patch(`/hr/expenses/${id}`, { status });
+  },
 };
+
+export interface Review {
+  id: string;
+  personId: string;
+  personName: string;
+  reviewerId?: string;
+  period: string;
+  rating?: number;
+  summary?: string;
+  createdAt: string;
+}
+
+export interface Expense {
+  id: string;
+  personId: string;
+  personName: string;
+  amount: number;
+  currency: string;
+  category?: string;
+  incurredOn: string;
+  memo?: string;
+  status: 'submitted' | 'approved' | 'rejected' | 'paid';
+  createdAt: string;
+}

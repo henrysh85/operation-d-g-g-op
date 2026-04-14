@@ -21,6 +21,16 @@ function adapt(a: BackendActivity): Activity {
   } as unknown as Activity;
 }
 
+export interface ActivityOutput {
+  id: string;
+  label: string;
+  minio_key: string;
+  content_type: string;
+  size_bytes: number;
+  created_at: string;
+  url?: string;
+}
+
 export const activities = {
   async list(params?: Record<string, unknown>): Promise<Activity[]> {
     return (await listHelper<BackendActivity>('/activities', params)).map(adapt);
@@ -35,5 +45,17 @@ export const activities = {
   },
   async remove(id: string): Promise<void> {
     await http.delete(`/activities/${id}`);
+  },
+  async listOutputs(activityId: string): Promise<ActivityOutput[]> {
+    const { data } = await http.get<{ data: ActivityOutput[] }>(`/activities/${activityId}/outputs`);
+    return data.data ?? [];
+  },
+  async uploadOutput(activityId: string, file: File): Promise<ActivityOutput> {
+    const fd = new FormData();
+    fd.append('file', file);
+    const { data } = await http.post<ActivityOutput>(`/activities/${activityId}/outputs`, fd, {
+      headers: { 'Content-Type': 'multipart/form-data' },
+    });
+    return data;
   },
 };

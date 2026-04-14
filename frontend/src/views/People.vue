@@ -2,7 +2,7 @@
 import { onMounted, ref, watch } from 'vue';
 import { people, hr } from '@/api';
 import type { Person } from '@/types';
-import type { Holiday, HolidayBalance } from '@/api/hr';
+import type { Holiday, HolidayBalance, Review, Expense } from '@/api/hr';
 import OrgChart from '@/components/OrgChart.vue';
 import DataTable from '@/components/DataTable.vue';
 import { useAuthStore } from '@/stores/auth';
@@ -74,6 +74,44 @@ async function decideHoliday(id: string, status: 'approved' | 'rejected') {
   await hr.setHolidayStatus(id, status).catch(() => null);
   await loadHolidays();
 }
+
+// --- Reviews ---
+const reviews = ref<Review[]>([]);
+const newReview = ref({ personId: '', period: '', rating: 3, summary: '' });
+async function loadReviews() {
+  if (!auth.pinVerified) return;
+  reviews.value = await hr.listReviews().catch(() => []);
+}
+async function submitReview() {
+  if (!newReview.value.personId || !newReview.value.period) return;
+  await hr.createReview(newReview.value).catch(() => null);
+  newReview.value = { personId: '', period: '', rating: 3, summary: '' };
+  await loadReviews();
+}
+
+// --- Expenses ---
+const expenses = ref<Expense[]>([]);
+const newExpense = ref({ personId: '', amount: 0, currency: 'USD', category: '', incurredOn: '', memo: '' });
+async function loadExpenses() {
+  if (!auth.pinVerified) return;
+  expenses.value = await hr.listExpenses().catch(() => []);
+}
+async function submitExpense() {
+  if (!newExpense.value.personId || !newExpense.value.amount || !newExpense.value.incurredOn) return;
+  await hr.createExpense(newExpense.value).catch(() => null);
+  newExpense.value = { personId: '', amount: 0, currency: 'USD', category: '', incurredOn: '', memo: '' };
+  await loadExpenses();
+}
+async function decideExpense(id: string, status: 'approved' | 'rejected' | 'paid') {
+  await hr.setExpenseStatus(id, status).catch(() => null);
+  await loadExpenses();
+}
+
+watch(() => [tab.value, auth.pinVerified] as const, ([t, verified]) => {
+  if (!verified) return;
+  if (t === 'performance') loadReviews();
+  if (t === 'expenses') loadExpenses();
+});
 
 const columns = [
   { key: 'fullName', label: 'Name', width: '30%' },
@@ -208,11 +246,122 @@ const columns = [
         </div>
       </template>
     </div>
-    <div v-else-if="tab === 'performance'" class="dcgg-card text-xs text-ink-500">
-      Performance reviews — to be wired to <code>/api/hr/reviews</code>.
+    <div v-else-if="tab === 'performance'" class="space-y-4">
+      <div v-if="!auth.pinVerified" class="dcgg-card max-w-sm text-xs text-ink-500">
+        Verify your HR PIN under the HR tab to view reviews.
+      </div>
+      <template v-else>
+        <div class="dcgg-card">
+          <div class="text-sm font-semibold mb-3">Log a review</div>
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-2 items-end">
+            <label class="block">
+              <span class="text-xxs font-semibold text-ink-500 uppercase">Person</span>
+              <select v-model="newReview.personId" class="dcgg-input w-full mt-1">
+                <option value="">Select…</option>
+                <option v-for="p in rows" :key="p.id" :value="p.id">{{ (p as any).fullName }}</option>
+              </select>
+            </label>
+            <label class="block">
+              <span class="text-xxs font-semibold text-ink-500 uppercase">Period</span>
+              <input v-model="newReview.period" placeholder="e.g. 2026-Q1" class="dcgg-input w-full mt-1" />
+            </label>
+            <label class="block">
+              <span class="text-xxs font-semibold text-ink-500 uppercase">Rating</span>
+              <select v-model.number="newReview.rating" class="dcgg-input w-full mt-1">
+                <option v-for="n in 5" :key="n" :value="n">{{ n }}</option>
+              </select>
+            </label>
+            <label class="block md:col-span-1">
+              <span class="text-xxs font-semibold text-ink-500 uppercase">Summary</span>
+              <input v-model="newReview.summary" class="dcgg-input w-full mt-1" />
+            </label>
+            <button class="dcgg-btn-primary" @click="submitReview">Save</button>
+          </div>
+        </div>
+        <div class="dcgg-card">
+          <div class="text-sm font-semibold mb-3">Reviews</div>
+          <div v-if="!reviews.length" class="text-xs text-ink-400">No reviews logged yet.</div>
+          <table v-else class="w-full text-xs">
+            <thead class="text-xxs uppercase text-ink-500">
+              <tr><th class="text-left py-1">Person</th><th>Period</th><th class="text-right">Rating</th><th>Summary</th></tr>
+            </thead>
+            <tbody>
+              <tr v-for="r in reviews" :key="r.id" class="border-t border-ink-100">
+                <td class="py-1">{{ r.personName }}</td>
+                <td>{{ r.period }}</td>
+                <td class="text-right">{{ r.rating ?? '—' }}</td>
+                <td class="text-ink-600">{{ r.summary ?? '' }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </template>
     </div>
-    <div v-else-if="tab === 'expenses'" class="dcgg-card text-xs text-ink-500">
-      Expenses — to be wired to <code>/api/hr/expenses</code>.
+
+    <div v-else-if="tab === 'expenses'" class="space-y-4">
+      <div v-if="!auth.pinVerified" class="dcgg-card max-w-sm text-xs text-ink-500">
+        Verify your HR PIN under the HR tab to view expenses.
+      </div>
+      <template v-else>
+        <div class="dcgg-card">
+          <div class="text-sm font-semibold mb-3">Submit an expense</div>
+          <div class="grid grid-cols-2 md:grid-cols-6 gap-2 items-end">
+            <label class="block">
+              <span class="text-xxs font-semibold text-ink-500 uppercase">Person</span>
+              <select v-model="newExpense.personId" class="dcgg-input w-full mt-1">
+                <option value="">Select…</option>
+                <option v-for="p in rows" :key="p.id" :value="p.id">{{ (p as any).fullName }}</option>
+              </select>
+            </label>
+            <label class="block">
+              <span class="text-xxs font-semibold text-ink-500 uppercase">Amount</span>
+              <input v-model.number="newExpense.amount" type="number" step="0.01" class="dcgg-input w-full mt-1" />
+            </label>
+            <label class="block">
+              <span class="text-xxs font-semibold text-ink-500 uppercase">Currency</span>
+              <input v-model="newExpense.currency" class="dcgg-input w-full mt-1" />
+            </label>
+            <label class="block">
+              <span class="text-xxs font-semibold text-ink-500 uppercase">Category</span>
+              <input v-model="newExpense.category" class="dcgg-input w-full mt-1" placeholder="travel / meals…" />
+            </label>
+            <label class="block">
+              <span class="text-xxs font-semibold text-ink-500 uppercase">Date</span>
+              <input v-model="newExpense.incurredOn" type="date" class="dcgg-input w-full mt-1" />
+            </label>
+            <button class="dcgg-btn-primary" @click="submitExpense">Submit</button>
+          </div>
+        </div>
+        <div class="dcgg-card">
+          <div class="text-sm font-semibold mb-3">Expenses</div>
+          <div v-if="!expenses.length" class="text-xs text-ink-400">No expenses recorded yet.</div>
+          <table v-else class="w-full text-xs">
+            <thead class="text-xxs uppercase text-ink-500">
+              <tr><th class="text-left py-1">Person</th><th>Date</th><th>Category</th><th class="text-right">Amount</th><th>Status</th><th></th></tr>
+            </thead>
+            <tbody>
+              <tr v-for="e in expenses" :key="e.id" class="border-t border-ink-100">
+                <td class="py-1">{{ e.personName }}</td>
+                <td>{{ format(new Date(e.incurredOn), 'PP') }}</td>
+                <td>{{ e.category ?? '—' }}</td>
+                <td class="text-right">{{ e.currency }} {{ e.amount.toFixed(2) }}</td>
+                <td>
+                  <span class="dcgg-tag" :class="{
+                    'bg-ok/10 text-ok': e.status==='approved' || e.status==='paid',
+                    'bg-err/10 text-err': e.status==='rejected',
+                    'bg-warn/10 text-warn': e.status==='submitted',
+                  }">{{ e.status }}</span>
+                </td>
+                <td class="text-right">
+                  <button v-if="e.status==='submitted'" class="text-xxs text-ok hover:underline mr-2" @click="decideExpense(e.id,'approved')">Approve</button>
+                  <button v-if="e.status==='submitted'" class="text-xxs text-err hover:underline mr-2" @click="decideExpense(e.id,'rejected')">Reject</button>
+                  <button v-if="e.status==='approved'" class="text-xxs text-brand-600 hover:underline" @click="decideExpense(e.id,'paid')">Mark paid</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </template>
     </div>
   </section>
 </template>

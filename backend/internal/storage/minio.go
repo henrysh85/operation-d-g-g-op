@@ -43,6 +43,11 @@ func New(ctx context.Context, cfg *config.Config) (*Client, error) {
 	return &Client{mc: mc, Bucket: cfg.MinioBucket}, nil
 }
 
+// GetObject opens a stream for reading an object out of the bucket.
+func (c *Client) GetObject(ctx context.Context, key string) (io.ReadCloser, error) {
+	return c.mc.GetObject(ctx, c.Bucket, key, minio.GetObjectOptions{})
+}
+
 // PutObject uploads raw bytes to the bucket at the given key.
 func (c *Client) PutObject(ctx context.Context, key string, body io.Reader, size int64, contentType string) error {
 	_, err := c.mc.PutObject(ctx, c.Bucket, key, body, size, minio.PutObjectOptions{ContentType: contentType})
