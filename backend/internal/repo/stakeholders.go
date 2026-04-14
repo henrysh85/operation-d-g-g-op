@@ -2,6 +2,7 @@ package repo
 
 import (
 	"context"
+	"encoding/json"
 	"errors"
 
 	"github.com/jackc/pgx/v5"
@@ -9,6 +10,8 @@ import (
 
 	"github.com/henrysh85/operation-d-g-g-op/backend/internal/models"
 )
+
+func jsonUnmarshal(b []byte, v any) error { return json.Unmarshal(b, v) }
 
 type StakeholdersRepo struct{ DB *pgxpool.Pool }
 
@@ -103,6 +106,87 @@ func (r *StakeholdersRepo) DeleteContact(ctx context.Context, id string) error {
 		return ErrNotFound
 	}
 	return nil
+}
+
+// TreeInstitution is the shape consumed by the Stakeholders view.
+type TreeInstitution struct {
+	ID       string                  `json:"id"`
+	Name     string                  `json:"name"`
+	Type     string                  `json:"type"`
+	Contacts []TreeContact           `json:"contacts"`
+}
+type TreeContact struct {
+	ID    string `json:"id"`
+	Name  string `json:"name"`
+	Title string `json:"title,omitempty"`
+}
+type TreeCountry struct {
+	CountryCode  string            `json:"countryCode"`
+	Institutions []TreeInstitution `json:"institutions"`
+}
+type TreeRegion struct {
+	Region    string        `json:"region"`
+	Countries []TreeCountry `json:"countries"`
+}
+
+// Tree assembles a region → country → institution → contact hierarchy in one
+// pass so the Stakeholders view can render its accordion without per-node
+// fetches.
+func (r *StakeholdersRepo) Tree(ctx context.Context) ([]TreeRegion, error) {
+	rows, err := r.DB.Query(ctx, `
+		SELECT COALESCE(reg.name, 'Unassigned') AS region_name,
+		       COALESCE(co.code, '?')          AS country_code,
+		       i.id, i.name, COALESCE(i.kind,'') AS kind,
+		       COALESCE(json_agg(json_build_object(
+		           'id', ct.id, 'name', ct.name, 'title', COALESCE(ct.title,'')
+		       )) FILTER (WHERE ct.id IS NOT NULL), '[]'::json) AS contacts
+		FROM institutions i
+		LEFT JOIN countries co ON co.id = i.country_id
+		LEFT JOIN regions   reg ON reg.id = co.region_id
+		LEFT JOIN contacts  ct  ON ct.institution_id = i.id
+		GROUP BY reg.name, co.code, i.id, i.name, i.kind
+		ORDER BY region_name, country_code, i.name`)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	type key struct{ r, c string }
+	regionIdx  := map[string]int{}
+	countryIdx := map[key]int{}
+	out := []TreeRegion{}
+
+	for rows.Next() {
+		var (
+			regionName, countryCode, instID, instName, kind string
+			contactsJSON                                     []byte
+		)
+		if err := rows.Scan(&regionName, &countryCode, &instID, &instName, &kind, &contactsJSON); err != nil {
+			return nil, err
+		}
+		var contacts []TreeContact
+		if err := jsonUnmarshal(contactsJSON, &contacts); err != nil {
+			return nil, err
+		}
+
+		ri, ok := regionIdx[regionName]
+		if !ok {
+			out = append(out, TreeRegion{Region: regionName})
+			ri = len(out) - 1
+			regionIdx[regionName] = ri
+		}
+		ck := key{regionName, countryCode}
+		ci, ok := countryIdx[ck]
+		if !ok {
+			out[ri].Countries = append(out[ri].Countries, TreeCountry{CountryCode: countryCode})
+			ci = len(out[ri].Countries) - 1
+			countryIdx[ck] = ci
+		}
+		out[ri].Countries[ci].Institutions = append(out[ri].Countries[ci].Institutions, TreeInstitution{
+			ID: instID, Name: instName, Type: kind, Contacts: contacts,
+		})
+	}
+	return out, rows.Err()
 }
 
 func (r *StakeholdersRepo) ListInstitutions(ctx context.Context) ([]*models.Institution, error) {

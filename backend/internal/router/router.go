@@ -55,6 +55,7 @@ func New(cfg *config.Config, db *pgxpool.Pool, s3 *storage.Client, jwtMgr *auth.
 	pubH := handlers.NewPublicationsHandler(pubRepo)
 	filesH := handlers.NewFilesHandler(s3)
 	membershipH := handlers.NewMembershipHandler(db, tmplRepo)
+	membersH := handlers.NewMembersHandler(db)
 	dashH := handlers.NewDashboardHandler(db)
 
 	r.GET("/healthz", healthH.Check)
@@ -108,6 +109,7 @@ func New(cfg *config.Config, db *pgxpool.Pool, s3 *storage.Client, jwtMgr *auth.
 			authed.POST("/stakeholders/contacts", auth.RequireRole("admin", "lead", "staff"), stkH.CreateContact)
 			authed.DELETE("/stakeholders/contacts/:id", auth.RequireRole("admin", "lead"), stkH.DeleteContact)
 			authed.GET("/stakeholders/institutions", stkH.ListInstitutions)
+			authed.GET("/stakeholders/tree", stkH.Tree)
 
 			authed.GET("/consultations", consultH.List)
 			authed.GET("/consultations/:id", consultH.Get)
@@ -129,6 +131,12 @@ func New(cfg *config.Config, db *pgxpool.Pool, s3 *storage.Client, jwtMgr *auth.
 			authed.DELETE("/files", auth.RequireRole("admin", "lead"), filesH.Delete)
 
 			authed.POST("/memberships/generate", auth.RequireRole("admin", "lead", "staff"), membershipH.Generate)
+
+			authed.GET("/members", membersH.List)
+			authed.GET("/members/:id", membersH.Get)
+			authed.POST("/members", auth.RequireRole("admin", "lead", "staff"), membersH.Create)
+			authed.PATCH("/members/:id", auth.RequireRole("admin", "lead", "staff"), membersH.Patch)
+			authed.DELETE("/members/:id", auth.RequireRole("admin", "lead"), membersH.Delete)
 		}
 	}
 

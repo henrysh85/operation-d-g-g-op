@@ -68,3 +68,14 @@ func (h *StakeholdersHandler) ListInstitutions(c *gin.Context) {
 	}
 	c.JSON(http.StatusOK, gin.H{"data": out})
 }
+
+// Tree returns institutions + contacts grouped by region → country, matching the
+// shape the Stakeholders view consumes.
+func (h *StakeholdersHandler) Tree(c *gin.Context) {
+	tree, err := h.Repo.Tree(c.Request.Context())
+	if err != nil {
+		HandleErr(c, err)
+		return
+	}
+	c.JSON(http.StatusOK, tree)
+}
