@@ -57,6 +57,7 @@ func New(cfg *config.Config, db *pgxpool.Pool, s3 *storage.Client, jwtMgr *auth.
 	membershipH := handlers.NewMembershipHandler(db, tmplRepo)
 	membersH := handlers.NewMembersHandler(db)
 	hrH := handlers.NewHRHandler(db)
+	auditH := handlers.NewAuditHandler(db)
 	dashH := handlers.NewDashboardHandler(db)
 
 	r.GET("/healthz", healthH.Check)
@@ -148,9 +149,13 @@ func New(cfg *config.Config, db *pgxpool.Pool, s3 *storage.Client, jwtMgr *auth.
 
 			authed.GET("/members", membersH.List)
 			authed.GET("/members/:id", membersH.Get)
+			authed.GET("/members/:id/intel", membersH.Intel)
 			authed.POST("/members", auth.RequireRole("admin", "lead", "staff"), membersH.Create)
 			authed.PATCH("/members/:id", auth.RequireRole("admin", "lead", "staff"), membersH.Patch)
 			authed.DELETE("/members/:id", auth.RequireRole("admin", "lead"), membersH.Delete)
+
+			authed.POST("/templates/:id/render", auth.RequireRole("admin", "lead", "staff"), tmplH.Render)
+			authed.GET("/audit-log", auth.RequireRole("admin"), auditH.List)
 		}
 	}
 

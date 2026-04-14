@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, watch } from 'vue';
 import { membership, activities } from '@/api';
 import type { Member, Activity } from '@/types';
+import type { MemberIntel } from '@/api/membership';
 import StatusBadge from '@/components/StatusBadge.vue';
 import { format } from 'date-fns';
 
@@ -21,6 +22,8 @@ const acts = ref<Activity[]>([]);
 const loading = ref(true);
 const error = ref<string | null>(null);
 
+const intel = ref<MemberIntel | null>(null);
+
 onMounted(async () => {
   try {
     member.value = await membership.get(props.id);
@@ -28,6 +31,12 @@ onMounted(async () => {
   } catch (e) { error.value = (e as Error).message; }
   finally { loading.value = false; }
 });
+
+async function loadIntel() {
+  if (!member.value || intel.value) return;
+  intel.value = await membership.intel(member.value.id).catch(() => null);
+}
+watch(tab, (t) => { if (t === 'risks' || t === 'intelligence') loadIntel(); });
 </script>
 
 <template>
@@ -70,8 +79,26 @@ onMounted(async () => {
         </dl>
       </div>
 
-      <div v-else-if="tab === 'risks'" class="dcgg-card text-xs text-ink-500">
-        Risk drilldown — to be wired to <code>/api/members/{{ member.id }}/risks</code>.
+      <div v-else-if="tab === 'risks'" class="space-y-3">
+        <div v-if="!intel" class="text-xs text-ink-400">Loading risks…</div>
+        <template v-else>
+          <div class="dcgg-card">
+            <div class="text-sm font-semibold mb-3">Risk components</div>
+            <div class="space-y-3">
+              <div v-for="r in intel.risks" :key="r.key">
+                <div class="flex items-baseline justify-between">
+                  <span class="text-xs text-ink-700">{{ r.label }}</span>
+                  <span class="text-xs font-semibold tabular-nums">{{ r.value }}</span>
+                </div>
+                <div class="mt-1 h-1.5 bg-ink-100 rounded">
+                  <div class="h-full rounded" :style="{ width: Math.min(100, r.value) + '%' }"
+                       :class="r.value > 60 ? 'bg-err' : r.value > 30 ? 'bg-warn' : 'bg-ok'" />
+                </div>
+                <div class="text-xxs text-ink-500 mt-0.5">{{ r.note }}</div>
+              </div>
+            </div>
+          </div>
+        </template>
       </div>
 
       <div v-else-if="tab === 'activity'">
@@ -84,8 +111,43 @@ onMounted(async () => {
         <div v-else class="dcgg-card text-xs text-ink-400">No activity recorded.</div>
       </div>
 
-      <div v-else-if="tab === 'intelligence'" class="dcgg-card text-xs text-ink-500">
-        Intelligence — to be wired to <code>/api/members/{{ member.id }}/intelligence</code>.
+      <div v-else-if="tab === 'intelligence'" class="space-y-3">
+        <div v-if="!intel" class="text-xs text-ink-400">Loading intelligence…</div>
+        <template v-else>
+          <div class="dcgg-card">
+            <div class="text-sm font-semibold mb-3">Open consultations in jurisdiction</div>
+            <div v-if="!intel.openConsults.length" class="text-xs text-ink-400">None.</div>
+            <ul v-else class="divide-y divide-ink-100">
+              <li v-for="r in intel.openConsults" :key="r.id" class="py-1.5 flex items-baseline gap-2">
+                <span class="text-sm text-ink-900 flex-1 truncate">{{ r.title }}</span>
+                <span class="text-xxs text-ink-500">{{ r.tag }}</span>
+                <span class="text-xxs text-ink-400">{{ r.when?.slice(0,10) || '—' }}</span>
+              </li>
+            </ul>
+          </div>
+          <div class="dcgg-card">
+            <div class="text-sm font-semibold mb-3">Recent regulatory changes</div>
+            <div v-if="!intel.recentRegChanges.length" class="text-xs text-ink-400">None.</div>
+            <ul v-else class="divide-y divide-ink-100">
+              <li v-for="r in intel.recentRegChanges" :key="r.id" class="py-1.5 flex items-baseline gap-2">
+                <span class="text-sm text-ink-900 flex-1 truncate">{{ r.title }}</span>
+                <span class="text-xxs text-ink-500">{{ r.tag }}</span>
+                <span class="text-xxs text-ink-400">{{ r.when?.slice(0,10) || '—' }}</span>
+              </li>
+            </ul>
+          </div>
+          <div class="dcgg-card">
+            <div class="text-sm font-semibold mb-3">Recent activities</div>
+            <div v-if="!intel.activities.length" class="text-xs text-ink-400">None.</div>
+            <ul v-else class="divide-y divide-ink-100">
+              <li v-for="r in intel.activities" :key="r.id" class="py-1.5 flex items-baseline gap-2">
+                <span class="text-sm text-ink-900 flex-1 truncate">{{ r.title }}</span>
+                <span class="text-xxs text-ink-500">{{ r.tag }}</span>
+                <span class="text-xxs text-ink-400">{{ r.when?.slice(0,10) || '—' }}</span>
+              </li>
+            </ul>
+          </div>
+        </template>
       </div>
     </template>
   </section>

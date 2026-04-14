@@ -17,6 +17,7 @@ const navs: Nav[] = [
   { to: '/people',        label: 'People',        icon: 'P' },
   { to: '/engagement',    label: 'Engagement',    icon: 'E' },
   { to: '/members',       label: 'Members',       icon: 'U' },
+  { to: '/audit',         label: 'Audit log',     icon: 'L' },
 ];
 
 const route = useRoute();

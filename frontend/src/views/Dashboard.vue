@@ -34,8 +34,8 @@ onMounted(async () => {
       <div v-else v-for="k in (data?.kpis ?? [])" :key="k.key" class="dcgg-card">
         <div class="text-xxs uppercase tracking-wider text-ink-500 font-semibold">{{ k.label }}</div>
         <div class="text-xl font-bold text-ink-900 mt-1">{{ k.value }}<span v-if="k.unit" class="text-xs text-ink-500 ml-1">{{ k.unit }}</span></div>
-        <div v-if="k.delta != null" class="text-xxs mt-1" :class="k.delta >= 0 ? 'text-ok' : 'text-err'">
-          {{ k.delta >= 0 ? '▲' : '▼' }} {{ Math.abs(k.delta) }}%
+        <div v-if="k.delta" class="text-xxs mt-1" :class="k.delta >= 0 ? 'text-ok' : 'text-err'">
+          {{ k.delta >= 0 ? '▲' : '▼' }} {{ Math.abs(k.delta) }} vs prev period
         </div>
       </div>
     </div>

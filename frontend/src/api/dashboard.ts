@@ -9,6 +9,7 @@ export interface DashboardSummary {
 
 interface BackendSummary {
   counts: Record<string, number>;
+  deltas?: Record<string, number>;
   highlights: Array<{ id: string; title: string; occurred_on: string; vertical?: string; type?: string }>;
   deadlines?: Array<{ id: string; title: string; deadline: string; regulator?: string; impact?: string }>;
 }
@@ -26,11 +27,16 @@ export const dashboard = {
   async summary(params?: Record<string, unknown>): Promise<DashboardSummary> {
     const { data } = await http.get<BackendSummary>('/dashboard/summary', { params });
     const counts = data.counts ?? {};
-    const kpis: KPI[] = Object.entries(counts).map(([key, value]) => ({
-      key,
-      label: COUNT_LABELS[key] ?? key,
-      value,
-    } as KPI));
+    const deltas = data.deltas ?? {};
+    const order = ['people', 'activities', 'open_consultations', 'clients', 'contacts', 'jurisdictions'];
+    const kpis: KPI[] = order
+      .filter((k) => k in counts)
+      .map((key) => ({
+        key,
+        label: COUNT_LABELS[key] ?? key,
+        value: counts[key],
+        delta: deltas[key],
+      } as KPI));
     const recentActivity: Activity[] = (data.highlights ?? []).map((h) => ({
       id: h.id,
       title: h.title,

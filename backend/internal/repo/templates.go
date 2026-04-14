@@ -51,7 +51,7 @@ func (r *TemplatesRepo) List(ctx context.Context, kind string) ([]*models.Templa
 }
 
 func (r *TemplatesRepo) Get(ctx context.Context, id string) (*models.Template, error) {
-	row := r.DB.QueryRow(ctx, `SELECT `+tmplCols+` FROM templates WHERE id=$1 OR slug=$1`, id)
+	row := r.DB.QueryRow(ctx, `SELECT `+tmplCols+` FROM templates WHERE id::text=$1 OR slug=$1`, id)
 	t, err := scanTmpl(row)
 	if errors.Is(err, pgx.ErrNoRows) {
 		return nil, ErrNotFound

@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"context"
+	"fmt"
 	"net/http"
 	"strconv"
 	"strings"
@@ -153,6 +154,160 @@ func (h *MembersHandler) Patch(c *gin.Context) {
 		return
 	}
 	c.JSON(http.StatusOK, m)
+}
+
+// Intel returns a member's risk breakdown and recent intelligence affecting
+// their jurisdiction. All components are computed from real rows so the page
+// is honest about what it knows (no fictional risk scores).
+type intelOut struct {
+	Risks []struct {
+		Key   string `json:"key"`
+		Label string `json:"label"`
+		Value int    `json:"value"`
+		Note  string `json:"note,omitempty"`
+	} `json:"risks"`
+	RecentRegChanges []intelRow `json:"recentRegChanges"`
+	OpenConsults     []intelRow `json:"openConsults"`
+	Activities       []intelRow `json:"activities"`
+}
+type intelRow struct {
+	ID    string `json:"id"`
+	Title string `json:"title"`
+	When  string `json:"when,omitempty"`
+	Tag   string `json:"tag,omitempty"`
+}
+
+func (h *MembersHandler) Intel(c *gin.Context) {
+	id := c.Param("id")
+	ctx := c.Request.Context()
+
+	var (
+		jurisdictionID *string
+		joinedAt       *time.Time
+		tier           *int
+	)
+	err := h.DB.QueryRow(ctx, `
+		SELECT m.jurisdiction_id, m.joined_at, co.tier
+		FROM members m
+		LEFT JOIN countries co ON co.id = m.jurisdiction_id
+		WHERE m.id = $1`, id).Scan(&jurisdictionID, &joinedAt, &tier)
+	if err == pgx.ErrNoRows {
+		c.JSON(http.StatusNotFound, gin.H{"error": "not found"})
+		return
+	}
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+
+	out := intelOut{}
+
+	jurisdictionRisk := 0
+	jurisdictionNote := "No jurisdiction set."
+	if tier != nil {
+		jurisdictionRisk = (4 - *tier) * 25 // tier 1 → 75, tier 3 → 25
+		jurisdictionNote = fmt.Sprintf("Jurisdiction tier %d.", *tier)
+	}
+
+	regChanges := 0
+	if jurisdictionID != nil {
+		_ = h.DB.QueryRow(ctx, `
+			SELECT COUNT(*) FROM jurisdictions_status
+			WHERE country_id = $1 AND updated_at >= NOW() - INTERVAL '90 days'`,
+			*jurisdictionID).Scan(&regChanges)
+	}
+
+	openConsults := 0
+	if jurisdictionID != nil {
+		_ = h.DB.QueryRow(ctx, `
+			SELECT COUNT(*) FROM consultations c
+			JOIN jurisdictions_status js ON js.id = c.jurisdiction_id
+			WHERE js.country_id = $1 AND c.status NOT IN ('closed','rejected','withdrawn')`,
+			*jurisdictionID).Scan(&openConsults)
+	}
+
+	tenureRisk := 50
+	tenureNote := "No join date."
+	if joinedAt != nil {
+		years := time.Since(*joinedAt).Hours() / (24 * 365)
+		tenureRisk = int(60 - years*15)
+		if tenureRisk < 0 {
+			tenureRisk = 0
+		}
+		if tenureRisk > 100 {
+			tenureRisk = 100
+		}
+		tenureNote = fmt.Sprintf("%.1f years as a member.", years)
+	}
+
+	out.Risks = []struct {
+		Key   string `json:"key"`
+		Label string `json:"label"`
+		Value int    `json:"value"`
+		Note  string `json:"note,omitempty"`
+	}{
+		{"jurisdiction", "Jurisdiction risk", jurisdictionRisk, jurisdictionNote},
+		{"regulatory_change", "Regulatory change activity", regChanges * 10, fmt.Sprintf("%d status updates in 90 days.", regChanges)},
+		{"open_consults", "Open consultations exposure", openConsults * 15, fmt.Sprintf("%d consultations open.", openConsults)},
+		{"tenure", "Tenure risk", tenureRisk, tenureNote},
+	}
+
+	if jurisdictionID != nil {
+		// Recent regulatory changes
+		rows, err := h.DB.Query(ctx, `
+			SELECT js.id, js.headline, js.updated_at::text, js.vertical
+			FROM jurisdictions_status js
+			WHERE js.country_id = $1
+			ORDER BY js.updated_at DESC
+			LIMIT 8`, *jurisdictionID)
+		if err == nil {
+			defer rows.Close()
+			for rows.Next() {
+				r := intelRow{}
+				if err := rows.Scan(&r.ID, &r.Title, &r.When, &r.Tag); err == nil {
+					out.RecentRegChanges = append(out.RecentRegChanges, r)
+				}
+			}
+		}
+
+		// Open consultations
+		consRows, err := h.DB.Query(ctx, `
+			SELECT c.id, c.title, COALESCE(c.deadline::text,''), c.vertical
+			FROM consultations c
+			JOIN jurisdictions_status js ON js.id = c.jurisdiction_id
+			WHERE js.country_id = $1 AND c.status NOT IN ('closed','rejected','withdrawn')
+			ORDER BY c.deadline ASC NULLS LAST
+			LIMIT 8`, *jurisdictionID)
+		if err == nil {
+			defer consRows.Close()
+			for consRows.Next() {
+				r := intelRow{}
+				if err := consRows.Scan(&r.ID, &r.Title, &r.When, &r.Tag); err == nil {
+					out.OpenConsults = append(out.OpenConsults, r)
+				}
+			}
+		}
+
+		// Recent activities in jurisdiction (via region match — best effort)
+		actRows, err := h.DB.Query(ctx, `
+			SELECT a.id, a.title, a.occurred_on::text, COALESCE(a.vertical,'')
+			FROM activities a
+			WHERE a.country_id = $1
+			   OR a.region_id = (SELECT region_id FROM countries WHERE id = $1)
+			ORDER BY a.occurred_on DESC
+			LIMIT 8`, *jurisdictionID)
+		if err == nil {
+			defer actRows.Close()
+			for actRows.Next() {
+				r := intelRow{}
+				if err := actRows.Scan(&r.ID, &r.Title, &r.When, &r.Tag); err == nil {
+					out.Activities = append(out.Activities, r)
+				}
+			}
+		}
+	}
+
+	c.JSON(http.StatusOK, out)
 }
 
 func (h *MembersHandler) Delete(c *gin.Context) {

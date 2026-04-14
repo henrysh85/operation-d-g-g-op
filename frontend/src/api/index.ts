@@ -12,3 +12,4 @@ export { membership } from './membership';
 export { files } from './files';
 export { dashboard } from './dashboard';
 export { hr } from './hr';
+export { audit } from './audit';

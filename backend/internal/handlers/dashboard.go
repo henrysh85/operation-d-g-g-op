@@ -15,21 +15,37 @@ func NewDashboardHandler(db *pgxpool.Pool) *DashboardHandler { return &Dashboard
 func (h *DashboardHandler) Summary(c *gin.Context) {
 	ctx := c.Request.Context()
 	counts := map[string]int{}
-	queries := map[string]string{
-		"people":             `SELECT COUNT(*) FROM people WHERE status='active'`,
-		"activities":         `SELECT COUNT(*) FROM activities WHERE occurred_on >= NOW() - INTERVAL '90 days'`,
-		"open_consultations": `SELECT COUNT(*) FROM consultations WHERE status='open'`,
-		"clients":            `SELECT COUNT(*) FROM clients WHERE status='active'`,
-		"contacts":           `SELECT COUNT(*) FROM contacts`,
-		"jurisdictions":      `SELECT COUNT(*) FROM jurisdictions_status`,
+	deltas := map[string]int{}
+	// Each KPI: value query + previous-period query for the delta.
+	queries := []struct{ key, val, prev string }{
+		{"people",
+			`SELECT COUNT(*) FROM people WHERE status='active'`,
+			`SELECT COUNT(*) FROM people WHERE status='active' AND created_at < NOW() - INTERVAL '30 days'`},
+		{"activities",
+			`SELECT COUNT(*) FROM activities WHERE occurred_on >= NOW() - INTERVAL '90 days'`,
+			`SELECT COUNT(*) FROM activities WHERE occurred_on BETWEEN NOW() - INTERVAL '180 days' AND NOW() - INTERVAL '90 days'`},
+		{"open_consultations",
+			`SELECT COUNT(*) FROM consultations WHERE status NOT IN ('closed','rejected','withdrawn')`,
+			`SELECT COUNT(*) FROM consultations WHERE status NOT IN ('closed','rejected','withdrawn') AND created_at < NOW() - INTERVAL '30 days'`},
+		{"clients",
+			`SELECT COUNT(*) FROM clients WHERE status='active'`,
+			`SELECT COUNT(*) FROM clients WHERE status='active' AND created_at < NOW() - INTERVAL '30 days'`},
+		{"contacts",
+			`SELECT COUNT(*) FROM contacts`,
+			`SELECT COUNT(*) FROM contacts WHERE created_at < NOW() - INTERVAL '30 days'`},
+		{"jurisdictions",
+			`SELECT COUNT(*) FROM jurisdictions_status`,
+			`SELECT COUNT(*) FROM jurisdictions_status WHERE created_at < NOW() - INTERVAL '30 days'`},
 	}
-	for k, q := range queries {
-		var n int
-		if err := h.DB.QueryRow(ctx, q).Scan(&n); err != nil {
-			c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error(), "at": k})
+	for _, q := range queries {
+		var v, p int
+		if err := h.DB.QueryRow(ctx, q.val).Scan(&v); err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error(), "at": q.key})
 			return
 		}
-		counts[k] = n
+		_ = h.DB.QueryRow(ctx, q.prev).Scan(&p)
+		counts[q.key] = v
+		deltas[q.key] = v - p
 	}
 
 	rows, err := h.DB.Query(ctx, `SELECT id, title, occurred_on, vertical FROM activities
@@ -79,5 +95,8 @@ func (h *DashboardHandler) Summary(c *gin.Context) {
 		})
 	}
 
-	c.JSON(http.StatusOK, gin.H{"counts": counts, "highlights": highlights, "deadlines": deadlines})
+	c.JSON(http.StatusOK, gin.H{
+		"counts": counts, "deltas": deltas,
+		"highlights": highlights, "deadlines": deadlines,
+	})
 }
