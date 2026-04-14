@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
-import { people } from '@/api';
+import { onMounted, ref, watch } from 'vue';
+import { people, hr } from '@/api';
 import type { Person } from '@/types';
+import type { Holiday, HolidayBalance } from '@/api/hr';
 import OrgChart from '@/components/OrgChart.vue';
 import DataTable from '@/components/DataTable.vue';
 import { useAuthStore } from '@/stores/auth';
+import { format } from 'date-fns';
 
 type Tab = 'org' | 'directory' | 'hr' | 'holidays' | 'performance' | 'expenses';
 const tab = ref<Tab>('org');
@@ -32,6 +34,45 @@ async function unlockHR() {
   pinError.value = null;
   const ok = await auth.verifyPin(pin.value).catch(() => false);
   if (!ok) pinError.value = 'Invalid PIN.';
+}
+
+// --- Holidays ---
+const holidays = ref<Holiday[]>([]);
+const balances = ref<HolidayBalance[]>([]);
+const loadingHol = ref(false);
+const newHoliday = ref({ personId: '', startDate: '', endDate: '', note: '' });
+const holidayError = ref<string | null>(null);
+
+async function loadHolidays() {
+  if (!auth.pinVerified) return;
+  loadingHol.value = true;
+  try {
+    holidays.value = await hr.listHolidays();
+    balances.value = (await hr.balances()).data;
+  } catch (e) { holidayError.value = (e as Error).message; }
+  finally { loadingHol.value = false; }
+}
+
+watch(() => [tab.value, auth.pinVerified] as const, ([t, verified]) => {
+  if ((t === 'holidays' || t === 'hr') && verified) loadHolidays();
+});
+
+async function submitHoliday() {
+  holidayError.value = null;
+  if (!newHoliday.value.personId || !newHoliday.value.startDate || !newHoliday.value.endDate) {
+    holidayError.value = 'Person, start and end are required.';
+    return;
+  }
+  try {
+    await hr.createHoliday(newHoliday.value);
+    newHoliday.value = { personId: '', startDate: '', endDate: '', note: '' };
+    await loadHolidays();
+  } catch (e) { holidayError.value = (e as Error).message; }
+}
+
+async function decideHoliday(id: string, status: 'approved' | 'rejected') {
+  await hr.setHolidayStatus(id, status).catch(() => null);
+  await loadHolidays();
 }
 
 const columns = [
@@ -84,8 +125,88 @@ const columns = [
       </div>
     </div>
 
-    <div v-else-if="tab === 'holidays'" class="dcgg-card text-xs text-ink-500">
-      Holiday calendar — to be wired to <code>/api/hr/holidays</code>.
+    <div v-else-if="tab === 'holidays'" class="space-y-4">
+      <div v-if="!auth.pinVerified" class="dcgg-card max-w-sm">
+        <div class="text-sm font-semibold mb-2">Holiday admin is HR-gated</div>
+        <p class="text-xs text-ink-500 mb-3">Verify your HR PIN under the HR tab to manage holidays.</p>
+      </div>
+      <template v-else>
+        <div class="dcgg-card">
+          <div class="text-sm font-semibold mb-3">New holiday request</div>
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-2 items-end">
+            <label class="block">
+              <span class="text-xxs font-semibold text-ink-500 uppercase">Person</span>
+              <select v-model="newHoliday.personId" class="dcgg-input w-full mt-1">
+                <option value="">Select…</option>
+                <option v-for="p in rows" :key="p.id" :value="p.id">{{ (p as any).fullName }}</option>
+              </select>
+            </label>
+            <label class="block">
+              <span class="text-xxs font-semibold text-ink-500 uppercase">Start</span>
+              <input v-model="newHoliday.startDate" type="date" class="dcgg-input w-full mt-1" />
+            </label>
+            <label class="block">
+              <span class="text-xxs font-semibold text-ink-500 uppercase">End</span>
+              <input v-model="newHoliday.endDate" type="date" class="dcgg-input w-full mt-1" />
+            </label>
+            <label class="block md:col-span-1">
+              <span class="text-xxs font-semibold text-ink-500 uppercase">Note</span>
+              <input v-model="newHoliday.note" class="dcgg-input w-full mt-1" />
+            </label>
+            <button class="dcgg-btn-primary" @click="submitHoliday">Submit</button>
+          </div>
+          <div v-if="holidayError" class="text-xs text-err mt-2">{{ holidayError }}</div>
+        </div>
+
+        <div class="dcgg-card">
+          <div class="flex items-center mb-3">
+            <div class="text-sm font-semibold flex-1">Balances (this year)</div>
+            <button class="text-xxs text-ink-500 hover:text-brand-600" @click="loadHolidays">Refresh</button>
+          </div>
+          <table class="w-full text-xs">
+            <thead class="text-xxs uppercase text-ink-500">
+              <tr><th class="text-left py-1">Person</th><th class="text-right">Quota</th><th class="text-right">Taken</th><th class="text-right">Remaining</th></tr>
+            </thead>
+            <tbody>
+              <tr v-for="b in balances" :key="b.personId" class="border-t border-ink-100">
+                <td class="py-1">{{ b.personName }}</td>
+                <td class="text-right">{{ b.quota }}</td>
+                <td class="text-right">{{ b.taken }}</td>
+                <td class="text-right" :class="b.remaining < 0 ? 'text-err font-semibold' : ''">{{ b.remaining }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="dcgg-card">
+          <div class="text-sm font-semibold mb-3">Requests</div>
+          <div v-if="loadingHol" class="text-xs text-ink-400">Loading…</div>
+          <div v-else-if="!holidays.length" class="text-xs text-ink-400">No holiday requests yet.</div>
+          <table v-else class="w-full text-xs">
+            <thead class="text-xxs uppercase text-ink-500">
+              <tr><th class="text-left py-1">Person</th><th>Dates</th><th class="text-right">Days</th><th>Status</th><th></th></tr>
+            </thead>
+            <tbody>
+              <tr v-for="h in holidays" :key="h.id" class="border-t border-ink-100">
+                <td class="py-1">{{ h.personName }}</td>
+                <td>{{ format(new Date(h.startDate), 'PP') }} → {{ format(new Date(h.endDate), 'PP') }}</td>
+                <td class="text-right">{{ h.days }}</td>
+                <td>
+                  <span class="dcgg-tag" :class="{
+                    'bg-ok/10 text-ok': h.status==='approved',
+                    'bg-err/10 text-err': h.status==='rejected',
+                    'bg-warn/10 text-warn': h.status==='pending',
+                  }">{{ h.status }}</span>
+                </td>
+                <td class="text-right">
+                  <button v-if="h.status!=='approved'" class="text-xxs text-ok hover:underline mr-2" @click="decideHoliday(h.id,'approved')">Approve</button>
+                  <button v-if="h.status!=='rejected'" class="text-xxs text-err hover:underline" @click="decideHoliday(h.id,'rejected')">Reject</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </template>
     </div>
     <div v-else-if="tab === 'performance'" class="dcgg-card text-xs text-ink-500">
       Performance reviews — to be wired to <code>/api/hr/reviews</code>.

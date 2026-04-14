@@ -56,6 +56,7 @@ func New(cfg *config.Config, db *pgxpool.Pool, s3 *storage.Client, jwtMgr *auth.
 	filesH := handlers.NewFilesHandler(s3)
 	membershipH := handlers.NewMembershipHandler(db, tmplRepo)
 	membersH := handlers.NewMembersHandler(db)
+	hrH := handlers.NewHRHandler(db)
 	dashH := handlers.NewDashboardHandler(db)
 
 	r.GET("/healthz", healthH.Check)
@@ -86,6 +87,11 @@ func New(cfg *config.Config, db *pgxpool.Pool, s3 *storage.Client, jwtMgr *auth.
 			hr.Use(auth.RequireRole("admin", "hr"), auth.RequireHRGate())
 			{
 				hr.GET("/people/:id/salary", peopleH.Get) // real impl would redact in the default path
+				hr.GET("/holidays", hrH.ListHolidays)
+				hr.POST("/holidays", hrH.CreateHoliday)
+				hr.PATCH("/holidays/:id", hrH.PatchHoliday)
+				hr.DELETE("/holidays/:id", hrH.DeleteHoliday)
+				hr.GET("/holidays/balances", hrH.HolidayBalances)
 			}
 
 			authed.GET("/activities", activitiesH.List)

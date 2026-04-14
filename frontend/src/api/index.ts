@@ -11,3 +11,4 @@ export { publications } from './publications';
 export { membership } from './membership';
 export { files } from './files';
 export { dashboard } from './dashboard';
+export { hr } from './hr';
