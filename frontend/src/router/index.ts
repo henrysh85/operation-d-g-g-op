@@ -17,7 +17,7 @@ const routes: RouteRecordRaw[] = [
   { path: '/engagement',    name: 'engagement',    component: () => import('@/views/Engagement.vue') },
   { path: '/members',       name: 'members',       component: () => import('@/views/Members.vue') },
   { path: '/members/:id',   name: 'member-detail', component: () => import('@/views/MemberDetail.vue'), props: true },
-  { path: '/audit',         name: 'audit',         component: () => import('@/views/AuditLog.vue') },
+  { path: '/audit',         name: 'audit',         component: () => import('@/views/AuditLog.vue'), meta: { role: 'admin' } },
 
   { path: '/:pathMatch(.*)*', name: 'not-found', component: () => import('@/views/NotFound.vue') },
 ];
@@ -32,6 +32,10 @@ router.beforeEach((to) => {
   const auth = useAuthStore();
   if (!to.meta.public && !auth.token) {
     return { name: 'login', query: { redirect: to.fullPath } };
+  }
+  const requiredRole = to.meta.role as string | undefined;
+  if (requiredRole && !auth.hasRole(requiredRole)) {
+    return { name: 'dashboard' };
   }
   return true;
 });

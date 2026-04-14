@@ -10,9 +10,19 @@ export const http: AxiosInstance = axios.create({
 
 http.interceptors.request.use((config: InternalAxiosRequestConfig) => {
   const token = localStorage.getItem('dcgg.token');
-  if (token) {
+  // HR endpoints need a PIN-elevated token (RequireHRGate). Pinia store keeps
+  // it in memory only — fall back gracefully if the user hasn't unlocked.
+  const isHR = (config.url ?? '').includes('/hr/');
+  let bearer = token;
+  if (isHR) {
+    try {
+      const raw = (window as unknown as { __DCGG_HR_TOKEN__?: string }).__DCGG_HR_TOKEN__;
+      if (raw) bearer = raw;
+    } catch { /* ignore */ }
+  }
+  if (bearer) {
     config.headers = config.headers ?? {};
-    (config.headers as Record<string, string>).Authorization = `Bearer ${token}`;
+    (config.headers as Record<string, string>).Authorization = `Bearer ${bearer}`;
   }
   return config;
 });

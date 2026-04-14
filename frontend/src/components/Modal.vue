@@ -1,6 +1,18 @@
 <script setup lang="ts">
-defineProps<{ open: boolean; title?: string; width?: string }>();
+import { onMounted, onBeforeUnmount, watch } from 'vue';
+const props = defineProps<{ open: boolean; title?: string; width?: string }>();
 const emit = defineEmits<{ (e: 'close'): void }>();
+
+function onKey(e: KeyboardEvent) {
+  if (e.key === 'Escape' && props.open) emit('close');
+}
+onMounted(() => window.addEventListener('keydown', onKey));
+onBeforeUnmount(() => window.removeEventListener('keydown', onKey));
+
+// Prevent body scroll while open.
+watch(() => props.open, (v) => {
+  document.body.style.overflow = v ? 'hidden' : '';
+});
 </script>
 
 <template>

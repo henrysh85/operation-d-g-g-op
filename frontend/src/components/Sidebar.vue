@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import { useAuthStore } from '@/stores/auth';
 
-interface Nav { to: string; label: string; icon: string; }
+interface Nav { to: string; label: string; icon: string; role?: string; }
 
-const navs: Nav[] = [
+const allNavs: Nav[] = [
   { to: '/dashboard',     label: 'Dashboard',     icon: 'D' },
   { to: '/regulatory',    label: 'Regulatory',    icon: 'R' },
   { to: '/stakeholders',  label: 'Stakeholders',  icon: 'S' },
@@ -17,11 +17,18 @@ const navs: Nav[] = [
   { to: '/people',        label: 'People',        icon: 'P' },
   { to: '/engagement',    label: 'Engagement',    icon: 'E' },
   { to: '/members',       label: 'Members',       icon: 'U' },
-  { to: '/audit',         label: 'Audit log',     icon: 'L' },
+  { to: '/audit',         label: 'Audit log',     icon: 'L', role: 'admin' },
 ];
 
 const route = useRoute();
+const router = useRouter();
 const auth = useAuthStore();
+const navs = computed(() => allNavs.filter((n) => !n.role || auth.hasRole(n.role)));
+
+function signOut() {
+  auth.logout();
+  router.push('/login');
+}
 const openOnMobile = ref(false);
 const collapsed = ref(false);
 
@@ -95,7 +102,7 @@ const initials = computed(() =>
       </div>
       <div v-if="!collapsed" class="flex-1 min-w-0">
         <div class="text-xs font-semibold text-ink-900 truncate">{{ auth.user?.name ?? 'Signed out' }}</div>
-        <button class="text-xxs text-ink-500 hover:text-brand-600" @click="auth.logout()">
+        <button class="text-xxs text-ink-500 hover:text-brand-600" @click="signOut">
           Sign out
         </button>
       </div>

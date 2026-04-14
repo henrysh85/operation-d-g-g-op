@@ -16,8 +16,8 @@ export const auth = {
   async logout(): Promise<void> {
     await http.post('/auth/logout').catch(() => void 0);
   },
-  async verifyPin(pin: string): Promise<{ ok: boolean }> {
-    const { data } = await http.post<{ ok: boolean }>('/auth/pin', { pin });
+  async verifyPin(pin: string): Promise<{ token: string; expires_in: number }> {
+    const { data } = await http.post<{ token: string; expires_in: number }>('/auth/verify-pin', { pin });
     return data;
   },
 };

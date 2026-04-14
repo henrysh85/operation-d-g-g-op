@@ -4,24 +4,27 @@ import type { User } from '@/types';
 
 interface State {
   token: string | null;
+  hrToken: string | null;
+  hrTokenExpiresAt: number | null;
   user: User | null;
-  pinVerified: boolean;
   loading: boolean;
   error: string | null;
 }
 
 export const useAuthStore = defineStore('auth', {
   state: (): State => ({
-    token: localStorage.getItem('dcgg.token'),
+    token:    localStorage.getItem('dcgg.token'),
+    hrToken:  null, // intentionally not persisted — PIN must be re-entered each session
+    hrTokenExpiresAt: null,
     user: null,
-    pinVerified: false,
     loading: false,
     error: null,
   }),
   getters: {
-    isAuthed: (s) => !!s.token,
-    roles:    (s) => s.user?.roles ?? [],
-    hasRole:  (s) => (role: string) => (s.user?.roles ?? []).includes(role),
+    isAuthed:    (s) => !!s.token,
+    pinVerified: (s) => !!s.hrToken && (s.hrTokenExpiresAt ?? 0) > Date.now(),
+    roles:       (s) => s.user?.roles ?? [],
+    hasRole:     (s) => (role: string) => (s.user?.roles ?? []).includes(role),
   },
   actions: {
     async login(email: string, password: string) {
@@ -45,15 +48,21 @@ export const useAuthStore = defineStore('auth', {
       catch { this.logout(); }
     },
     async verifyPin(pin: string) {
-      const { ok } = await authApi.verifyPin(pin);
-      this.pinVerified = ok;
-      return ok;
+      try {
+        const { token, expires_in } = await authApi.verifyPin(pin);
+        this.hrToken = token;
+        this.hrTokenExpiresAt = Date.now() + expires_in * 1000;
+        (window as unknown as { __DCGG_HR_TOKEN__?: string }).__DCGG_HR_TOKEN__ = token;
+        return true;
+      } catch { return false; }
     },
     logout() {
       this.token = null;
+      this.hrToken = null;
+      this.hrTokenExpiresAt = null;
       this.user = null;
-      this.pinVerified = false;
       localStorage.removeItem('dcgg.token');
+      delete (window as unknown as { __DCGG_HR_TOKEN__?: string }).__DCGG_HR_TOKEN__;
       void authApi.logout();
     },
   },
