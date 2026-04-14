@@ -27,6 +27,7 @@ func (h *ConsultationsHandler) List(c *gin.Context) {
 		Vertical:   c.Query("vertical"),
 		Status:     c.Query("status"),
 		AssigneeID: c.Query("assignee_id"),
+		Search:     c.Query("q"),
 		Before:     before,
 		Limit:      qInt(c, "limit", 200),
 	})

@@ -32,6 +32,7 @@ type ConsultFilter struct {
 	Vertical   string
 	Status     string
 	AssigneeID string
+	Search     string
 	Before     *time.Time
 	Limit      int
 }
@@ -54,6 +55,10 @@ func (r *ConsultationsRepo) List(ctx context.Context, f ConsultFilter) ([]*model
 	if f.Before != nil {
 		args = append(args, *f.Before)
 		q += " AND deadline <= $" + itoa(len(args))
+	}
+	if f.Search != "" {
+		args = append(args, "%"+f.Search+"%")
+		q += " AND title ILIKE $" + itoa(len(args))
 	}
 	q += " ORDER BY deadline ASC NULLS LAST"
 	if f.Limit > 0 {

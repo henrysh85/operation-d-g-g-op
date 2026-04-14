@@ -16,10 +16,12 @@ func NewRegulatoryHandler(r *repo.RegulatoryRepo) *RegulatoryHandler {
 
 func (h *RegulatoryHandler) ListJurisdictions(c *gin.Context) {
 	out, err := h.Repo.ListJurisdictions(c.Request.Context(), repo.JSFilter{
-		Vertical:  c.Query("vertical"),
-		CountryID: c.Query("country_id"),
-		Status:    c.Query("status"),
-		Limit:     qInt(c, "limit", 200),
+		Vertical:   c.Query("vertical"),
+		CountryID:  c.Query("country_id"),
+		RegionCode: c.Query("region"),
+		Status:     c.Query("status"),
+		Search:     c.Query("q"),
+		Limit:      qInt(c, "limit", 200),
 	})
 	if err != nil {
 		HandleErr(c, err)

@@ -28,28 +28,48 @@ func scanJS(r pgx.Row) (*models.JurisdictionStatus, error) {
 }
 
 type JSFilter struct {
-	Vertical  string
-	CountryID string
-	Status    string
-	Limit     int
+	Vertical   string
+	CountryID  string
+	RegionID   string
+	RegionCode string
+	Status     string
+	Search     string
+	Limit      int
 }
 
 func (r *RegulatoryRepo) ListJurisdictions(ctx context.Context, f JSFilter) ([]*models.JurisdictionStatus, error) {
-	q := `SELECT ` + jsCols + ` FROM jurisdictions_status WHERE 1=1`
+	q := `SELECT js.id, js.country_id, js.vertical, js.status, js.headline,
+	             js.regulators, js.timeline, js.impact_matrix, js.last_reviewed,
+	             js.created_at, js.updated_at
+	      FROM jurisdictions_status js
+	      JOIN countries co ON co.id = js.country_id
+	      WHERE 1=1`
 	args := []any{}
 	if f.Vertical != "" {
 		args = append(args, f.Vertical)
-		q += " AND vertical=$" + itoa(len(args))
+		q += " AND js.vertical=$" + itoa(len(args))
 	}
 	if f.CountryID != "" {
 		args = append(args, f.CountryID)
-		q += " AND country_id=$" + itoa(len(args))
+		q += " AND js.country_id=$" + itoa(len(args))
+	}
+	if f.RegionID != "" {
+		args = append(args, f.RegionID)
+		q += " AND co.region_id=$" + itoa(len(args))
+	}
+	if f.RegionCode != "" {
+		args = append(args, f.RegionCode)
+		q += " AND co.region_id = (SELECT id FROM regions WHERE code=$" + itoa(len(args)) + ")"
 	}
 	if f.Status != "" {
 		args = append(args, f.Status)
-		q += " AND status=$" + itoa(len(args))
+		q += " AND js.status=$" + itoa(len(args))
 	}
-	q += " ORDER BY updated_at DESC"
+	if f.Search != "" {
+		args = append(args, "%"+f.Search+"%")
+		q += " AND (co.name ILIKE $" + itoa(len(args)) + " OR js.headline ILIKE $" + itoa(len(args)) + ")"
+	}
+	q += " ORDER BY js.updated_at DESC"
 	if f.Limit > 0 {
 		args = append(args, f.Limit)
 		q += " LIMIT $" + itoa(len(args))

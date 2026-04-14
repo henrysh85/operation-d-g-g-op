@@ -30,14 +30,15 @@ func scanActivity(r pgx.Row) (*models.Activity, error) {
 }
 
 type ActivitiesFilter struct {
-	Vertical string
-	RegionID string
-	ClientID string
-	OwnerID  string
-	From, To *time.Time
-	Search   string
-	Limit    int
-	Offset   int
+	Vertical   string
+	RegionID   string
+	RegionCode string
+	ClientID   string
+	OwnerID    string
+	From, To   *time.Time
+	Search     string
+	Limit      int
+	Offset     int
 }
 
 func (r *ActivitiesRepo) List(ctx context.Context, f ActivitiesFilter) ([]*models.Activity, error) {
@@ -50,6 +51,10 @@ func (r *ActivitiesRepo) List(ctx context.Context, f ActivitiesFilter) ([]*model
 	if f.RegionID != "" {
 		args = append(args, f.RegionID)
 		q += " AND a.region_id=$" + itoa(len(args))
+	}
+	if f.RegionCode != "" {
+		args = append(args, f.RegionCode)
+		q += " AND a.region_id = (SELECT id FROM regions WHERE code=$" + itoa(len(args)) + ")"
 	}
 	if f.OwnerID != "" {
 		args = append(args, f.OwnerID)

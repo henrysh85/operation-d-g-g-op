@@ -38,10 +38,11 @@ func (h *ActivitiesHandler) List(c *gin.Context) {
 		}
 	}
 	out, err := h.Repo.List(c.Request.Context(), repo.ActivitiesFilter{
-		Vertical: c.Query("vertical"),
-		RegionID: c.Query("region_id"),
-		ClientID: c.Query("client_id"),
-		OwnerID:  c.Query("owner_id"),
+		Vertical:   c.Query("vertical"),
+		RegionID:   c.Query("region_id"),
+		RegionCode: c.Query("region"),
+		ClientID:   c.Query("client_id"),
+		OwnerID:    c.Query("owner_id"),
 		From:     from,
 		To:       to,
 		Search:   c.Query("q"),
