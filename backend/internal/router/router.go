@@ -159,7 +159,9 @@ func New(cfg *config.Config, db *pgxpool.Pool, s3 *storage.Client, jwtMgr *auth.
 			authed.POST("/templates/:id/render", auth.RequireRole("admin", "lead", "staff"), tmplH.Render)
 			authed.GET("/audit-log", auth.RequireRole("admin"), auditH.List)
 
-			authed.POST("/auth/change-password", usersH.ChangePassword)
+			authed.POST("/auth/change-password",
+				auth.LoginRateLimit(5, 10*time.Minute, 10*time.Minute),
+				usersH.ChangePassword)
 			authed.GET("/users", auth.RequireRole("admin"), usersH.List)
 			authed.POST("/users", auth.RequireRole("admin"), usersH.Create)
 			authed.PATCH("/users/:id", auth.RequireRole("admin"), usersH.Patch)

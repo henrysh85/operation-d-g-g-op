@@ -101,12 +101,12 @@ const initials = computed(() =>
         :to="n.to"
         class="group flex items-center gap-2 mx-2 my-0.5 px-2 py-2 rounded-md text-sm text-ink-700
                hover:bg-ink-100 hover:text-ink-900"
-        :class="route.path.startsWith(n.to) && 'bg-brand-50 text-brand-600 font-semibold'"
+        :class="(route.path === n.to || route.path.startsWith(n.to + '/')) && 'bg-brand-50 text-brand-600 font-semibold'"
         @click="openOnMobile = false"
       >
         <span class="w-6 h-6 rounded grid place-items-center text-xxs font-bold
                      bg-ink-100 text-ink-500 group-hover:bg-ink-200"
-              :class="route.path.startsWith(n.to) && '!bg-brand-600 !text-white'">
+              :class="(route.path === n.to || route.path.startsWith(n.to + '/')) && '!bg-brand-600 !text-white'">
           {{ n.icon }}
         </span>
         <span v-if="!collapsed" class="truncate">{{ n.label }}</span>

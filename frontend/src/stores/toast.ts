@@ -15,6 +15,9 @@ export const useToastStore = defineStore('toast', {
   state: () => ({ items: [] as Toast[] }),
   actions: {
     push(text: string, kind: ToastKind = 'info', ttl = 4000) {
+      // De-dup: if the same kind+text is already on screen, skip.
+      const dup = this.items.find((t) => t.kind === kind && t.text === text);
+      if (dup) return dup.id;
       const id = nextId++;
       this.items.push({ id, kind, text, ttl });
       setTimeout(() => this.dismiss(id), ttl);

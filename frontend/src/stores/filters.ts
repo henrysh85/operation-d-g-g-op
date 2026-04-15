@@ -32,8 +32,17 @@ export const useFiltersStore = defineStore('filters', {
       if (state.vertical !== 'all') q.vertical = state.vertical;
       if (state.region   !== 'all') q.region   = state.region;
       if (state.clientId !== 'all') q.clientId = state.clientId;
-      if (state.month)              q.month    = state.month;
       if (state.debouncedSearch)    q.q        = state.debouncedSearch;
+      // month (YYYY-MM) fans out to from / to so endpoints that accept a date
+      // range (e.g. activities) actually filter, while others that don't look
+      // at either just ignore them.
+      if (state.month && /^\d{4}-\d{2}$/.test(state.month)) {
+        const [y, m] = state.month.split('-').map(Number);
+        const last = new Date(y, m, 0).getDate(); // day 0 of next month = last of this
+        q.from = `${state.month}-01`;
+        q.to   = `${state.month}-${String(last).padStart(2, '0')}`;
+        q.month = state.month;
+      }
       return q;
     },
   },

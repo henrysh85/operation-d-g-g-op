@@ -22,7 +22,6 @@ const loadingMore = ref(false);
 const form = ref<Partial<Activity>>({
   type: 'meeting', title: '', summary: '',
   occurredAt: new Date().toISOString(),
-  personIds: [], clientIds: [], jurisdictionIds: [],
 });
 
 async function load() {
