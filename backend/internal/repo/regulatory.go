@@ -35,6 +35,7 @@ type JSFilter struct {
 	Status     string
 	Search     string
 	Limit      int
+	Offset     int
 }
 
 func (r *RegulatoryRepo) ListJurisdictions(ctx context.Context, f JSFilter) ([]*models.JurisdictionStatus, error) {
@@ -73,6 +74,10 @@ func (r *RegulatoryRepo) ListJurisdictions(ctx context.Context, f JSFilter) ([]*
 	if f.Limit > 0 {
 		args = append(args, f.Limit)
 		q += " LIMIT $" + itoa(len(args))
+	}
+	if f.Offset > 0 {
+		args = append(args, f.Offset)
+		q += " OFFSET $" + itoa(len(args))
 	}
 	rows, err := r.DB.Query(ctx, q, args...)
 	if err != nil {

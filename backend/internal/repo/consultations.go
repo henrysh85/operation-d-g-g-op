@@ -35,6 +35,7 @@ type ConsultFilter struct {
 	Search     string
 	Before     *time.Time
 	Limit      int
+	Offset     int
 }
 
 func (r *ConsultationsRepo) List(ctx context.Context, f ConsultFilter) ([]*models.Consultation, error) {
@@ -64,6 +65,10 @@ func (r *ConsultationsRepo) List(ctx context.Context, f ConsultFilter) ([]*model
 	if f.Limit > 0 {
 		args = append(args, f.Limit)
 		q += " LIMIT $" + itoa(len(args))
+	}
+	if f.Offset > 0 {
+		args = append(args, f.Offset)
+		q += " OFFSET $" + itoa(len(args))
 	}
 	rows, err := r.DB.Query(ctx, q, args...)
 	if err != nil {

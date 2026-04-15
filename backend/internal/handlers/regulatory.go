@@ -22,6 +22,7 @@ func (h *RegulatoryHandler) ListJurisdictions(c *gin.Context) {
 		Status:     c.Query("status"),
 		Search:     c.Query("q"),
 		Limit:      qInt(c, "limit", 200),
+		Offset:     qInt(c, "offset", 0),
 	})
 	if err != nil {
 		HandleErr(c, err)

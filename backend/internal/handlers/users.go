@@ -1,11 +1,14 @@
 package handlers
 
 import (
+	"errors"
 	"net/http"
+	"strings"
 	"time"
 
 	"github.com/gin-gonic/gin"
 	"github.com/jackc/pgx/v5"
+	"github.com/jackc/pgx/v5/pgconn"
 	"github.com/jackc/pgx/v5/pgxpool"
 	"golang.org/x/crypto/bcrypt"
 
@@ -77,9 +80,14 @@ func (h *UsersHandler) Create(c *gin.Context) {
 	var id string
 	err = h.DB.QueryRow(c.Request.Context(),
 		`INSERT INTO users (email, name, password_hash, active) VALUES ($1,$2,$3,$4) RETURNING id`,
-		in.Email, in.Name, string(hash), active).Scan(&id)
+		strings.ToLower(strings.TrimSpace(in.Email)), in.Name, string(hash), active).Scan(&id)
 	if err != nil {
-		c.JSON(http.StatusConflict, gin.H{"error": err.Error()})
+		var pgErr *pgconn.PgError
+		if errors.As(err, &pgErr) && pgErr.Code == "23505" {
+			c.JSON(http.StatusConflict, gin.H{"error": "a user with that email already exists"})
+			return
+		}
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
 	for _, role := range in.Roles {
@@ -107,6 +115,28 @@ func (h *UsersHandler) Patch(c *gin.Context) {
 		return
 	}
 	id := c.Param("id")
+	// Block the only self-lockout paths: admin disabling themselves or
+	// demoting themselves out of the admin role. Other admins can still do it.
+	claims, _ := auth.ClaimsFrom(c)
+	if claims != nil && claims.UserID == id {
+		if in.Active != nil && !*in.Active {
+			c.JSON(http.StatusBadRequest, gin.H{"error": "you cannot disable your own account"})
+			return
+		}
+		if in.Roles != nil {
+			hasAdmin := false
+			for _, r := range *in.Roles {
+				if r == "admin" {
+					hasAdmin = true
+					break
+				}
+			}
+			if !hasAdmin {
+				c.JSON(http.StatusBadRequest, gin.H{"error": "you cannot remove your own admin role"})
+				return
+			}
+		}
+	}
 	if _, err := h.DB.Exec(c.Request.Context(), `
 		UPDATE users SET
 		  name   = COALESCE($1, name),

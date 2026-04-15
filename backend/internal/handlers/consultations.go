@@ -30,6 +30,7 @@ func (h *ConsultationsHandler) List(c *gin.Context) {
 		Search:     c.Query("q"),
 		Before:     before,
 		Limit:      qInt(c, "limit", 200),
+		Offset:     qInt(c, "offset", 0),
 	})
 	if err != nil {
 		HandleErr(c, err)

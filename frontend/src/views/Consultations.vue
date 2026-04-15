@@ -13,10 +13,29 @@ const rows = ref<Consultation[]>([]);
 const loading = ref(true);
 const filters = useFiltersStore();
 
+const PAGE = 100;
+const offset = ref(0);
+const hasMore = ref(true);
+const loadingMore = ref(false);
+
 async function load() {
   loading.value = true;
-  try { rows.value = await consultations.list(filters.asQuery); }
-  finally { loading.value = false; }
+  offset.value = 0;
+  try {
+    const page = await consultations.list({ ...filters.asQuery, limit: PAGE, offset: 0 });
+    rows.value = page;
+    hasMore.value = page.length === PAGE;
+  } finally { loading.value = false; }
+}
+async function loadMore() {
+  if (loadingMore.value || !hasMore.value) return;
+  loadingMore.value = true;
+  try {
+    offset.value += PAGE;
+    const page = await consultations.list({ ...filters.asQuery, limit: PAGE, offset: offset.value });
+    rows.value.push(...page);
+    hasMore.value = page.length === PAGE;
+  } finally { loadingMore.value = false; }
 }
 onMounted(load);
 watch(() => filters.asQuery, load, { deep: true });
@@ -71,5 +90,10 @@ const columns = [
       <template #cell-impact="{ row }"><ImpactBadge :impact="row.impact" /></template>
       <template #cell-status="{ row }"><StatusBadge :status="row.status" /></template>
     </DataTable>
+    <div v-if="hasMore && !loading" class="flex justify-center mt-4">
+      <button class="dcgg-btn" :disabled="loadingMore" @click="loadMore">
+        {{ loadingMore ? 'Loading…' : `Load ${PAGE} more` }}
+      </button>
+    </div>
   </section>
 </template>

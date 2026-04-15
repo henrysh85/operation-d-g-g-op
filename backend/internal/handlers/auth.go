@@ -41,7 +41,7 @@ func (h *AuthHandler) Login(c *gin.Context) {
 		active         bool
 	)
 	err := h.DB.QueryRow(ctx,
-		`SELECT id, name, password_hash, active FROM users WHERE email=$1`, b.Email,
+		`SELECT id, name, password_hash, active FROM users WHERE LOWER(email)=LOWER($1)`, b.Email,
 	).Scan(&id, &name, &hash, &active)
 	if err == pgx.ErrNoRows || (err == nil && !active) {
 		c.JSON(http.StatusUnauthorized, gin.H{"error": "invalid credentials"})

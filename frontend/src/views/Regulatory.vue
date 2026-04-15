@@ -12,11 +12,29 @@ const filters = useFiltersStore();
 const rows = ref<Jurisdiction[]>([]);
 const loading = ref(true);
 const selected = ref<Jurisdiction | null>(null);
+const PAGE = 100;
+const offset = ref(0);
+const hasMore = ref(true);
+const loadingMore = ref(false);
 
 async function load() {
   loading.value = true;
-  try { rows.value = await regulatory.list(filters.asQuery); }
-  finally { loading.value = false; }
+  offset.value = 0;
+  try {
+    const page = await regulatory.list({ ...filters.asQuery, limit: PAGE, offset: 0 });
+    rows.value = page;
+    hasMore.value = page.length === PAGE;
+  } finally { loading.value = false; }
+}
+async function loadMore() {
+  if (loadingMore.value || !hasMore.value) return;
+  loadingMore.value = true;
+  try {
+    offset.value += PAGE;
+    const page = await regulatory.list({ ...filters.asQuery, limit: PAGE, offset: offset.value });
+    rows.value.push(...page);
+    hasMore.value = page.length === PAGE;
+  } finally { loadingMore.value = false; }
 }
 onMounted(load);
 watch(() => filters.asQuery, load, { deep: true });
@@ -61,6 +79,11 @@ const columns = [
         <StatusBadge :status="String(value)" />
       </template>
     </DataTable>
+    <div v-if="hasMore && !loading" class="flex justify-center mt-4">
+      <button class="dcgg-btn" :disabled="loadingMore" @click="loadMore">
+        {{ loadingMore ? 'Loading…' : `Load ${PAGE} more` }}
+      </button>
+    </div>
 
     <Modal :open="!!selected" :title="selected?.name" width="520px" @close="selected = null">
       <template v-if="selected">
