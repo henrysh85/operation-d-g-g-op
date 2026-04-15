@@ -80,6 +80,25 @@ async function deleteHoliday(id: string) {
   await loadHolidays();
 }
 
+const selectedHolidays = ref<Set<string>>(new Set());
+function toggleHoliday(id: string) {
+  const s = new Set(selectedHolidays.value);
+  if (s.has(id)) s.delete(id); else s.add(id);
+  selectedHolidays.value = s;
+}
+function toggleAllPendingHolidays() {
+  const pendingIds = holidays.value.filter((h) => h.status === 'pending').map((h) => h.id);
+  const allSelected = pendingIds.every((id) => selectedHolidays.value.has(id));
+  selectedHolidays.value = allSelected ? new Set() : new Set(pendingIds);
+}
+async function bulkDecideHolidays(status: 'approved' | 'rejected') {
+  const ids = Array.from(selectedHolidays.value);
+  if (!ids.length) return;
+  await hr.bulkHolidayDecision(ids, status).catch(() => null);
+  selectedHolidays.value = new Set();
+  await loadHolidays();
+}
+
 // --- Reviews ---
 const reviews = ref<Review[]>([]);
 const newReview = ref({ personId: '', period: '', rating: 3, summary: '' });
@@ -222,15 +241,39 @@ const columns = [
         </div>
 
         <div class="dcgg-card">
-          <div class="text-sm font-semibold mb-3">Requests</div>
+          <div class="flex items-center mb-3">
+            <div class="text-sm font-semibold flex-1">Requests</div>
+            <template v-if="selectedHolidays.size > 0">
+              <span class="text-xxs text-ink-500 mr-2">{{ selectedHolidays.size }} selected</span>
+              <button class="text-xxs text-ok hover:underline mr-3" @click="bulkDecideHolidays('approved')">Approve all</button>
+              <button class="text-xxs text-err hover:underline" @click="bulkDecideHolidays('rejected')">Reject all</button>
+            </template>
+          </div>
           <div v-if="loadingHol" class="text-xs text-ink-400">Loading…</div>
           <div v-else-if="!holidays.length" class="text-xs text-ink-400">No holiday requests yet.</div>
           <table v-else class="w-full text-xs">
             <thead class="text-xxs uppercase text-ink-500">
-              <tr><th class="text-left py-1">Person</th><th>Dates</th><th class="text-right">Days</th><th>Status</th><th></th></tr>
+              <tr>
+                <th class="w-6 py-1">
+                  <input
+                    type="checkbox"
+                    :checked="holidays.filter((h) => h.status === 'pending').every((h) => selectedHolidays.has(h.id)) && holidays.some((h) => h.status === 'pending')"
+                    @change="toggleAllPendingHolidays"
+                  />
+                </th>
+                <th class="text-left py-1">Person</th><th>Dates</th><th class="text-right">Days</th><th>Status</th><th></th>
+              </tr>
             </thead>
             <tbody>
               <tr v-for="h in holidays" :key="h.id" class="border-t border-ink-100">
+                <td class="py-1">
+                  <input
+                    v-if="h.status === 'pending'"
+                    type="checkbox"
+                    :checked="selectedHolidays.has(h.id)"
+                    @change="toggleHoliday(h.id)"
+                  />
+                </td>
                 <td class="py-1">{{ h.personName }}</td>
                 <td>{{ format(new Date(h.startDate), 'PP') }} → {{ format(new Date(h.endDate), 'PP') }}</td>
                 <td class="text-right">{{ h.days }}</td>

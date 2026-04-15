@@ -2,14 +2,16 @@
 import { ref, computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useAuthStore } from '@/stores/auth';
-import { users as usersApi } from '@/api';
+import { users as usersApi, inbox as inboxApi } from '@/api';
 import { useToastStore } from '@/stores/toast';
 import Modal from '@/components/Modal.vue';
+import { onMounted, onBeforeUnmount } from 'vue';
 
-interface Nav { to: string; label: string; icon: string; role?: string; }
+interface Nav { to: string; label: string; icon: string; role?: string; badge?: boolean; }
 
 const allNavs: Nav[] = [
   { to: '/dashboard',     label: 'Dashboard',     icon: 'D' },
+  { to: '/inbox',         label: 'Inbox',         icon: 'I', badge: true },
   { to: '/regulatory',    label: 'Regulatory',    icon: 'R' },
   { to: '/stakeholders',  label: 'Stakeholders',  icon: 'S' },
   { to: '/membership',    label: 'Membership',    icon: 'M' },
@@ -38,6 +40,26 @@ const pwOpen = ref(false);
 const pwCurrent = ref('');
 const pwNew = ref('');
 const toasts = useToastStore();
+// Inbox badge: poll /me/tasks every 60 s. Counts only "actionable" items so
+// decisions on your own holidays don't ghost the badge.
+const inboxActionable = ref(0);
+let inboxTimer: number | undefined;
+async function refreshInbox() {
+  if (!auth.isAuthed) return;
+  try {
+    const { counts } = await inboxApi.tasks();
+    inboxActionable.value =
+      (counts.holiday_pending ?? 0) +
+      (counts.expense_pending ?? 0) +
+      (counts.consultation_deadline ?? 0);
+  } catch { /* silent — the interceptor surfaced any real error */ }
+}
+onMounted(() => {
+  refreshInbox();
+  inboxTimer = window.setInterval(refreshInbox, 60_000);
+});
+onBeforeUnmount(() => { if (inboxTimer) clearInterval(inboxTimer); });
+
 async function changePassword() {
   if (pwNew.value.length < 10) { toasts.error('New password must be at least 10 characters.'); return; }
   try {
@@ -109,7 +131,11 @@ const initials = computed(() =>
               :class="(route.path === n.to || route.path.startsWith(n.to + '/')) && '!bg-brand-600 !text-white'">
           {{ n.icon }}
         </span>
-        <span v-if="!collapsed" class="truncate">{{ n.label }}</span>
+        <span v-if="!collapsed" class="truncate flex-1">{{ n.label }}</span>
+        <span
+          v-if="n.badge && inboxActionable > 0"
+          class="text-xxs bg-err text-white rounded-full px-1.5 min-w-[18px] text-center"
+        >{{ inboxActionable }}</span>
       </router-link>
     </nav>
 

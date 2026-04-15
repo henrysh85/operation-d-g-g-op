@@ -108,6 +108,31 @@ type holidayDecision struct {
 	Status string `json:"status" binding:"required,oneof=approved rejected pending"`
 }
 
+type bulkHolidayDecision struct {
+	IDs    []string `json:"ids" binding:"required"`
+	Status string   `json:"status" binding:"required,oneof=approved rejected pending"`
+}
+
+// BulkPatchHolidays approves/rejects multiple holiday requests in one call.
+func (h *HRHandler) BulkPatchHolidays(c *gin.Context) {
+	var in bulkHolidayDecision
+	if err := c.ShouldBindJSON(&in); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+	if len(in.IDs) == 0 {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "ids required"})
+		return
+	}
+	ct, err := h.DB.Exec(c.Request.Context(),
+		`UPDATE holidays SET status=$1 WHERE id = ANY($2::uuid[])`, in.Status, in.IDs)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+	c.JSON(http.StatusOK, gin.H{"updated": ct.RowsAffected()})
+}
+
 func (h *HRHandler) PatchHoliday(c *gin.Context) {
 	var in holidayDecision
 	if err := c.ShouldBindJSON(&in); err != nil {

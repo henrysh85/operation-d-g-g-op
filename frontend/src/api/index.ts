@@ -14,3 +14,4 @@ export { dashboard } from './dashboard';
 export { hr } from './hr';
 export { audit } from './audit';
 export { users } from './users';
+export { inbox } from './inbox';

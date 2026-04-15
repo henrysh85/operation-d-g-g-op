@@ -32,6 +32,10 @@ export const hr = {
   async setHolidayStatus(id: string, status: 'approved' | 'rejected' | 'pending'): Promise<void> {
     await http.patch(`/hr/holidays/${id}`, { status });
   },
+  async bulkHolidayDecision(ids: string[], status: 'approved' | 'rejected' | 'pending'): Promise<number> {
+    const { data } = await http.post<{ updated: number }>('/hr/holidays/bulk-decision', { ids, status });
+    return data.updated;
+  },
   async deleteHoliday(id: string): Promise<void> {
     await http.delete(`/hr/holidays/${id}`);
   },

@@ -59,6 +59,7 @@ func New(cfg *config.Config, db *pgxpool.Pool, s3 *storage.Client, jwtMgr *auth.
 	hrH := handlers.NewHRHandler(db)
 	auditH := handlers.NewAuditHandler(db)
 	usersH := handlers.NewUsersHandler(db)
+	inboxH := handlers.NewInboxHandler(db)
 	dashH := handlers.NewDashboardHandler(db)
 
 	r.GET("/healthz", healthH.Check)
@@ -93,6 +94,7 @@ func New(cfg *config.Config, db *pgxpool.Pool, s3 *storage.Client, jwtMgr *auth.
 				hr.POST("/holidays", hrH.CreateHoliday)
 				hr.PATCH("/holidays/:id", hrH.PatchHoliday)
 				hr.DELETE("/holidays/:id", hrH.DeleteHoliday)
+				hr.POST("/holidays/bulk-decision", hrH.BulkPatchHolidays)
 				hr.GET("/holidays/balances", hrH.HolidayBalances)
 				hr.GET("/reviews", hrH.ListReviews)
 				hr.POST("/reviews", hrH.CreateReview)
@@ -158,6 +160,7 @@ func New(cfg *config.Config, db *pgxpool.Pool, s3 *storage.Client, jwtMgr *auth.
 
 			authed.POST("/templates/:id/render", auth.RequireRole("admin", "lead", "staff"), tmplH.Render)
 			authed.GET("/audit-log", auth.RequireRole("admin"), auditH.List)
+			authed.GET("/me/tasks", inboxH.Tasks)
 
 			authed.POST("/auth/change-password",
 				auth.LoginRateLimit(5, 10*time.Minute, 10*time.Minute),
