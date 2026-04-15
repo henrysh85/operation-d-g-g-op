@@ -11,6 +11,16 @@ const router = useRouter();
 
 // Hydrate on mount from URL.
 filters.hydrateFromQuery(route.query as Record<string, string | undefined>);
+filters.debouncedSearch = filters.search;
+
+// Debounce the free-text search into filters.debouncedSearch (250ms). The
+// raw `search` drives the input's v-model so typing stays responsive; the
+// debounced value is what downstream list views react to.
+let searchT: number | undefined;
+watch(search, (v) => {
+  if (searchT) clearTimeout(searchT);
+  searchT = window.setTimeout(() => { filters.debouncedSearch = v; }, 250);
+});
 
 // Sync to URL (shallow).
 watch(

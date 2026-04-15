@@ -114,7 +114,7 @@ func (r *ActivitiesRepo) Create(ctx context.Context, a *models.Activity) error {
 	return r.DB.QueryRow(ctx, `
 		INSERT INTO activities (title, description, type, vertical, region_id, country_id, occurred_on,
 			impact, owner_id, status, highlight, metadata)
-		VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,COALESCE($10,'done'),COALESCE($11,false),COALESCE($12,'{}'::jsonb))
+		VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,COALESCE(NULLIF($10,''),'done'),COALESCE($11,false),COALESCE($12,'{}'::jsonb))
 		RETURNING id, created_at, updated_at`,
 		a.Title, a.Description, a.Type, a.Vertical, a.RegionID, a.CountryID, a.OccurredOn,
 		a.Impact, a.OwnerID, a.Status, a.Highlight, a.Metadata,

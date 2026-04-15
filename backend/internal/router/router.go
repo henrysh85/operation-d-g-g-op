@@ -65,7 +65,7 @@ func New(cfg *config.Config, db *pgxpool.Pool, s3 *storage.Client, jwtMgr *auth.
 	v1 := r.Group("/api/v1")
 	{
 		// public
-		v1.POST("/auth/login", authH.Login)
+		v1.POST("/auth/login", auth.LoginRateLimit(5, 10*time.Minute, 5*time.Minute), authH.Login)
 
 		// authenticated
 		authed := v1.Group("")

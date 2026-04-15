@@ -14,6 +14,10 @@ const loading = ref(true);
 const filters = useFiltersStore();
 const showLog = ref(false);
 const saving = ref(false);
+const PAGE = 50;
+const offset = ref(0);
+const hasMore = ref(true);
+const loadingMore = ref(false);
 
 const form = ref<Partial<Activity>>({
   type: 'meeting', title: '', summary: '',
@@ -23,8 +27,22 @@ const form = ref<Partial<Activity>>({
 
 async function load() {
   loading.value = true;
-  try { rows.value = await activities.list(filters.asQuery); }
-  finally { loading.value = false; }
+  offset.value = 0;
+  try {
+    const page = await activities.list({ ...filters.asQuery, limit: PAGE, offset: 0 });
+    rows.value = page;
+    hasMore.value = page.length === PAGE;
+  } finally { loading.value = false; }
+}
+async function loadMore() {
+  if (loadingMore.value || !hasMore.value) return;
+  loadingMore.value = true;
+  try {
+    offset.value += PAGE;
+    const page = await activities.list({ ...filters.asQuery, limit: PAGE, offset: offset.value });
+    rows.value.push(...page);
+    hasMore.value = page.length === PAGE;
+  } finally { loadingMore.value = false; }
 }
 onMounted(load);
 watch(() => filters.asQuery, load, { deep: true });
@@ -102,6 +120,11 @@ const columns = [
         <button class="text-xxs text-brand-600 hover:underline" @click.stop="openFiles(row)">Files</button>
       </template>
     </DataTable>
+    <div v-if="hasMore && !loading" class="flex justify-center mt-4">
+      <button class="dcgg-btn" :disabled="loadingMore" @click="loadMore">
+        {{ loadingMore ? 'Loading…' : `Load ${PAGE} more` }}
+      </button>
+    </div>
 
     <Modal :open="!!filesFor" :title="filesFor ? 'Files — ' + filesFor.title : ''" width="520px" @close="filesFor = null">
       <div v-if="!fileList.length" class="text-xs text-ink-400 mb-3">No files attached yet.</div>

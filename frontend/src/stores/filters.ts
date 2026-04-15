@@ -7,6 +7,7 @@ interface State {
   clientId: string   | 'all';
   month:    string;   // YYYY-MM
   search:   string;
+  debouncedSearch: string;
 }
 
 function currentMonth(): string {
@@ -21,15 +22,18 @@ export const useFiltersStore = defineStore('filters', {
     clientId: 'all',
     month:    currentMonth(),
     search:   '',
+    debouncedSearch: '',
   }),
   getters: {
+    // Downstream watchers read asQuery, which uses the debounced search so
+    // every keystroke doesn't fire a round-trip.
     asQuery(state): Record<string, string> {
       const q: Record<string, string> = {};
       if (state.vertical !== 'all') q.vertical = state.vertical;
       if (state.region   !== 'all') q.region   = state.region;
       if (state.clientId !== 'all') q.clientId = state.clientId;
       if (state.month)              q.month    = state.month;
-      if (state.search)             q.q        = state.search;
+      if (state.debouncedSearch)    q.q        = state.debouncedSearch;
       return q;
     },
   },
@@ -43,6 +47,7 @@ export const useFiltersStore = defineStore('filters', {
       this.clientId = 'all';
       this.month    = currentMonth();
       this.search   = '';
+      this.debouncedSearch = '';
     },
     hydrateFromQuery(q: Record<string, string | string[] | undefined>) {
       const pick = (k: string) => (typeof q[k] === 'string' ? (q[k] as string) : undefined);
