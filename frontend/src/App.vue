@@ -2,12 +2,14 @@
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 import Sidebar from '@/components/Sidebar.vue';
+import ToastHost from '@/components/ToastHost.vue';
 
 const route = useRoute();
 const isAuthRoute = computed(() => route.name === 'login');
 </script>
 
 <template>
+  <ToastHost />
   <template v-if="isAuthRoute">
     <router-view />
   </template>

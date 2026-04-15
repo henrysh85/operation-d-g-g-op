@@ -29,15 +29,24 @@ http.interceptors.request.use((config: InternalAxiosRequestConfig) => {
 
 http.interceptors.response.use(
   (res) => res,
-  (err: AxiosError<{ message?: string }>) => {
-    if (err.response?.status === 401) {
+  (err: AxiosError<{ message?: string; error?: string }>) => {
+    const status = err.response?.status;
+    const data = err.response?.data as { message?: string; error?: string } | undefined;
+    const msg = data?.message ?? data?.error ?? err.message ?? 'Request failed';
+
+    if (status === 401) {
       localStorage.removeItem('dcgg.token');
       if (typeof window !== 'undefined' && window.location.pathname !== '/login') {
         const next = encodeURIComponent(window.location.pathname + window.location.search);
         window.location.assign(`/login?redirect=${next}`);
       }
+    } else if (status && status >= 400 && status !== 404) {
+      // Surface server-side errors as a toast. Dynamic import avoids a cycle
+      // with the store factory at module init.
+      import('@/stores/toast').then(({ useToastStore }) => {
+        useToastStore().error(msg);
+      }).catch(() => void 0);
     }
-    const msg = err.response?.data?.message ?? err.message ?? 'Request failed';
     return Promise.reject(new Error(msg));
   },
 );

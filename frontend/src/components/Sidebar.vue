@@ -2,6 +2,9 @@
 import { ref, computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useAuthStore } from '@/stores/auth';
+import { users as usersApi } from '@/api';
+import { useToastStore } from '@/stores/toast';
+import Modal from '@/components/Modal.vue';
 
 interface Nav { to: string; label: string; icon: string; role?: string; }
 
@@ -17,6 +20,7 @@ const allNavs: Nav[] = [
   { to: '/people',        label: 'People',        icon: 'P' },
   { to: '/engagement',    label: 'Engagement',    icon: 'E' },
   { to: '/members',       label: 'Members',       icon: 'U' },
+  { to: '/users',         label: 'Users',         icon: 'V', role: 'admin' },
   { to: '/audit',         label: 'Audit log',     icon: 'L', role: 'admin' },
 ];
 
@@ -28,6 +32,20 @@ const navs = computed(() => allNavs.filter((n) => !n.role || auth.hasRole(n.role
 function signOut() {
   auth.logout();
   router.push('/login');
+}
+
+const pwOpen = ref(false);
+const pwCurrent = ref('');
+const pwNew = ref('');
+const toasts = useToastStore();
+async function changePassword() {
+  if (pwNew.value.length < 10) { toasts.error('New password must be at least 10 characters.'); return; }
+  try {
+    await usersApi.changeOwnPassword(pwCurrent.value, pwNew.value);
+    toasts.success('Password updated.');
+    pwOpen.value = false;
+    pwCurrent.value = ''; pwNew.value = '';
+  } catch { /* interceptor shows the error */ }
 }
 const openOnMobile = ref(false);
 const collapsed = ref(false);
@@ -102,9 +120,14 @@ const initials = computed(() =>
       </div>
       <div v-if="!collapsed" class="flex-1 min-w-0">
         <div class="text-xs font-semibold text-ink-900 truncate">{{ auth.user?.name ?? 'Signed out' }}</div>
-        <button class="text-xxs text-ink-500 hover:text-brand-600" @click="signOut">
-          Sign out
-        </button>
+        <div class="flex gap-2">
+          <button class="text-xxs text-ink-500 hover:text-brand-600" @click="pwOpen = true">
+            Password
+          </button>
+          <button class="text-xxs text-ink-500 hover:text-brand-600" @click="signOut">
+            Sign out
+          </button>
+        </div>
       </div>
     </div>
   </aside>
@@ -115,4 +138,23 @@ const initials = computed(() =>
     class="md:hidden fixed inset-0 bg-ink-900/30 z-30"
     @click="openOnMobile = false"
   />
+
+  <Modal :open="pwOpen" title="Change password" width="360px" @close="pwOpen = false">
+    <div class="space-y-3">
+      <label class="block">
+        <span class="text-xxs font-semibold text-ink-500 uppercase">Current password</span>
+        <input v-model="pwCurrent" type="password" class="dcgg-input w-full mt-1" />
+      </label>
+      <label class="block">
+        <span class="text-xxs font-semibold text-ink-500 uppercase">New password (10+ chars)</span>
+        <input v-model="pwNew" type="password" class="dcgg-input w-full mt-1" />
+      </label>
+    </div>
+    <template #footer>
+      <button class="dcgg-btn" @click="pwOpen = false">Cancel</button>
+      <button class="dcgg-btn-primary" :disabled="pwNew.length < 10 || !pwCurrent" @click="changePassword">
+        Save
+      </button>
+    </template>
+  </Modal>
 </template>
