@@ -40,7 +40,18 @@ export const activities = {
     return adapt(data);
   },
   async create(payload: Partial<Activity>): Promise<Activity> {
-    const { data } = await http.post<BackendActivity>('/activities', payload);
+    // Adapt camelCase frontend shape to the backend's snake_case model.
+    const p = payload as Record<string, unknown>;
+    const body = {
+      title: p.title,
+      description: p.description ?? p.summary,
+      type: p.type ?? 'meeting',
+      vertical: p.vertical,
+      occurred_on: p.occurredAt ?? p.occurred_on ?? new Date().toISOString(),
+      status: p.status ?? 'done',
+      metadata: p.metadata ?? {},
+    };
+    const { data } = await http.post<BackendActivity>('/activities', body);
     return adapt(data);
   },
   async remove(id: string): Promise<void> {

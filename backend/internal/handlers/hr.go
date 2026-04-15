@@ -75,12 +75,18 @@ func (h *HRHandler) CreateHoliday(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
+	s, errA := time.Parse("2006-01-02", in.StartDate)
+	e, errB := time.Parse("2006-01-02", in.EndDate)
+	if errA != nil || errB != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "startDate and endDate must be YYYY-MM-DD"})
+		return
+	}
+	if e.Before(s) {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "endDate must be on or after startDate"})
+		return
+	}
 	if in.Days <= 0 {
-		s, errA := time.Parse("2006-01-02", in.StartDate)
-		e, errB := time.Parse("2006-01-02", in.EndDate)
-		if errA == nil && errB == nil && !e.Before(s) {
-			in.Days = e.Sub(s).Hours()/24 + 1
-		}
+		in.Days = e.Sub(s).Hours()/24 + 1
 	}
 	ctx, cancel := context.WithTimeout(c.Request.Context(), 5*time.Second)
 	defer cancel()

@@ -4,6 +4,7 @@ import { computed } from 'vue';
 const props = defineProps<{ status: string }>();
 
 const map: Record<string, string> = {
+  // generic
   live:      'bg-emerald-50 text-ok border-emerald-200',
   active:    'bg-amber-50 text-warn border-amber-200',
   open:      'bg-blue-50 text-brand-600 border-blue-200',
@@ -13,9 +14,19 @@ const map: Record<string, string> = {
   closed:    'bg-ink-100 text-ink-500 border-ink-200',
   early:     'bg-ink-100 text-ink-500 border-ink-200',
   none:      'bg-ink-100 text-ink-400 border-ink-200',
+  done:      'bg-emerald-50 text-ok border-emerald-200',
+  // membership
   prospect:  'bg-blue-50 text-brand-600 border-blue-200',
   applied:   'bg-amber-50 text-warn border-amber-200',
   lapsed:    'bg-red-50 text-err border-red-200',
+  // consultations / submissions
+  submitted: 'bg-blue-50 text-brand-600 border-blue-200',
+  withdrawn: 'bg-ink-100 text-ink-500 border-ink-200',
+  // approval workflow (holidays / expenses)
+  pending:   'bg-amber-50 text-warn border-amber-200',
+  approved:  'bg-emerald-50 text-ok border-emerald-200',
+  rejected:  'bg-red-50 text-err border-red-200',
+  paid:      'bg-emerald-50 text-ok border-emerald-200',
 };
 
 const cls = computed(() => map[props.status] ?? 'bg-ink-100 text-ink-500 border-ink-200');
